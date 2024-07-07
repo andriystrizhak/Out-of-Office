@@ -7,8 +7,7 @@ namespace OutOfOffice.Models
 {
     public partial class ListsDBContext : DbContext
     {
-        private readonly string _connectionString = 
-            $"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Out of Office", "Database", "ListsDB.db")}";
+        private readonly string _connectionString = "Data Source=Database\\ListsDB.db";
 
         public ListsDBContext()
         {

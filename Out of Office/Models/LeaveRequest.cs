@@ -16,7 +16,7 @@ namespace OutOfOffice.Models
         public byte[] StartDate { get; set; } = null!;
         public byte[] EndDate { get; set; } = null!;
         public string? Comment { get; set; }
-        public long Status { get; set; }
+        public long Status { get; set; } = 1;
 
         public virtual AbsenceReason AbsenceReason { get; set; } = null!;
         public virtual Employee Employee { get; set; } = null!;
