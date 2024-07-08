@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Out_of_Office.Models;
+using Out_of_Office.Models.Factories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,32 +9,49 @@ using System.Threading.Tasks;
 
 namespace OutOfOffice.Models
 {
-    public static class CRUDService
+    public static class CrudService
     {
         /// <summary>
         /// Connection String (contains path to .db file)
         /// </summary>
         public static string CS { get; set; } = "Data Source=Database\\ListsDB.db";
+        public static IListDbContextFactory dBContextFactory { get; set; } = new SQLiteListDbContextFactory(CS);
 
         #region [ Employee ]
 
         public static List<Employee> Get_Employees()
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.Employees.ToList();
+            var employee = db.Employees
+                .Include(e => e.Subdivision)
+                .Include(e => e.Position)
+                .Include(e => e.Status)
+                .Include(e => e.PeoplePartner)
+                .Include(e => e.Photo)
+                .ToList();
+
+            return employee;
         }
 
         public static Employee? Get_Employee(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.Employees.Find(id);
+            var employee = db.Employees
+                .Include(e => e.Subdivision)
+                .Include(e => e.Position)
+                .Include(e => e.Status)
+                .Include(e => e.PeoplePartner)
+                .Include(e => e.Photo)
+                .FirstOrDefault(e => e.EmployeeId == id);
+
+            return employee;
         }
 
         public static long Add_Employee(Employee emp)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var id = db.Employees.Add(emp);
             db.SaveChanges();
@@ -41,7 +61,7 @@ namespace OutOfOffice.Models
 
         public static void Update_Employee(Employee emp)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             db.Employees.Update(emp);
             db.SaveChanges();
@@ -49,7 +69,7 @@ namespace OutOfOffice.Models
 
         public static bool Deactivate_Employee(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var emp = db.Employees.Find(id);
             if (emp is not null)
@@ -63,7 +83,7 @@ namespace OutOfOffice.Models
 
         public static bool Activate_Employee(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var emp = db.Employees.Find(id);
             if (emp is not null)
@@ -77,14 +97,13 @@ namespace OutOfOffice.Models
 
         public static bool Assign_Employee_ToProject(long empId, long projId)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var emp = db.Employees.Find(empId);
             var proj = db.Projects.Find(projId);
             if (emp is not null && proj is not null)
             {
-                //TODO - add 'ProjectID' column
-                //emp.Projects = projId;
+                db.EmployeeProjects.Add(new EmployeeProject { EmployeeId = empId, ProjectId = projId });
                 db.SaveChanges();
                 return true;
             }
@@ -93,20 +112,60 @@ namespace OutOfOffice.Models
 
         #endregion
 
-        #region [ Position ]
+        #region [ Project ]
 
         public static List<Project> Get_Projects()
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.Projects.ToList();
+            return db.Projects
+                .Include(e => e.ProjectType)
+                .Include(e => e.ProjectManager)
+                .Include(e => e.Status)
+                .ToList();
         }
 
         public static Project? Get_Project(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.Projects.Find(id);
+            return db.Projects
+                .Include(e => e.ProjectType)
+                .Include(e => e.ProjectManager)
+                .Include(e => e.Status)
+                .FirstOrDefault(e => e.ProjectId == id);
+        }
+
+        public static long Add_Project(Project proj)
+        {
+            using var db = dBContextFactory.Create();
+
+            var id = db.Projects.Add(proj);
+            db.SaveChanges();
+
+            return id.Entity.ProjectId;
+        }
+
+        public static void Update_Project(Project proj)
+        {
+            using var db = dBContextFactory.Create();
+
+            db.Projects.Update(proj);
+            db.SaveChanges();
+        }
+
+        public static bool Deactivate_Project(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var proj = db.Projects.Find(id);
+            if (proj is not null)
+            {
+                proj.StatusId = 2;
+                db.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         #endregion
@@ -115,21 +174,29 @@ namespace OutOfOffice.Models
 
         public static List<ApprovalRequest> Get_ApprovalRequests()
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.ApprovalRequests.ToList();
+            return db.ApprovalRequests
+                .Include(e => e.Approver)
+                .Include(e => e.LeaveRequest)
+                .Include(e => e.Status)
+                .ToList();
         }
 
         public static ApprovalRequest? Get_ApprovalRequest(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.ApprovalRequests.Find(id);
+            return db.ApprovalRequests
+                .Include(e => e.Approver)
+                .Include(e => e.LeaveRequest)
+                .Include(e => e.Status)
+                .FirstOrDefault(e => e.ApprovalRequestId == id);
         }
 
         public static bool Approve_ApprovalRequest(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var req = db.ApprovalRequests.Find(id);
             if (req is not null)
@@ -143,7 +210,7 @@ namespace OutOfOffice.Models
 
         public static bool Reject_ApprovalRequest(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var req = db.ApprovalRequests.Find(id);
             if (req is not null)
@@ -161,21 +228,39 @@ namespace OutOfOffice.Models
 
         public static List<LeaveRequest> Get_LeaveRequests()
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.LeaveRequests.ToList();
+            return db.LeaveRequests
+                .Include(e => e.EmployeeId)
+                .Include(e => e.AbsenceReason)
+                .Include(e => e.Status)
+                .ToList();
         }
 
         public static LeaveRequest? Get_LeaveRequest(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
-            return db.LeaveRequests.Find(id);
+            return db.LeaveRequests
+                .Include(e => e.EmployeeId)
+                .Include(e => e.AbsenceReason)
+                .Include(e => e.Status)
+                .FirstOrDefault(e => e.LeaveRequestId == id);
+        }
+
+        public static long OpenNew_LeaveRequest(LeaveRequest req)
+        {
+            using var db = dBContextFactory.Create();
+
+            var id = db.LeaveRequests.Add(req);
+            db.SaveChanges();
+
+            return id.Entity.LeaveRequestId;
         }
 
         public static bool Approve_LeaveRequest(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var req = db.LeaveRequests.Find(id);
             if (req is not null)
@@ -189,7 +274,7 @@ namespace OutOfOffice.Models
 
         public static bool Reject_LeaveRequest(long id)
         {
-            using ListsDBContext db = new();
+            using var db = dBContextFactory.Create();
 
             var req = db.LeaveRequests.Find(id);
             if (req is not null)
@@ -203,5 +288,133 @@ namespace OutOfOffice.Models
 
         #endregion
 
+        #region [[ other ]]
+
+        #region [ Absence Reason ]
+
+        public static List<AbsenceReason> Get_AbsenceReasons()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.AbsenceReasons.ToList();
+        }
+
+        public static AbsenceReason? Get_AbsenceReason(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.AbsenceReasons.Find(id);
+        }
+
+        #endregion
+
+        #region [ Leave Status ]
+
+        public static List<LeaveStatus> Get_LeaveStatuses()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.LeaveStatuses.ToList();
+        }
+
+        public static LeaveStatus? Get_LeaveStatus(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.LeaveStatuses.Find(id);
+        }
+
+        #endregion
+
+        #region [ Status ]
+
+        public static List<Status> Get_Statuses()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Statuses.ToList();
+        }
+        public static Status? Get_Status(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Statuses.Find(id);
+        }
+
+        #endregion
+
+        #region [ Position ]
+
+        public static List<Position> Get_Positions()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Positions.ToList();
+        }
+
+        public static Position? Get_Position(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Positions.Find(id);
+        }
+
+        #endregion
+
+        #region [ Project Type ]
+
+        public static List<ProjectType> Get_ProjectTypes()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.ProjectTypes.ToList();
+        }
+
+        public static ProjectType? Get_ProjectType(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.ProjectTypes.Find(id);
+        }
+
+        #endregion
+
+        #region [ Subdivision ]
+
+        public static List<Subdivision> Get_Subdivisions()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Subdivisions.ToList();
+        }
+
+        public static Subdivision? Get_Subdivision(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Subdivisions.Find(id);
+        }
+
+        #endregion
+
+        #region [ Photo ]
+
+        public static List<Photo> Get_Photos()
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Photos.ToList();
+        }
+
+        public static Photo? Get_Photo(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            return db.Photos.Find(id);
+        }
+
+        #endregion
+
+        #endregion
     }
 }

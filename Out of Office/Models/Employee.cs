@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Out_of_Office.Models;
+using System;
 using System.Collections.Generic;
 
 namespace OutOfOffice.Models
@@ -11,6 +12,7 @@ namespace OutOfOffice.Models
             InversePeoplePartner = new HashSet<Employee>();
             LeaveRequests = new HashSet<LeaveRequest>();
             Projects = new HashSet<Project>();
+            EmployeeProjects = new HashSet<EmployeeProject>();  
         }
 
         public long EmployeeId { get; set; }
@@ -31,5 +33,7 @@ namespace OutOfOffice.Models
         public virtual ICollection<Employee> InversePeoplePartner { get; set; }
         public virtual ICollection<LeaveRequest> LeaveRequests { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
+
+        public virtual ICollection<EmployeeProject> EmployeeProjects { get; set; }
     }
 }

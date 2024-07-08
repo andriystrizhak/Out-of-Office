@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Out_of_Office.Models;
 
 namespace OutOfOffice.Models
 {
-    public partial class ListsDBContext : DbContext
+    public partial class ListsDbContext : DbContext
     {
         private readonly string _connectionString = "Data Source=Database\\ListsDB.db";
 
-        public ListsDBContext()
+        public ListsDbContext()
         {
         }
 
-        public ListsDBContext(string connectionStr) : this()
+        public ListsDbContext(string connectionStr) : this()
         {
             _connectionString = connectionStr;
         }
 
-        public ListsDBContext(DbContextOptions<ListsDBContext> options)
+        public ListsDbContext(DbContextOptions<ListsDbContext> options)
             : base(options)
         {
         }
@@ -34,6 +35,7 @@ namespace OutOfOffice.Models
         public virtual DbSet<ProjectType> ProjectTypes { get; set; }
         public virtual DbSet<Status> Statuses { get; set; }
         public virtual DbSet<Subdivision> Subdivisions { get; set; }
+        public virtual DbSet<EmployeeProject> EmployeeProjects { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -120,6 +122,23 @@ namespace OutOfOffice.Models
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.SubdivisionId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
+
+                entity.HasMany(e => e.EmployeeProjects)
+                    .WithOne(ep => ep.Employee)
+                    .HasForeignKey(ep => ep.EmployeeId);
+            });
+
+            modelBuilder.Entity<EmployeeProject>(entity =>
+            {
+                entity.HasKey(ep => new { ep.EmployeeId, ep.ProjectId });
+
+                entity.HasOne(ep => ep.Employee)
+                    .WithMany(e => e.EmployeeProjects)
+                    .HasForeignKey(ep => ep.EmployeeId);
+
+                entity.HasOne(ep => ep.Project)
+                    .WithMany(p => p.EmployeeProjects)
+                    .HasForeignKey(ep => ep.ProjectId);
             });
 
             modelBuilder.Entity<LeaveRequest>(entity =>
@@ -203,6 +222,10 @@ namespace OutOfOffice.Models
                     .WithMany(p => p.Projects)
                     .HasForeignKey(d => d.StatusId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
+
+                entity.HasMany(p => p.EmployeeProjects)
+                    .WithOne(ep => ep.Project)
+                    .HasForeignKey(ep => ep.ProjectId);
             });
 
             modelBuilder.Entity<ProjectType>(entity =>

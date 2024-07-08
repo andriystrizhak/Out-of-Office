@@ -46,7 +46,8 @@ namespace OutOfOffice.RoleForms
 
         private void ApplyRoleButton_Click(object sender, EventArgs e)
         {
-            label1.Text = CRUDService.Get_Employees()[0].FullName;
+            var emps = CrudService.Get_Employees();
+            label1.Text = emps[0].FullName;
         }
     }
 }
