@@ -33,18 +33,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             MinimizeButton = new Guna.UI2.WinForms.Guna2Button();
             CloseButton = new Guna.UI2.WinForms.Guna2Button();
@@ -52,12 +54,14 @@
             label1 = new Label();
             TabControl = new Guna.UI2.WinForms.Guna2TabControl();
             tabPage1 = new TabPage();
+            PLRefreshCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             ProjectsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             tabPage2 = new TabPage();
             LeaveRequestsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             label2 = new Label();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            AddNewLRButton = new Guna.UI2.WinForms.Guna2Button();
             TopPanel = new Guna.UI2.WinForms.Guna2Panel();
+            LRLRefreshCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             TabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProjectsDataGridView).BeginInit();
@@ -85,7 +89,7 @@
             MinimizeButton.Font = new Font("Montserrat SemiBold", 7F, FontStyle.Bold, GraphicsUnit.Point);
             MinimizeButton.ForeColor = Color.White;
             MinimizeButton.HoverState.FillColor = Color.RoyalBlue;
-            MinimizeButton.Location = new Point(911, 0);
+            MinimizeButton.Location = new Point(989, 0);
             MinimizeButton.Name = "MinimizeButton";
             MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             MinimizeButton.Size = new Size(52, 30);
@@ -106,7 +110,7 @@
             CloseButton.Font = new Font("Montserrat SemiBold", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             CloseButton.ForeColor = Color.White;
             CloseButton.HoverState.FillColor = Color.OrangeRed;
-            CloseButton.Location = new Point(963, 0);
+            CloseButton.Location = new Point(1041, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
             CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -117,16 +121,16 @@
             // 
             // ApplyRoleButton
             // 
-            ApplyRoleButton.CustomizableEdges = customizableEdges7;
+            ApplyRoleButton.CustomizableEdges = customizableEdges8;
             ApplyRoleButton.DisabledState.BorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             ApplyRoleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             ApplyRoleButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ApplyRoleButton.ForeColor = Color.White;
-            ApplyRoleButton.Location = new Point(8, 501);
+            ApplyRoleButton.Location = new Point(66, 533);
             ApplyRoleButton.Name = "ApplyRoleButton";
-            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges9;
             ApplyRoleButton.Size = new Size(180, 45);
             ApplyRoleButton.TabIndex = 9;
             ApplyRoleButton.Text = "Get";
@@ -136,7 +140,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Montserrat SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(26, 12);
+            label1.Location = new Point(33, 23);
             label1.Name = "label1";
             label1.Size = new Size(187, 37);
             label1.TabIndex = 10;
@@ -152,10 +156,10 @@
             TabControl.Margin = new Padding(3, 0, 3, 3);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1015, 632);
+            TabControl.Size = new Size(1093, 682);
             TabControl.TabButtonHoverState.BorderColor = Color.Empty;
-            TabControl.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
-            TabControl.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TabControl.TabButtonHoverState.FillColor = Color.FromArgb(75, 148, 207);
+            TabControl.TabButtonHoverState.Font = new Font("Montserrat SemiBold", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             TabControl.TabButtonHoverState.ForeColor = Color.White;
             TabControl.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
             TabControl.TabButtonIdleState.BorderColor = Color.Empty;
@@ -177,15 +181,37 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.FromArgb(226, 239, 252);
+            tabPage1.Controls.Add(PLRefreshCircleButton);
             tabPage1.Controls.Add(ProjectsDataGridView);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(ApplyRoleButton);
             tabPage1.Location = new Point(4, 44);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1007, 584);
+            tabPage1.Size = new Size(1085, 634);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Projects";
+            // 
+            // PLRefreshCircleButton
+            // 
+            PLRefreshCircleButton.Animated = true;
+            PLRefreshCircleButton.DisabledState.BorderColor = Color.DarkGray;
+            PLRefreshCircleButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            PLRefreshCircleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            PLRefreshCircleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            PLRefreshCircleButton.FillColor = Color.FromArgb(226, 239, 252);
+            PLRefreshCircleButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            PLRefreshCircleButton.ForeColor = Color.Black;
+            PLRefreshCircleButton.HoverState.FillColor = Color.FromArgb(202, 228, 247);
+            PLRefreshCircleButton.Location = new Point(997, 16);
+            PLRefreshCircleButton.Name = "PLRefreshCircleButton";
+            PLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
+            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            PLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            PLRefreshCircleButton.Size = new Size(45, 45);
+            PLRefreshCircleButton.TabIndex = 12;
+            PLRefreshCircleButton.Text = "R";
+            PLRefreshCircleButton.Click += PLRefreshCircleButton_Click;
             // 
             // ProjectsDataGridView
             // 
@@ -193,6 +219,7 @@
             ProjectsDataGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             ProjectsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            ProjectsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ProjectsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             ProjectsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             ProjectsDataGridView.BorderStyle = BorderStyle.FixedSingle;
@@ -218,13 +245,15 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             ProjectsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             ProjectsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
-            ProjectsDataGridView.Location = new Point(26, 63);
+            ProjectsDataGridView.Location = new Point(42, 75);
+            ProjectsDataGridView.Margin = new Padding(20, 50, 20, 100);
+            ProjectsDataGridView.MaximumSize = new Size(1000, 500);
             ProjectsDataGridView.Name = "ProjectsDataGridView";
             ProjectsDataGridView.ReadOnly = true;
             ProjectsDataGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             ProjectsDataGridView.RowHeadersVisible = false;
             ProjectsDataGridView.RowTemplate.Height = 25;
-            ProjectsDataGridView.Size = new Size(952, 398);
+            ProjectsDataGridView.Size = new Size(1000, 420);
             ProjectsDataGridView.TabIndex = 11;
             ProjectsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             ProjectsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -253,13 +282,14 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.FromArgb(226, 239, 252);
+            tabPage2.Controls.Add(LRLRefreshCircleButton);
             tabPage2.Controls.Add(LeaveRequestsDataGridView);
             tabPage2.Controls.Add(label2);
-            tabPage2.Controls.Add(guna2Button1);
+            tabPage2.Controls.Add(AddNewLRButton);
             tabPage2.Location = new Point(4, 44);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1007, 584);
+            tabPage2.Size = new Size(1085, 634);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Leave Requests";
             // 
@@ -291,12 +321,12 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             LeaveRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
             LeaveRequestsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
-            LeaveRequestsDataGridView.Location = new Point(26, 63);
+            LeaveRequestsDataGridView.Location = new Point(42, 75);
             LeaveRequestsDataGridView.Name = "LeaveRequestsDataGridView";
             LeaveRequestsDataGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             LeaveRequestsDataGridView.RowHeadersVisible = false;
             LeaveRequestsDataGridView.RowTemplate.Height = 25;
-            LeaveRequestsDataGridView.Size = new Size(952, 398);
+            LeaveRequestsDataGridView.Size = new Size(1000, 420);
             LeaveRequestsDataGridView.TabIndex = 14;
             LeaveRequestsDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             LeaveRequestsDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -324,27 +354,30 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Montserrat SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(26, 12);
+            label2.Location = new Point(33, 23);
             label2.Name = "label2";
             label2.Size = new Size(292, 37);
             label2.TabIndex = 13;
             label2.Text = "Leave Requests List";
             // 
-            // guna2Button1
+            // AddNewLRButton
             // 
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(10, 505);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(180, 45);
-            guna2Button1.TabIndex = 12;
-            guna2Button1.Text = "Get";
+            AddNewLRButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
+            AddNewLRButton.CustomizableEdges = customizableEdges11;
+            AddNewLRButton.DisabledState.BorderColor = Color.DarkGray;
+            AddNewLRButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            AddNewLRButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            AddNewLRButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            AddNewLRButton.FillColor = Color.FromArgb(26, 139, 221);
+            AddNewLRButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            AddNewLRButton.ForeColor = Color.White;
+            AddNewLRButton.HoverState.FillColor = Color.FromArgb(75, 148, 207);
+            AddNewLRButton.Location = new Point(42, 522);
+            AddNewLRButton.Name = "AddNewLRButton";
+            AddNewLRButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            AddNewLRButton.Size = new Size(147, 40);
+            AddNewLRButton.TabIndex = 12;
+            AddNewLRButton.Text = "New Request";
             // 
             // TopPanel
             // 
@@ -357,17 +390,38 @@
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
             TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            TopPanel.Size = new Size(1015, 30);
+            TopPanel.Size = new Size(1093, 30);
             TopPanel.TabIndex = 12;
             TopPanel.MouseDown += This_MouseDown;
             TopPanel.MouseMove += This_MouseMove;
+            // 
+            // LRLRefreshCircleButton
+            // 
+            LRLRefreshCircleButton.Animated = true;
+            LRLRefreshCircleButton.DisabledState.BorderColor = Color.DarkGray;
+            LRLRefreshCircleButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            LRLRefreshCircleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            LRLRefreshCircleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            LRLRefreshCircleButton.FillColor = Color.FromArgb(226, 239, 252);
+            LRLRefreshCircleButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LRLRefreshCircleButton.ForeColor = Color.Black;
+            LRLRefreshCircleButton.HoverState.FillColor = Color.FromArgb(202, 228, 247);
+            LRLRefreshCircleButton.Location = new Point(997, 23);
+            LRLRefreshCircleButton.Name = "LRLRefreshCircleButton";
+            LRLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
+            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            LRLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            LRLRefreshCircleButton.Size = new Size(45, 45);
+            LRLRefreshCircleButton.TabIndex = 15;
+            LRLRefreshCircleButton.Text = "R";
+            LRLRefreshCircleButton.Click += LRLRefreshCircleButton_Click;
             // 
             // EmployeeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 105, 171);
-            ClientSize = new Size(1015, 665);
+            ClientSize = new Size(1093, 715);
             Controls.Add(TopPanel);
             Controls.Add(TabControl);
             FormBorderStyle = FormBorderStyle.None;
@@ -400,6 +454,8 @@
         private Guna.UI2.WinForms.Guna2DataGridView ProjectsDataGridView;
         private Guna.UI2.WinForms.Guna2DataGridView LeaveRequestsDataGridView;
         private Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button AddNewLRButton;
+        private Guna.UI2.WinForms.Guna2CircleButton PLRefreshCircleButton;
+        private Guna.UI2.WinForms.Guna2CircleButton LRLRefreshCircleButton;
     }
 }

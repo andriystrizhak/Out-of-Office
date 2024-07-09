@@ -66,13 +66,7 @@ namespace OutOfOffice.RoleForms
         private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TabControl.SelectedIndex == 0)
-            {
-                var projects = ProjectVM.FromEntities(CrudService.Get_Projects());
-                projectsBindingSource = (projects != null) 
-                    ? new SortedBindingList<ProjectVM>(projects) 
-                    : new SortedBindingList<ProjectVM>(new List<ProjectVM>());
-                ProjectsDataGridView.DataSource = projectsBindingSource;
-            }
+                PLRefreshCircleButton_Click(sender, e);
             else if (TabControl.SelectedIndex == 1)
             {
                 var leaveRequests = LeaveRequestVM.FromEntities(CrudService.Get_LeaveRequests());
@@ -108,6 +102,24 @@ namespace OutOfOffice.RoleForms
             }
 
             projectsBindingSource.ApplySort(columnName, direction);
+        }
+
+        private void PLRefreshCircleButton_Click(object sender, EventArgs e)
+        {
+            var projects = ProjectVM.FromEntities(CrudService.Get_Projects());
+            projectsBindingSource = (projects != null)
+                ? new SortedBindingList<ProjectVM>(projects)
+                : new SortedBindingList<ProjectVM>(new List<ProjectVM>());
+            ProjectsDataGridView.DataSource = projectsBindingSource;
+        }
+
+        private void LRLRefreshCircleButton_Click(object sender, EventArgs e)
+        {
+            var leaveRequests = LeaveRequestVM.FromEntities(CrudService.Get_LeaveRequests());
+            leaveRequestsBindingSource = (leaveRequests != null)
+                ? new SortedBindingList<LeaveRequestVM>(leaveRequests)
+                : new SortedBindingList<LeaveRequestVM>(new List<LeaveRequestVM>());
+            LeaveRequestsDataGridView.DataSource = leaveRequestsBindingSource;
         }
     }
 }
