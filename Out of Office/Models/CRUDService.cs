@@ -258,6 +258,14 @@ namespace OutOfOffice.Models
             return id.Entity.LeaveRequestId;
         }
 
+        public static void Update_LeaveRequest(LeaveRequest req)
+        {
+            using var db = dBContextFactory.Create();
+
+            db.LeaveRequests.Update(req);
+            db.SaveChanges();
+        }
+
         public static bool Approve_LeaveRequest(long id)
         {
             using var db = dBContextFactory.Create();

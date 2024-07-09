@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Out_of_Office.DataSources;
+using Out_of_Office.RoleForms.DialogueForms;
 using OutOfOffice.Models;
 using System;
 using System.Collections.Generic;
@@ -77,12 +78,7 @@ namespace OutOfOffice.RoleForms
             }
         }
 
-        private void ProjectsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ProjectsDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string columnName = ProjectsDataGridView.Columns[e.ColumnIndex].DataPropertyName;
 
@@ -104,6 +100,16 @@ namespace OutOfOffice.RoleForms
             projectsBindingSource.ApplySort(columnName, direction);
         }
 
+        private void ProjectsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = projectsBindingSource[e.RowIndex + 1].Id;
+            var req = CrudService.Get_LeaveRequest(id);
+            var reqVM = (req is not null) ? LeaveRequestVM.FromEntity(req) : null;
+
+            new LeaveRequestForm(this, reqVM).ShowDialog();
+            LRLRefreshCircleButton_Click(sender, e);
+        }
+
         private void PLRefreshCircleButton_Click(object sender, EventArgs e)
         {
             var projects = ProjectVM.FromEntities(CrudService.Get_Projects());
@@ -120,6 +126,12 @@ namespace OutOfOffice.RoleForms
                 ? new SortedBindingList<LeaveRequestVM>(leaveRequests)
                 : new SortedBindingList<LeaveRequestVM>(new List<LeaveRequestVM>());
             LeaveRequestsDataGridView.DataSource = leaveRequestsBindingSource;
+        }
+
+        private void AddNewLRButton_Click(object sender, EventArgs e)
+        {
+            new LeaveRequestForm(this).ShowDialog();
+            LRLRefreshCircleButton_Click(sender, e);
         }
     }
 }
