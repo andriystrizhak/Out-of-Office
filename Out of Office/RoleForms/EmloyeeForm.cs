@@ -1,4 +1,5 @@
-﻿using OutOfOffice.Models;
+﻿using Out_of_Office.DataSources;
+using OutOfOffice.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace OutOfOffice.RoleForms
         public EmployeeForm()
         {
             InitializeComponent();
+        }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            TabControl_SelectedIndexChanged(sender, e);
         }
 
         #region [ TopPanel ]
@@ -48,6 +54,25 @@ namespace OutOfOffice.RoleForms
         {
             var emps = CrudService.Get_Employees();
             label1.Text = emps[0].FullName;
+        }
+
+        private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TabControl.SelectedIndex == 0)
+            {
+                var projects = ProjectVM.FromEntities(CrudService.Get_Projects());
+                ProjectsDataGridView.DataSource = (projects != null) ? projects : new List<ProjectVM>();
+            }
+            else if (TabControl.SelectedIndex == 1)
+            {
+                var leaveRequests = LeaveRequestVM.FromEntities(CrudService.Get_LeaveRequests());
+                LeaveRequestsDataGridView.DataSource = (leaveRequests != null) ? leaveRequests : new List<LeaveRequestVM>();
+            }
+        }
+
+        private void ProjectsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

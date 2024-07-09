@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             EmloyeeButton = new Guna.UI2.WinForms.Guna2Button();
             HRButton = new Guna.UI2.WinForms.Guna2Button();
@@ -59,12 +59,12 @@
             // 
             // EmloyeeButton
             // 
-            EmloyeeButton.BorderColor = Color.FromArgb(94, 148, 255);
+            EmloyeeButton.BorderColor = Color.FromArgb(26, 139, 221);
             EmloyeeButton.BorderThickness = 2;
             EmloyeeButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             EmloyeeButton.CheckedState.FillColor = Color.FromArgb(110, 170, 255);
             EmloyeeButton.CheckedState.ForeColor = Color.White;
-            EmloyeeButton.CustomizableEdges = customizableEdges13;
+            EmloyeeButton.CustomizableEdges = customizableEdges11;
             EmloyeeButton.DisabledState.BorderColor = Color.DarkGray;
             EmloyeeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             EmloyeeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -74,8 +74,8 @@
             EmloyeeButton.ForeColor = Color.DodgerBlue;
             EmloyeeButton.Location = new Point(58, 192);
             EmloyeeButton.Name = "EmloyeeButton";
-            EmloyeeButton.PressedColor = Color.FromArgb(100, 160, 255);
-            EmloyeeButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            EmloyeeButton.PressedColor = Color.FromArgb(26, 139, 221);
+            EmloyeeButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
             EmloyeeButton.Size = new Size(180, 75);
             EmloyeeButton.TabIndex = 0;
             EmloyeeButton.Text = "Emloyee";
@@ -83,12 +83,12 @@
             // 
             // HRButton
             // 
-            HRButton.BorderColor = Color.FromArgb(94, 148, 255);
+            HRButton.BorderColor = Color.FromArgb(26, 139, 221);
             HRButton.BorderThickness = 2;
             HRButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             HRButton.CheckedState.FillColor = Color.FromArgb(110, 170, 255);
             HRButton.CheckedState.ForeColor = Color.White;
-            HRButton.CustomizableEdges = customizableEdges15;
+            HRButton.CustomizableEdges = customizableEdges9;
             HRButton.DisabledState.BorderColor = Color.DarkGray;
             HRButton.DisabledState.CustomBorderColor = Color.DarkGray;
             HRButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -98,8 +98,8 @@
             HRButton.ForeColor = Color.DodgerBlue;
             HRButton.Location = new Point(259, 192);
             HRButton.Name = "HRButton";
-            HRButton.PressedColor = Color.FromArgb(100, 160, 255);
-            HRButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            HRButton.PressedColor = Color.FromArgb(26, 139, 221);
+            HRButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             HRButton.Size = new Size(180, 75);
             HRButton.TabIndex = 1;
             HRButton.Text = "HR Manager";
@@ -107,12 +107,12 @@
             // 
             // PMButton
             // 
-            PMButton.BorderColor = Color.FromArgb(94, 148, 255);
+            PMButton.BorderColor = Color.FromArgb(26, 139, 221);
             PMButton.BorderThickness = 2;
             PMButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             PMButton.CheckedState.FillColor = Color.FromArgb(110, 170, 255);
             PMButton.CheckedState.ForeColor = Color.White;
-            PMButton.CustomizableEdges = customizableEdges17;
+            PMButton.CustomizableEdges = customizableEdges7;
             PMButton.DisabledState.BorderColor = Color.DarkGray;
             PMButton.DisabledState.CustomBorderColor = Color.DarkGray;
             PMButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -122,8 +122,8 @@
             PMButton.ForeColor = Color.DodgerBlue;
             PMButton.Location = new Point(460, 192);
             PMButton.Name = "PMButton";
-            PMButton.PressedColor = Color.FromArgb(100, 160, 255);
-            PMButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            PMButton.PressedColor = Color.FromArgb(26, 139, 221);
+            PMButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             PMButton.Size = new Size(180, 75);
             PMButton.TabIndex = 2;
             PMButton.Text = "Project Manager";
@@ -141,37 +141,40 @@
             // 
             // CloseButton
             // 
+            CloseButton.BackColor = Color.Transparent;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
-            CloseButton.CustomizableEdges = customizableEdges19;
+            CloseButton.CustomizableEdges = customizableEdges5;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             CloseButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            CloseButton.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            CloseButton.ForeColor = Color.White;
-            CloseButton.HoverState.FillColor = Color.OrangeRed;
+            CloseButton.FillColor = Color.Transparent;
+            CloseButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            CloseButton.ForeColor = Color.FromArgb(14, 75, 126);
+            CloseButton.HoverState.FillColor = Color.LightCoral;
             CloseButton.Location = new Point(650, 0);
             CloseButton.Name = "CloseButton";
-            CloseButton.PressedColor = Color.Firebrick;
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            CloseButton.PressedColor = Color.IndianRed;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             CloseButton.Size = new Size(52, 44);
             CloseButton.TabIndex = 4;
-            CloseButton.Text = "X";
+            CloseButton.Text = "x";
             CloseButton.Click += CloseButton_Click;
             // 
             // ApplyRoleButton
             // 
-            ApplyRoleButton.CustomizableEdges = customizableEdges21;
+            ApplyRoleButton.CustomizableEdges = customizableEdges3;
             ApplyRoleButton.DisabledState.BorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             ApplyRoleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             ApplyRoleButton.Enabled = false;
+            ApplyRoleButton.FillColor = Color.FromArgb(26, 139, 221);
             ApplyRoleButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ApplyRoleButton.ForeColor = Color.White;
             ApplyRoleButton.Location = new Point(258, 319);
             ApplyRoleButton.Name = "ApplyRoleButton";
-            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ApplyRoleButton.Size = new Size(180, 45);
             ApplyRoleButton.TabIndex = 5;
             ApplyRoleButton.Text = "Apply";
@@ -179,27 +182,30 @@
             // 
             // MinimizeButton
             // 
+            MinimizeButton.BackColor = Color.Transparent;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
-            MinimizeButton.CustomizableEdges = customizableEdges23;
+            MinimizeButton.CustomizableEdges = customizableEdges1;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             MinimizeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            MinimizeButton.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            MinimizeButton.ForeColor = Color.White;
+            MinimizeButton.FillColor = Color.Transparent;
+            MinimizeButton.Font = new Font("Montserrat ExtraBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            MinimizeButton.ForeColor = Color.FromArgb(14, 75, 126);
             MinimizeButton.HoverState.FillColor = Color.RoyalBlue;
             MinimizeButton.Location = new Point(597, 0);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             MinimizeButton.Size = new Size(52, 44);
             MinimizeButton.TabIndex = 6;
-            MinimizeButton.Text = "_";
+            MinimizeButton.Text = "—";
             MinimizeButton.Click += MinimizeButton_Click;
             // 
             // RoleSelectionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(226, 239, 252);
             ClientSize = new Size(702, 428);
             Controls.Add(MinimizeButton);
             Controls.Add(ApplyRoleButton);
@@ -210,6 +216,7 @@
             Controls.Add(EmloyeeButton);
             FormBorderStyle = FormBorderStyle.None;
             Name = "RoleSelectionForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             MouseDown += This_MouseDown;
             MouseMove += This_MouseMove;

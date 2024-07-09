@@ -13,10 +13,10 @@ namespace OutOfOffice.Models
         public long LeaveRequestId { get; set; }
         public long EmployeeId { get; set; }
         public long AbsenceReasonId { get; set; }
-        public byte[] StartDate { get; set; } = null!;
-        public byte[] EndDate { get; set; } = null!;
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string? Comment { get; set; }
-        public long Status { get; set; } = 1;
+        public long Status { get; set; } = (long)LeaveStatusEnum.New;
 
         public virtual AbsenceReason AbsenceReason { get; set; } = null!;
         public virtual Employee Employee { get; set; } = null!;

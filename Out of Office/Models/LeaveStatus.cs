@@ -17,4 +17,13 @@ namespace OutOfOffice.Models
         public virtual ICollection<ApprovalRequest> ApprovalRequests { get; set; }
         public virtual ICollection<LeaveRequest> LeaveRequests { get; set; }
     }
+
+    public enum LeaveStatusEnum
+    {
+        New = 1,
+        Approved,
+        Rejected,
+        Submitted,
+        Cancelled
+    }
 }

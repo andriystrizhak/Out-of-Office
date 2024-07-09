@@ -231,9 +231,9 @@ namespace OutOfOffice.Models
             using var db = dBContextFactory.Create();
 
             return db.LeaveRequests
-                .Include(e => e.EmployeeId)
+                .Include(e => e.Employee)
                 .Include(e => e.AbsenceReason)
-                .Include(e => e.Status)
+                .Include(e => e.StatusNavigation)
                 .ToList();
         }
 
@@ -242,13 +242,13 @@ namespace OutOfOffice.Models
             using var db = dBContextFactory.Create();
 
             return db.LeaveRequests
-                .Include(e => e.EmployeeId)
+                .Include(e => e.Employee)
                 .Include(e => e.AbsenceReason)
-                .Include(e => e.Status)
+                .Include(e => e.StatusNavigation)
                 .FirstOrDefault(e => e.LeaveRequestId == id);
         }
 
-        public static long OpenNew_LeaveRequest(LeaveRequest req)
+        public static long Add_LeaveRequest(LeaveRequest req)
         {
             using var db = dBContextFactory.Create();
 
@@ -265,7 +265,7 @@ namespace OutOfOffice.Models
             var req = db.LeaveRequests.Find(id);
             if (req is not null)
             {
-                req.Status = 2;
+                req.Status = (int)LeaveStatusEnum.Approved;
                 db.SaveChanges();
                 return true;
             }
@@ -279,7 +279,47 @@ namespace OutOfOffice.Models
             var req = db.LeaveRequests.Find(id);
             if (req is not null)
             {
-                req.Status = 3;
+                req.Status = (int)LeaveStatusEnum.Rejected;
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public static bool Submit_LeaveRequest(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var req = db.LeaveRequests.Find(id);
+            if (req is not null)
+            {
+                req.Status = (int)LeaveStatusEnum.Submitted;
+                db.ApprovalRequests
+                    .Add(new ApprovalRequest
+                    {
+                        ApproverId = 1, // Random employee
+                        LeaveRequestId = id,
+                        StatusId = (int)LeaveStatusEnum.New
+                    });
+
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public static bool Cancel_LeaveRequest(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var req = db.LeaveRequests.Find(id);
+            if (req is not null)
+            {
+                req.Status = (int)LeaveStatusEnum.Cancelled;
+                db.ApprovalRequests
+                    .Where(e => e.LeaveRequestId == id)
+                    .ForEachAsync(e => e.StatusId = (int)LeaveStatusEnum.Cancelled);
+
                 db.SaveChanges();
                 return true;
             }

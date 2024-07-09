@@ -8,7 +8,7 @@ namespace OutOfOffice.Models
         public long ApprovalRequestId { get; set; }
         public long ApproverId { get; set; }
         public long LeaveRequestId { get; set; }
-        public long StatusId { get; set; } = 1;
+        public long StatusId { get; set; } = (long)LeaveStatusEnum.New;
         public string? Comment { get; set; }
 
         public virtual Employee Approver { get; set; } = null!;

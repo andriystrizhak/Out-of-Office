@@ -13,8 +13,8 @@ namespace OutOfOffice.Models
 
         public long ProjectId { get; set; }
         public long ProjectTypeId { get; set; }
-        public byte[] StartDate { get; set; } = null!;
-        public byte[]? EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public long ProjectManagerId { get; set; }
         public string? Comment { get; set; }
         public long StatusId { get; set; } = 1;
