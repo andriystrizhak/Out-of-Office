@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             MinimizeButton = new Guna.UI2.WinForms.Guna2Button();
             CloseButton = new Guna.UI2.WinForms.Guna2Button();
@@ -55,34 +55,15 @@
             ProjectsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             tabPage2 = new TabPage();
             LeaveRequestsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            projectBindingSource = new BindingSource(components);
             label2 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            listsDbContextBindingSource = new BindingSource(components);
             TopPanel = new Guna.UI2.WinForms.Guna2Panel();
-            projectBindingSource1 = new BindingSource(components);
-            projectBindingSource2 = new BindingSource(components);
             TabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProjectsDataGridView).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LeaveRequestsDataGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)projectBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)listsDbContextBindingSource).BeginInit();
             TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)projectBindingSource1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)projectBindingSource2).BeginInit();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -94,7 +75,7 @@
             // MinimizeButton
             // 
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
-            MinimizeButton.CustomizableEdges = customizableEdges11;
+            MinimizeButton.CustomizableEdges = customizableEdges1;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -106,7 +87,7 @@
             MinimizeButton.HoverState.FillColor = Color.RoyalBlue;
             MinimizeButton.Location = new Point(911, 0);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             MinimizeButton.Size = new Size(52, 30);
             MinimizeButton.TabIndex = 8;
             MinimizeButton.Text = "—";
@@ -115,7 +96,7 @@
             // CloseButton
             // 
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
-            CloseButton.CustomizableEdges = customizableEdges13;
+            CloseButton.CustomizableEdges = customizableEdges3;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -128,7 +109,7 @@
             CloseButton.Location = new Point(963, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             CloseButton.Size = new Size(52, 30);
             CloseButton.TabIndex = 7;
             CloseButton.Text = "x";
@@ -136,7 +117,7 @@
             // 
             // ApplyRoleButton
             // 
-            ApplyRoleButton.CustomizableEdges = customizableEdges15;
+            ApplyRoleButton.CustomizableEdges = customizableEdges7;
             ApplyRoleButton.DisabledState.BorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,7 +126,7 @@
             ApplyRoleButton.ForeColor = Color.White;
             ApplyRoleButton.Location = new Point(8, 501);
             ApplyRoleButton.Name = "ApplyRoleButton";
-            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ApplyRoleButton.Size = new Size(180, 45);
             ApplyRoleButton.TabIndex = 9;
             ApplyRoleButton.Text = "Get";
@@ -208,35 +189,38 @@
             // 
             // ProjectsDataGridView
             // 
-            dataGridViewCellStyle7.BackColor = Color.White;
-            ProjectsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            ProjectsDataGridView.AllowUserToAddRows = false;
+            ProjectsDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            ProjectsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             ProjectsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             ProjectsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             ProjectsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             ProjectsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(14, 75, 126);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.NullValue = "-";
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(13, 109, 188);
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            ProjectsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(14, 75, 126);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.NullValue = "-";
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(13, 109, 188);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            ProjectsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             ProjectsDataGridView.ColumnHeadersHeight = 25;
             ProjectsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(241, 248, 254);
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.NullValue = "-";
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(190, 223, 249);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            ProjectsDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(241, 248, 254);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.NullValue = "-";
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(190, 223, 249);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            ProjectsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             ProjectsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
             ProjectsDataGridView.Location = new Point(26, 63);
             ProjectsDataGridView.Name = "ProjectsDataGridView";
+            ProjectsDataGridView.ReadOnly = true;
             ProjectsDataGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             ProjectsDataGridView.RowHeadersVisible = false;
             ProjectsDataGridView.RowTemplate.Height = 25;
@@ -255,7 +239,7 @@
             ProjectsDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             ProjectsDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             ProjectsDataGridView.ThemeStyle.HeaderStyle.Height = 25;
-            ProjectsDataGridView.ThemeStyle.ReadOnly = false;
+            ProjectsDataGridView.ThemeStyle.ReadOnly = true;
             ProjectsDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             ProjectsDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             ProjectsDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -263,7 +247,8 @@
             ProjectsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            ProjectsDataGridView.CellContentClick += ProjectsDataGridView_CellContentClick;
+            ProjectsDataGridView.CellContentDoubleClick += ProjectsDataGridView_CellContentDoubleClick;
+            ProjectsDataGridView.ColumnHeaderMouseClick += ProjectsDataGridView_ColumnHeaderMouseClick;
             // 
             // tabPage2
             // 
@@ -280,34 +265,31 @@
             // 
             // LeaveRequestsDataGridView
             // 
-            dataGridViewCellStyle10.BackColor = Color.White;
-            LeaveRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            LeaveRequestsDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            LeaveRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             LeaveRequestsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             LeaveRequestsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             LeaveRequestsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(14, 75, 126);
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.NullValue = "-";
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(13, 109, 188);
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            LeaveRequestsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(14, 75, 126);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.NullValue = "-";
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(13, 109, 188);
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            LeaveRequestsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             LeaveRequestsDataGridView.ColumnHeadersHeight = 25;
             LeaveRequestsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            LeaveRequestsDataGridView.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11 });
-            LeaveRequestsDataGridView.DataSource = projectBindingSource;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.FromArgb(241, 248, 254);
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle12.NullValue = "-";
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(190, 223, 249);
-            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            LeaveRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(241, 248, 254);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.NullValue = "-";
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(190, 223, 249);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            LeaveRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
             LeaveRequestsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
             LeaveRequestsDataGridView.Location = new Point(26, 63);
             LeaveRequestsDataGridView.Name = "LeaveRequestsDataGridView";
@@ -338,76 +320,6 @@
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "ProjectId";
-            dataGridViewTextBoxColumn1.HeaderText = "ProjectId";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.DataPropertyName = "ProjectTypeId";
-            dataGridViewTextBoxColumn2.HeaderText = "ProjectTypeId";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.DataPropertyName = "StartDate";
-            dataGridViewTextBoxColumn3.HeaderText = "StartDate";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.DataPropertyName = "EndDate";
-            dataGridViewTextBoxColumn4.HeaderText = "EndDate";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.DataPropertyName = "ProjectManagerId";
-            dataGridViewTextBoxColumn5.HeaderText = "ProjectManagerId";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.DataPropertyName = "Comment";
-            dataGridViewTextBoxColumn6.HeaderText = "Comment";
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            dataGridViewTextBoxColumn7.DataPropertyName = "StatusId";
-            dataGridViewTextBoxColumn7.HeaderText = "StatusId";
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.DataPropertyName = "ProjectManager";
-            dataGridViewTextBoxColumn8.HeaderText = "ProjectManager";
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewTextBoxColumn9.DataPropertyName = "ProjectType";
-            dataGridViewTextBoxColumn9.HeaderText = "ProjectType";
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            dataGridViewTextBoxColumn10.DataPropertyName = "Status";
-            dataGridViewTextBoxColumn10.HeaderText = "Status";
-            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            dataGridViewTextBoxColumn11.DataPropertyName = "EmployeeProjects";
-            dataGridViewTextBoxColumn11.HeaderText = "EmployeeProjects";
-            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // projectBindingSource
-            // 
-            projectBindingSource.DataSource = typeof(Models.Project);
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -420,7 +332,7 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.CustomizableEdges = customizableEdges17;
+            guna2Button1.CustomizableEdges = customizableEdges9;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -429,38 +341,26 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(10, 505);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button1.Size = new Size(180, 45);
             guna2Button1.TabIndex = 12;
             guna2Button1.Text = "Get";
-            // 
-            // listsDbContextBindingSource
-            // 
-            listsDbContextBindingSource.DataSource = typeof(Models.ListsDbContext);
             // 
             // TopPanel
             // 
             TopPanel.BackColor = Color.FromArgb(14, 75, 126);
             TopPanel.Controls.Add(MinimizeButton);
             TopPanel.Controls.Add(CloseButton);
-            TopPanel.CustomizableEdges = customizableEdges19;
+            TopPanel.CustomizableEdges = customizableEdges5;
             TopPanel.Dock = DockStyle.Top;
             TopPanel.Location = new Point(0, 0);
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
-            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
             TopPanel.Size = new Size(1015, 30);
             TopPanel.TabIndex = 12;
             TopPanel.MouseDown += This_MouseDown;
             TopPanel.MouseMove += This_MouseMove;
-            // 
-            // projectBindingSource1
-            // 
-            projectBindingSource1.DataSource = typeof(Models.Project);
-            // 
-            // projectBindingSource2
-            // 
-            projectBindingSource2.DataSource = typeof(Models.Project);
             // 
             // EmployeeForm
             // 
@@ -482,11 +382,7 @@
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LeaveRequestsDataGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)projectBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)listsDbContextBindingSource).EndInit();
             TopPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)projectBindingSource1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)projectBindingSource2).EndInit();
             ResumeLayout(false);
         }
 
@@ -501,23 +397,8 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private Guna.UI2.WinForms.Guna2Panel TopPanel;
-        private BindingSource projectBindingSource;
-        private BindingSource listsDbContextBindingSource;
-        private BindingSource projectBindingSource1;
-        private BindingSource projectBindingSource2;
         private Guna.UI2.WinForms.Guna2DataGridView ProjectsDataGridView;
         private Guna.UI2.WinForms.Guna2DataGridView LeaveRequestsDataGridView;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }

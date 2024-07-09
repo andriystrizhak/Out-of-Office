@@ -1,10 +1,12 @@
-﻿using Out_of_Office.DataSources;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Out_of_Office.DataSources;
 using OutOfOffice.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +21,14 @@ namespace OutOfOffice.RoleForms
         /// </summary>
         Point lastPoint;
 
+        private SortedBindingList<ProjectVM> projectsBindingSource;
+        private SortedBindingList<LeaveRequestVM> leaveRequestsBindingSource;
+
         public EmployeeForm()
         {
             InitializeComponent();
+
+            ProjectsDataGridView.DataSource = projectsBindingSource;
         }
 
         private void EmployeeForm_Load(object sender, EventArgs e)
@@ -61,18 +68,46 @@ namespace OutOfOffice.RoleForms
             if (TabControl.SelectedIndex == 0)
             {
                 var projects = ProjectVM.FromEntities(CrudService.Get_Projects());
-                ProjectsDataGridView.DataSource = (projects != null) ? projects : new List<ProjectVM>();
+                projectsBindingSource = (projects != null) 
+                    ? new SortedBindingList<ProjectVM>(projects) 
+                    : new SortedBindingList<ProjectVM>(new List<ProjectVM>());
+                ProjectsDataGridView.DataSource = projectsBindingSource;
             }
             else if (TabControl.SelectedIndex == 1)
             {
                 var leaveRequests = LeaveRequestVM.FromEntities(CrudService.Get_LeaveRequests());
-                LeaveRequestsDataGridView.DataSource = (leaveRequests != null) ? leaveRequests : new List<LeaveRequestVM>();
+                leaveRequestsBindingSource = (leaveRequests != null)
+                    ? new SortedBindingList<LeaveRequestVM>(leaveRequests)
+                    : new SortedBindingList<LeaveRequestVM>(new List<LeaveRequestVM>());
+                LeaveRequestsDataGridView.DataSource = leaveRequestsBindingSource;
             }
         }
 
-        private void ProjectsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ProjectsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ProjectsDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string columnName = ProjectsDataGridView.Columns[e.ColumnIndex].DataPropertyName;
+
+            ListSortDirection direction;
+
+            if (ProjectsDataGridView.SortOrder == SortOrder.Ascending || ProjectsDataGridView.SortOrder == SortOrder.None)
+                direction = ListSortDirection.Ascending;
+            else
+                direction = ListSortDirection.Descending;
+
+            // Перевірка наявності властивості в класі ProjectVM
+            var property = typeof(ProjectVM).GetProperty(columnName);
+            if (property == null)
+            {
+                MessageBox.Show($"Property '{columnName}' does not exist in 'ProjectVM'.");
+                return;
+            }
+
+            projectsBindingSource.ApplySort(columnName, direction);
         }
     }
 }
