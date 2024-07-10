@@ -370,6 +370,7 @@
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            LeaveRequestsDataGridView.CellContentDoubleClick += LeaveRequestsDataGridView_CellContentDoubleClick;
             LeaveRequestsDataGridView.ColumnHeaderMouseClick += DataGridView_ColumnHeaderMouseClick;
             // 
             // label2

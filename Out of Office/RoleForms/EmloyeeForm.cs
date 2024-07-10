@@ -102,12 +102,21 @@ namespace OutOfOffice.RoleForms
 
         private void ProjectsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var id = projectsBindingSource[e.RowIndex + 1].Id;
-            var req = CrudService.Get_LeaveRequest(id);
-            var reqVM = (req is not null) ? LeaveRequestVM.FromEntity(req) : null;
+        }
 
-            new LeaveRequestForm(this, reqVM).ShowDialog();
-            LRLRefreshCircleButton_Click(sender, e);
+        private void LeaveRequestsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            long id = (long)LeaveRequestsDataGridView[1, e.RowIndex].Value;
+            var req = CrudService.Get_LeaveRequest(id);
+            if (req is not null)
+            {
+                var reqVM = LeaveRequestVM.FromEntity(req);
+
+                new LeaveRequestForm(this, reqVM).ShowDialog();
+                LRLRefreshCircleButton_Click(sender, e);
+            }
+            else
+                MessageBox.Show("KAKA");
         }
 
         private void PLRefreshCircleButton_Click(object sender, EventArgs e)

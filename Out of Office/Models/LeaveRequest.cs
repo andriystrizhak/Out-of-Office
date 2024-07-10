@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OutOfOffice.Models
 {
@@ -10,6 +12,8 @@ namespace OutOfOffice.Models
             ApprovalRequests = new HashSet<ApprovalRequest>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long LeaveRequestId { get; set; }
         public long EmployeeId { get; set; }
         public long AbsenceReasonId { get; set; }

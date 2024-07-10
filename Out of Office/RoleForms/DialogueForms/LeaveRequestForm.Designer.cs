@@ -143,6 +143,7 @@
             IdTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             IdTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             IdTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            IdTextBox.Enabled = false;
             IdTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             IdTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             IdTextBox.ForeColor = Color.Black;
@@ -204,6 +205,7 @@
             EmployeeNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             EmployeeNameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             EmployeeNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            EmployeeNameTextBox.Enabled = false;
             EmployeeNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             EmployeeNameTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             EmployeeNameTextBox.ForeColor = Color.Black;
@@ -304,6 +306,7 @@
             StatusTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             StatusTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             StatusTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            StatusTextBox.Enabled = false;
             StatusTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             StatusTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             StatusTextBox.ForeColor = Color.Black;
