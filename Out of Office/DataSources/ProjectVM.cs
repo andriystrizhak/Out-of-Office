@@ -10,6 +10,7 @@ namespace Out_of_Office.DataSources
     public class ProjectVM
     {
         public long Id { get; set; }
+        public long ProjectTypeId { get; set; }
         public string ProjectType { get; set; } = null!;
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -23,6 +24,7 @@ namespace Out_of_Office.DataSources
             return new ProjectVM
             {
                 Id = entity.ProjectId,
+                ProjectTypeId = entity.ProjectTypeId,
                 ProjectType = entity.ProjectType.ProjectTypeName,
                 StartDate = entity.StartDate,
                 EndDate = entity.EndDate,

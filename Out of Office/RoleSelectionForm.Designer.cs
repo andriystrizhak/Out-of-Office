@@ -59,20 +59,23 @@
             // 
             // EmloyeeButton
             // 
+            EmloyeeButton.Animated = true;
             EmloyeeButton.BorderColor = Color.FromArgb(26, 139, 221);
             EmloyeeButton.BorderThickness = 2;
             EmloyeeButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            EmloyeeButton.CheckedState.FillColor = Color.FromArgb(110, 170, 255);
+            EmloyeeButton.CheckedState.BorderColor = Color.FromArgb(26, 139, 221);
+            EmloyeeButton.CheckedState.FillColor = Color.FromArgb(26, 139, 221);
             EmloyeeButton.CheckedState.ForeColor = Color.White;
             EmloyeeButton.CustomizableEdges = customizableEdges11;
             EmloyeeButton.DisabledState.BorderColor = Color.DarkGray;
             EmloyeeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             EmloyeeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            EmloyeeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            EmloyeeButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             EmloyeeButton.FillColor = Color.White;
             EmloyeeButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             EmloyeeButton.ForeColor = Color.DodgerBlue;
-            EmloyeeButton.Location = new Point(58, 192);
+            EmloyeeButton.HoverState.FillColor = Color.FromArgb(177, 214, 244);
+            EmloyeeButton.Location = new Point(58, 189);
             EmloyeeButton.Name = "EmloyeeButton";
             EmloyeeButton.PressedColor = Color.FromArgb(26, 139, 221);
             EmloyeeButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -83,20 +86,23 @@
             // 
             // HRButton
             // 
+            HRButton.Animated = true;
             HRButton.BorderColor = Color.FromArgb(26, 139, 221);
             HRButton.BorderThickness = 2;
             HRButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            HRButton.CheckedState.FillColor = Color.FromArgb(110, 170, 255);
+            HRButton.CheckedState.BorderColor = Color.FromArgb(26, 139, 221);
+            HRButton.CheckedState.FillColor = Color.FromArgb(26, 139, 221);
             HRButton.CheckedState.ForeColor = Color.White;
             HRButton.CustomizableEdges = customizableEdges9;
             HRButton.DisabledState.BorderColor = Color.DarkGray;
             HRButton.DisabledState.CustomBorderColor = Color.DarkGray;
             HRButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            HRButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            HRButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             HRButton.FillColor = Color.White;
             HRButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             HRButton.ForeColor = Color.DodgerBlue;
-            HRButton.Location = new Point(259, 192);
+            HRButton.HoverState.FillColor = Color.FromArgb(177, 214, 244);
+            HRButton.Location = new Point(259, 189);
             HRButton.Name = "HRButton";
             HRButton.PressedColor = Color.FromArgb(26, 139, 221);
             HRButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -107,20 +113,23 @@
             // 
             // PMButton
             // 
+            PMButton.Animated = true;
             PMButton.BorderColor = Color.FromArgb(26, 139, 221);
             PMButton.BorderThickness = 2;
             PMButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            PMButton.CheckedState.FillColor = Color.FromArgb(110, 170, 255);
+            PMButton.CheckedState.BorderColor = Color.FromArgb(26, 139, 221);
+            PMButton.CheckedState.FillColor = Color.FromArgb(26, 139, 221);
             PMButton.CheckedState.ForeColor = Color.White;
             PMButton.CustomizableEdges = customizableEdges7;
             PMButton.DisabledState.BorderColor = Color.DarkGray;
             PMButton.DisabledState.CustomBorderColor = Color.DarkGray;
             PMButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            PMButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            PMButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             PMButton.FillColor = Color.White;
             PMButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             PMButton.ForeColor = Color.DodgerBlue;
-            PMButton.Location = new Point(460, 192);
+            PMButton.HoverState.FillColor = Color.FromArgb(177, 214, 244);
+            PMButton.Location = new Point(460, 189);
             PMButton.Name = "PMButton";
             PMButton.PressedColor = Color.FromArgb(26, 139, 221);
             PMButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -133,7 +142,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Montserrat SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(227, 113);
+            label1.Location = new Point(227, 104);
             label1.Name = "label1";
             label1.Size = new Size(250, 37);
             label1.TabIndex = 3;
@@ -141,8 +150,10 @@
             // 
             // CloseButton
             // 
+            CloseButton.Animated = true;
             CloseButton.BackColor = Color.Transparent;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
+            CloseButton.CheckedState.ForeColor = Color.White;
             CloseButton.CustomizableEdges = customizableEdges5;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -151,10 +162,11 @@
             CloseButton.FillColor = Color.Transparent;
             CloseButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CloseButton.ForeColor = Color.FromArgb(14, 75, 126);
-            CloseButton.HoverState.FillColor = Color.LightCoral;
+            CloseButton.HoverState.FillColor = Color.OrangeRed;
+            CloseButton.HoverState.ForeColor = Color.White;
             CloseButton.Location = new Point(650, 0);
             CloseButton.Name = "CloseButton";
-            CloseButton.PressedColor = Color.IndianRed;
+            CloseButton.PressedColor = Color.OrangeRed;
             CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             CloseButton.Size = new Size(52, 44);
             CloseButton.TabIndex = 4;
@@ -163,16 +175,17 @@
             // 
             // ApplyRoleButton
             // 
+            ApplyRoleButton.Animated = true;
             ApplyRoleButton.CustomizableEdges = customizableEdges3;
             ApplyRoleButton.DisabledState.BorderColor = Color.DarkGray;
             ApplyRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            ApplyRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ApplyRoleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ApplyRoleButton.DisabledState.FillColor = Color.FromArgb(113, 157, 190);
+            ApplyRoleButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             ApplyRoleButton.Enabled = false;
             ApplyRoleButton.FillColor = Color.FromArgb(26, 139, 221);
             ApplyRoleButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ApplyRoleButton.ForeColor = Color.White;
-            ApplyRoleButton.Location = new Point(258, 319);
+            ApplyRoleButton.Location = new Point(258, 316);
             ApplyRoleButton.Name = "ApplyRoleButton";
             ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ApplyRoleButton.Size = new Size(180, 45);
@@ -182,6 +195,7 @@
             // 
             // MinimizeButton
             // 
+            MinimizeButton.Animated = true;
             MinimizeButton.BackColor = Color.Transparent;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
             MinimizeButton.CustomizableEdges = customizableEdges1;
@@ -193,6 +207,7 @@
             MinimizeButton.Font = new Font("Montserrat ExtraBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             MinimizeButton.ForeColor = Color.FromArgb(14, 75, 126);
             MinimizeButton.HoverState.FillColor = Color.RoyalBlue;
+            MinimizeButton.HoverState.ForeColor = Color.White;
             MinimizeButton.Location = new Point(597, 0);
             MinimizeButton.Name = "MinimizeButton";
             MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;

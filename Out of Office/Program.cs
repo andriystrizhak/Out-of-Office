@@ -1,7 +1,12 @@
+using Out_of_Office;
+using OutOfOffice.RoleForms;
+
 namespace OutOfOffice
 {
-    internal static class Program
+    public static class Program
     {
+        public static UserRole CurrentRole { get; set; } = UserRole.NotSet;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -12,6 +17,19 @@ namespace OutOfOffice
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new RoleSelectionForm());
+            
+            switch(CurrentRole)
+            {
+                case UserRole.Employee:
+                    Application.Run(new EmployeeForm());
+                    break;
+                case UserRole.HR:
+                    Application.Run(new HRManagerForm());
+                    break;
+                case UserRole.PM:
+                    Application.Run(new ProjectManagerForm());
+                    break;
+            }
         }
     }
 }

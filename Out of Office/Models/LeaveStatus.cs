@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OutOfOffice.Models
 {
@@ -11,6 +13,8 @@ namespace OutOfOffice.Models
             LeaveRequests = new HashSet<LeaveRequest>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long LeaveStatusId { get; set; }
         public string LeaveStatusName { get; set; } = null!;
 

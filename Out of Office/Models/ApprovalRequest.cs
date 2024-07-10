@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OutOfOffice.Models
 {
     public partial class ApprovalRequest
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ApprovalRequestId { get; set; }
         public long ApproverId { get; set; }
         public long LeaveRequestId { get; set; }

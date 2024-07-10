@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OutOfOffice.Models
 {
@@ -10,6 +12,8 @@ namespace OutOfOffice.Models
             Employees = new HashSet<Employee>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long PhotoId { get; set; }
         public string FilePath { get; set; } = null!;
 

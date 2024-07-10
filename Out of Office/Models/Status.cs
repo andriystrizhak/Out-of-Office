@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OutOfOffice.Models
 {
@@ -11,6 +13,8 @@ namespace OutOfOffice.Models
             Projects = new HashSet<Project>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long StatusId { get; set; } = (long)StatusEnum.Active;
         public string StatusName { get; set; } = null!;
 

@@ -12,6 +12,8 @@ namespace OutOfOffice.Models
             Employees = new HashSet<Employee>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long SubdivisionId { get; set; }
         public string SubdivisionName { get; set; } = null!;
 

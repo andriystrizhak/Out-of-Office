@@ -12,52 +12,63 @@ using System.Windows.Forms;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
-    public partial class LeaveRequestForm : Form
+    public partial class ProjectsForm : Form
     {
         private Form owner;
-        private LeaveRequestVM? requestVM;
-        private List<AbsenceReason> absenceReasons;
+        private ProjectVM? projectVM;
+        private List<ProjectType> projectTypes;
+        private List<Employee> employees;
 
-        public LeaveRequestForm(Form owner)
+        public ProjectsForm(Form owner)
         {
             this.owner = owner;
-            this.requestVM = null;
+            this.projectVM = null;
 
             InitializeComponent();
-            SetAbsenceReasonList();
+            SetProjectTypesList();
+            SetEmployeesList();
             InitializeFormWithoutData();
         }
 
-        public LeaveRequestForm(Form owner, LeaveRequestVM requestVM)
+        public ProjectsForm(Form owner, ProjectVM requestVM)
         {
             this.owner = owner;
-            this.requestVM = requestVM;
+            this.projectVM = requestVM;
 
             InitializeComponent();
-            SetAbsenceReasonList();
+            SetProjectTypesList();
+            SetEmployeesList();
             InitializeFormWithData();
         }
 
-        void SetAbsenceReasonList()
+        void SetProjectTypesList()
         {
-            absenceReasons = CrudService.Get_AbsenceReasons();
-            AbsenceReasonComboBox.DataSource = absenceReasons
-                .Select(c => c.AbsenceReasonName)
+            projectTypes = CrudService.Get_ProjectTypes();
+            ProjectTypeComboBox.DataSource = projectTypes
+                .Select(pt => pt.ProjectTypeName)
+                .ToList();
+        }
+
+        void SetEmployeesList()
+        {
+            employees = CrudService.Get_Employees();
+            PMComboBox.DataSource = employees
+                .Select(e => $"{e.EmployeeId}. {e.FullName}")
                 .ToList();
         }
 
         void InitializeFormWithData()
         {
-            IdLabel.Text = requestVM.Id.ToString();
+            IdLabel.Text = projectVM.Id.ToString();
 
-            IdTextBox.Text = requestVM.Id.ToString();
-            EmployeeIdTextBox.Text = requestVM.EmployeeId.ToString();
-            EmployeeNameTextBox.Text = requestVM.EmployeeName;
-            StatusTextBox.Text = requestVM.Status.ToString();
-            AbsenceReasonComboBox.SelectedIndex = (int)requestVM.AbsenceReasonId - 1;
-            StartDateTimePicker.Value = requestVM.StartDate;
-            EndDateTimePicker.Value = requestVM.EndDate;
-            CommentTextBox.Text = requestVM.Comment;
+            IdTextBox.Text = projectVM.Id.ToString();
+            PMComboBox.SelectedIndex = (int)projectVM.ProjectManagerId - 1;
+            StatusTextBox.Text = projectVM.Status.ToString();
+            ProjectTypeComboBox.SelectedIndex = (int)projectVM.ProjectTypeId - 1;
+            StartDateTimePicker.Value = projectVM.StartDate;
+            // TODO - вирішити це
+            //EndDateTimePicker.Value = projectVM.EndDate; 
+            CommentTextBox.Text = projectVM.Comment;
         }
 
         void InitializeFormWithoutData()
@@ -70,24 +81,24 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            AddOrUpdateWithDataFromForm(LeaveStatusEnum.Submitted);
+            AddOrUpdateWithDataFromForm(StatusEnum.Active);
             Close();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            AddOrUpdateWithDataFromForm(LeaveStatusEnum.Cancelled);
+            AddOrUpdateWithDataFromForm(StatusEnum.Inactive);
             Close();
         }
 
-        void AddOrUpdateWithDataFromForm(LeaveStatusEnum stat)
+        void AddOrUpdateWithDataFromForm(StatusEnum stat)
         {
             var leaveReq = new LeaveRequest
             {
-                EmployeeId = long.Parse(EmployeeIdTextBox.Text),
-                AbsenceReasonId = AbsenceReasonComboBox.SelectedIndex + 1,
+                EmployeeId = PMComboBox.SelectedIndex + 1,
+                AbsenceReasonId = ProjectTypeComboBox.SelectedIndex + 1,
                 StartDate = StartDateTimePicker.Value,
-                EndDate = EndDateTimePicker.Value, 
+                EndDate = EndDateTimePicker.Value,
                 Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) ? null : CommentTextBox.Text,
                 Status = (long)stat
             };

@@ -33,24 +33,21 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             MinimizeButton = new Guna.UI2.WinForms.Guna2Button();
             CloseButton = new Guna.UI2.WinForms.Guna2Button();
-            ApplyRoleButton = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             TabControl = new Guna.UI2.WinForms.Guna2TabControl();
             tabPage1 = new TabPage();
@@ -119,23 +116,6 @@
             CloseButton.Text = "x";
             CloseButton.Click += CloseButton_Click;
             // 
-            // ApplyRoleButton
-            // 
-            ApplyRoleButton.CustomizableEdges = customizableEdges8;
-            ApplyRoleButton.DisabledState.BorderColor = Color.DarkGray;
-            ApplyRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            ApplyRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ApplyRoleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            ApplyRoleButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            ApplyRoleButton.ForeColor = Color.White;
-            ApplyRoleButton.Location = new Point(66, 533);
-            ApplyRoleButton.Name = "ApplyRoleButton";
-            ApplyRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            ApplyRoleButton.Size = new Size(180, 45);
-            ApplyRoleButton.TabIndex = 9;
-            ApplyRoleButton.Text = "Get";
-            ApplyRoleButton.Click += ApplyRoleButton_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -184,7 +164,6 @@
             tabPage1.Controls.Add(PLRefreshCircleButton);
             tabPage1.Controls.Add(ProjectsDataGridView);
             tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(ApplyRoleButton);
             tabPage1.Location = new Point(4, 44);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -276,7 +255,7 @@
             ProjectsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            ProjectsDataGridView.CellContentDoubleClick += ProjectsDataGridView_CellContentDoubleClick;
+            ProjectsDataGridView.CellContentDoubleClick += ProjectsDataGridView_CelltDoubleClick;
             ProjectsDataGridView.ColumnHeaderMouseClick += DataGridView_ColumnHeaderMouseClick;
             // 
             // tabPage2
@@ -307,7 +286,7 @@
             LRLRefreshCircleButton.Location = new Point(997, 23);
             LRLRefreshCircleButton.Name = "LRLRefreshCircleButton";
             LRLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             LRLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             LRLRefreshCircleButton.Size = new Size(45, 45);
             LRLRefreshCircleButton.TabIndex = 15;
@@ -318,6 +297,7 @@
             // 
             dataGridViewCellStyle4.BackColor = Color.White;
             LeaveRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            LeaveRequestsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             LeaveRequestsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             LeaveRequestsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             LeaveRequestsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -370,7 +350,7 @@
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            LeaveRequestsDataGridView.CellContentDoubleClick += LeaveRequestsDataGridView_CellContentDoubleClick;
+            LeaveRequestsDataGridView.CellMouseDoubleClick += LeaveRequestsDataGridView_CellContentDoubleClick;
             LeaveRequestsDataGridView.ColumnHeaderMouseClick += DataGridView_ColumnHeaderMouseClick;
             // 
             // label2
@@ -387,7 +367,7 @@
             // 
             AddNewLRButton.BorderRadius = 10;
             AddNewLRButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            AddNewLRButton.CustomizableEdges = customizableEdges11;
+            AddNewLRButton.CustomizableEdges = customizableEdges9;
             AddNewLRButton.DisabledState.BorderColor = Color.DarkGray;
             AddNewLRButton.DisabledState.CustomBorderColor = Color.DarkGray;
             AddNewLRButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -398,7 +378,7 @@
             AddNewLRButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
             AddNewLRButton.Location = new Point(42, 522);
             AddNewLRButton.Name = "AddNewLRButton";
-            AddNewLRButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            AddNewLRButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             AddNewLRButton.Size = new Size(147, 46);
             AddNewLRButton.TabIndex = 12;
             AddNewLRButton.Text = "New Request";
@@ -449,7 +429,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button MinimizeButton;
         private Guna.UI2.WinForms.Guna2Button CloseButton;
-        private Guna.UI2.WinForms.Guna2Button ApplyRoleButton;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TabControl TabControl;
         private TabPage tabPage1;

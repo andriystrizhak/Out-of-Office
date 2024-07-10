@@ -1,3 +1,4 @@
+using Out_of_Office;
 using OutOfOffice.RoleForms;
 
 namespace OutOfOffice
@@ -43,22 +44,13 @@ namespace OutOfOffice
         private void ApplyRoleButton_Click(object sender, EventArgs e)
         {
             if (EmloyeeButton.Checked)
-            {
-                var adminForm = new EmployeeForm();
-                adminForm.Show();
-            }
+                Program.CurrentRole = UserRole.Employee;
             else if (HRButton.Checked)
-            {
-                var employeeForm = new HRManagerForm();
-                employeeForm.Show();
-            }
+                Program.CurrentRole = UserRole.HR;
             else if (PMButton.Checked)
-            {
-                var managerForm = new ProjectManagerForm();
-                managerForm.Show();
-            }
+                Program.CurrentRole = UserRole.PM;
 
-            //Close();
+            Close();
         }
     }
 }

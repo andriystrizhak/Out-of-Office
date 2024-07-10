@@ -1,6 +1,8 @@
 ﻿using Out_of_Office.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OutOfOffice.Models
 {
@@ -11,6 +13,8 @@ namespace OutOfOffice.Models
             EmployeeProjects = new HashSet<EmployeeProject>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ProjectId { get; set; }
         public long ProjectTypeId { get; set; }
         public DateTime StartDate { get; set; }

@@ -51,14 +51,14 @@ namespace OutOfOffice.Models
             modelBuilder.Entity<AbsenceReason>(entity =>
             {
                 entity.Property(e => e.AbsenceReasonId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("AbsenceReasonID");
             });
 
             modelBuilder.Entity<ApprovalRequest>(entity =>
             {
                 entity.Property(e => e.ApprovalRequestId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ApprovalRequestID");
 
                 entity.Property(e => e.ApproverId).HasColumnName("ApproverID");
@@ -86,7 +86,7 @@ namespace OutOfOffice.Models
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.Property(e => e.EmployeeId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("EmployeeID");
 
                 entity.Property(e => e.PeoplePartnerId).HasColumnName("PeoplePartnerID");
@@ -144,7 +144,7 @@ namespace OutOfOffice.Models
             modelBuilder.Entity<LeaveRequest>(entity =>
             {
                 entity.Property(e => e.LeaveRequestId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("LeaveRequestID");
 
                 entity.Property(e => e.AbsenceReasonId).HasColumnName("AbsenceReasonID");
@@ -174,28 +174,28 @@ namespace OutOfOffice.Models
             modelBuilder.Entity<LeaveStatus>(entity =>
             {
                 entity.Property(e => e.LeaveStatusId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("LeaveStatusID");
             });
 
             modelBuilder.Entity<Photo>(entity =>
             {
                 entity.Property(e => e.PhotoId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("PhotoID");
             });
 
             modelBuilder.Entity<Position>(entity =>
             {
                 entity.Property(e => e.PositionId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("PositionID");
             });
 
             modelBuilder.Entity<Project>(entity =>
             {
                 entity.Property(e => e.ProjectId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ProjectID");
 
                 entity.Property(e => e.EndDate).HasColumnType("datetime");
@@ -231,21 +231,21 @@ namespace OutOfOffice.Models
             modelBuilder.Entity<ProjectType>(entity =>
             {
                 entity.Property(e => e.ProjectTypeId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("ProjectTypeID");
             });
 
             modelBuilder.Entity<Status>(entity =>
             {
                 entity.Property(e => e.StatusId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("StatusID");
             });
 
             modelBuilder.Entity<Subdivision>(entity =>
             {
                 entity.Property(e => e.SubdivisionId)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("SubdivisionID");
             });
 
