@@ -15,14 +15,13 @@ namespace Out_of_Office.RoleForms.DialogueForms
     public partial class ProjectsForm : Form
     {
         private Form owner;
-        private ProjectVM? projectVM;
+        private ProjectVM? projectVM = null;
         private List<ProjectType> projectTypes;
         private List<Employee> employees;
 
         public ProjectsForm(Form owner)
         {
             this.owner = owner;
-            this.projectVM = null;
 
             InitializeComponent();
             SetProjectTypesList();
@@ -30,16 +29,24 @@ namespace Out_of_Office.RoleForms.DialogueForms
             InitializeFormWithoutData();
         }
 
-        public ProjectsForm(Form owner, ProjectVM requestVM)
+        public ProjectsForm(Form owner, ProjectVM projectVM)
         {
             this.owner = owner;
-            this.projectVM = requestVM;
+
+            if (projectVM is null)
+            {
+                MessageBox.Show("Цей запис чомусь дорівнює нулю");
+                Close();
+            }
+            this.projectVM = projectVM;
 
             InitializeComponent();
             SetProjectTypesList();
             SetEmployeesList();
             InitializeFormWithData();
         }
+
+        #region [Set Lists]
 
         void SetProjectTypesList()
         {
@@ -57,6 +64,10 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 .ToList();
         }
 
+        #endregion
+
+        #region [Initialize Form]
+
         void InitializeFormWithData()
         {
             IdLabel.Text = projectVM.Id.ToString();
@@ -66,8 +77,14 @@ namespace Out_of_Office.RoleForms.DialogueForms
             StatusTextBox.Text = projectVM.Status.ToString();
             ProjectTypeComboBox.SelectedIndex = (int)projectVM.ProjectTypeId - 1;
             StartDateTimePicker.Value = projectVM.StartDate;
-            // TODO - вирішити це
-            //EndDateTimePicker.Value = projectVM.EndDate; 
+
+            if (projectVM.EndDate is null)
+                EndDateTimePicker.Checked = false;
+            else
+            {
+                EndDateTimePicker.Checked = true;
+                EndDateTimePicker.Value = (DateTime)projectVM.EndDate;
+            }
             CommentTextBox.Text = projectVM.Comment;
         }
 
@@ -77,7 +94,49 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             IdTextBox.Text = "-";
             StatusTextBox.Text = "New";
+
+            CreateNewOrUpdateButton.Text = "Create new";
+            ActivateButton.Enabled = false;
+            DeactivateButton.Enabled = false;
         }
+
+        #endregion
+
+        private void CreateNewOrUpdateButton_Click(object sender, EventArgs e)
+        {
+            if (projectVM is null)
+            {
+                long id = AddNewPFromForm(StatusEnum.Active);
+
+                IdLabel.Text = id.ToString();
+                IdTextBox.Text = id.ToString();
+            }
+            else
+            {
+                UpdateLRFromForm((StatusEnum)(int)(projectVM.StatusId));
+            }
+
+            CreateNewOrUpdateButton.Enabled = false;
+            CreateNewOrUpdateButton.Text = "Update";
+
+            ActivateButton.Enabled = true;
+            DeactivateButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// Adds new Project to BD and updates 'projectVM' field
+        /// </summary>
+        /// <param name="stat">State of created Project</param>
+        /// <returns>Id of new Project in DB</returns>
+        long AddNewPFromForm(StatusEnum stat)
+        {
+            var proj = ParseDataFromForm(stat);
+            projectVM = ProjectVM.FromEntity(proj);
+
+            long id = CrudService.Add_LeaveRequest(proj);
+            return id;
+        }
+
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
@@ -91,8 +150,34 @@ namespace Out_of_Office.RoleForms.DialogueForms
             Close();
         }
 
+        long UpdateLRFromForm(StatusEnum stat)
+        {
+            long id = long.Parse(IdTextBox.Text);
+            var leaveReq = ParseDataFromForm(stat);
+            leaveReq.LeaveRequestId = id;
+
+            CrudService.Update_LeaveRequest(leaveReq);
+            return id;
+        }
+
+        Project ParseDataFromForm(StatusEnum stat)
+        {
+            var leaveReq = new Project //TODO - improve
+            {
+                EmployeeId = EmployeeComboBox.SelectedIndex + 1,
+                AbsenceReasonId = AbsenceReasonComboBox.SelectedIndex + 1,
+                StartDate = StartDateTimePicker.Value,
+                EndDate = EndDateTimePicker.Value,
+                Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) ? null : CommentTextBox.Text,
+                Status = (long)stat
+            };
+
+            return leaveReq;
+        }
+
         void AddOrUpdateWithDataFromForm(StatusEnum stat)
         {
+            //TODO - CHANGE
             var leaveReq = new LeaveRequest
             {
                 EmployeeId = PMComboBox.SelectedIndex + 1,

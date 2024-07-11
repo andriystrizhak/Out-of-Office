@@ -17,6 +17,7 @@ namespace Out_of_Office.DataSources
         public long ProjectManagerId { get; set; }
         public string ProjectManagerName { get; set; } = null!;
         public string? Comment { get; set; }
+        public long StatusId { get; set; }
         public string Status { get; set; } = null!;
 
         public static ProjectVM FromEntity(Project entity)
@@ -31,6 +32,7 @@ namespace Out_of_Office.DataSources
                 ProjectManagerId = entity.ProjectManagerId,
                 ProjectManagerName = entity.ProjectManager.FullName,
                 Comment = entity.Comment,
+                StatusId = entity.StatusId,
                 Status = entity.Status.StatusName
             };
         }
