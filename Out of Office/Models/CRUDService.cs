@@ -49,6 +49,22 @@ namespace OutOfOffice.Models
             return employee;
         }
 
+        public static List<Employee> Get_HRManagers()
+        {
+            using var db = dBContextFactory.Create();
+
+            var employee = db.Employees
+                .Include(e => e.Subdivision)
+                .Include(e => e.Position)
+                .Include(e => e.Status)
+                .Include(e => e.PeoplePartner)
+                .Include(e => e.Photo)
+                .Where(e => e.Position.PositionName == "HR Manager")
+                .ToList();
+
+            return employee;
+        }
+
         public static long Add_Employee(Employee emp)
         {
             using var db = dBContextFactory.Create();

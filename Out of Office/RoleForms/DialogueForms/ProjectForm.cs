@@ -164,6 +164,5 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 e.Handled = true;
             }
         }
-
     }
 }
