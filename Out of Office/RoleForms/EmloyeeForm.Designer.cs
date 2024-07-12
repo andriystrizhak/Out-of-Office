@@ -59,6 +59,7 @@
             label2 = new Label();
             AddNewLRButton = new Guna.UI2.WinForms.Guna2Button();
             TopPanel = new Guna.UI2.WinForms.Guna2Panel();
+            label3 = new Label();
             TabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProjectsDataGridView).BeginInit();
@@ -75,6 +76,7 @@
             // 
             // MinimizeButton
             // 
+            MinimizeButton.Animated = true;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
             MinimizeButton.CustomizableEdges = customizableEdges1;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
@@ -85,17 +87,18 @@
             MinimizeButton.FillColor = Color.FromArgb(14, 75, 126);
             MinimizeButton.Font = new Font("Montserrat SemiBold", 7F, FontStyle.Bold, GraphicsUnit.Point);
             MinimizeButton.ForeColor = Color.White;
-            MinimizeButton.HoverState.FillColor = Color.RoyalBlue;
+            MinimizeButton.HoverState.FillColor = Color.FromArgb(12, 65, 109);
             MinimizeButton.Location = new Point(989, 0);
             MinimizeButton.Name = "MinimizeButton";
             MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            MinimizeButton.Size = new Size(52, 30);
+            MinimizeButton.Size = new Size(52, 33);
             MinimizeButton.TabIndex = 8;
             MinimizeButton.Text = "—";
             MinimizeButton.Click += MinimizeButton_Click;
             // 
             // CloseButton
             // 
+            CloseButton.Animated = true;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
             CloseButton.CustomizableEdges = customizableEdges3;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
@@ -106,12 +109,12 @@
             CloseButton.FillColor = Color.FromArgb(14, 75, 126);
             CloseButton.Font = new Font("Montserrat SemiBold", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
             CloseButton.ForeColor = Color.White;
-            CloseButton.HoverState.FillColor = Color.OrangeRed;
+            CloseButton.HoverState.FillColor = Color.FromArgb(164, 37, 42);
             CloseButton.Location = new Point(1041, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
             CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            CloseButton.Size = new Size(52, 30);
+            CloseButton.Size = new Size(52, 33);
             CloseButton.TabIndex = 7;
             CloseButton.Text = "x";
             CloseButton.Click += CloseButton_Click;
@@ -182,14 +185,15 @@
             PLRefreshCircleButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             PLRefreshCircleButton.ForeColor = Color.Black;
             PLRefreshCircleButton.HoverState.FillColor = Color.FromArgb(202, 228, 247);
-            PLRefreshCircleButton.Location = new Point(997, 16);
+            PLRefreshCircleButton.Image = Out_of_Office.Properties.Resources.icons8_обновление_48;
+            PLRefreshCircleButton.ImageSize = new Size(30, 30);
+            PLRefreshCircleButton.Location = new Point(997, 508);
             PLRefreshCircleButton.Name = "PLRefreshCircleButton";
             PLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
             PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges7;
             PLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             PLRefreshCircleButton.Size = new Size(45, 45);
             PLRefreshCircleButton.TabIndex = 12;
-            PLRefreshCircleButton.Text = "R";
             PLRefreshCircleButton.Click += PLRefreshCircleButton_Click;
             // 
             // ProjectsDataGridView
@@ -255,7 +259,7 @@
             ProjectsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            ProjectsDataGridView.CellContentDoubleClick += ProjectsDataGridView_CelltDoubleClick;
+            ProjectsDataGridView.CellMouseDoubleClick += ProjectsDataGridView_CellMouseDoubleClick;
             ProjectsDataGridView.ColumnHeaderMouseClick += DataGridView_ColumnHeaderMouseClick;
             // 
             // tabPage2
@@ -283,14 +287,15 @@
             LRLRefreshCircleButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             LRLRefreshCircleButton.ForeColor = Color.Black;
             LRLRefreshCircleButton.HoverState.FillColor = Color.FromArgb(202, 228, 247);
-            LRLRefreshCircleButton.Location = new Point(997, 23);
+            LRLRefreshCircleButton.Image = Out_of_Office.Properties.Resources.icons8_обновление_48;
+            LRLRefreshCircleButton.ImageSize = new Size(30, 30);
+            LRLRefreshCircleButton.Location = new Point(997, 508);
             LRLRefreshCircleButton.Name = "LRLRefreshCircleButton";
             LRLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
             LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             LRLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             LRLRefreshCircleButton.Size = new Size(45, 45);
             LRLRefreshCircleButton.TabIndex = 15;
-            LRLRefreshCircleButton.Text = "R";
             LRLRefreshCircleButton.Click += LRLRefreshCircleButton_Click;
             // 
             // LeaveRequestsDataGridView
@@ -350,7 +355,7 @@
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            LeaveRequestsDataGridView.CellMouseDoubleClick += LeaveRequestsDataGridView_CellContentDoubleClick;
+            LeaveRequestsDataGridView.CellMouseDoubleClick += LeaveRequestsDataGridView_CellMouseDoubleClick;
             LeaveRequestsDataGridView.ColumnHeaderMouseClick += DataGridView_ColumnHeaderMouseClick;
             // 
             // label2
@@ -387,6 +392,7 @@
             // TopPanel
             // 
             TopPanel.BackColor = Color.FromArgb(14, 75, 126);
+            TopPanel.Controls.Add(label3);
             TopPanel.Controls.Add(MinimizeButton);
             TopPanel.Controls.Add(CloseButton);
             TopPanel.CustomizableEdges = customizableEdges5;
@@ -395,10 +401,21 @@
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
             TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            TopPanel.Size = new Size(1093, 30);
+            TopPanel.Size = new Size(1093, 33);
             TopPanel.TabIndex = 12;
             TopPanel.MouseDown += This_MouseDown;
             TopPanel.MouseMove += This_MouseMove;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Montserrat SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(495, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 16);
+            label3.TabIndex = 9;
+            label3.Text = "Employee Form";
             // 
             // EmployeeForm
             // 
@@ -421,6 +438,7 @@
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LeaveRequestsDataGridView).EndInit();
             TopPanel.ResumeLayout(false);
+            TopPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -440,5 +458,6 @@
         private Guna.UI2.WinForms.Guna2Button AddNewLRButton;
         private Guna.UI2.WinForms.Guna2CircleButton PLRefreshCircleButton;
         private Guna.UI2.WinForms.Guna2CircleButton LRLRefreshCircleButton;
+        private Label label3;
     }
 }

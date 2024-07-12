@@ -95,113 +95,66 @@ namespace Out_of_Office.RoleForms.DialogueForms
             IdTextBox.Text = "-";
             StatusTextBox.Text = "New";
 
-            CreateNewOrUpdateButton.Text = "Create new";
-            ActivateButton.Enabled = false;
-            DeactivateButton.Enabled = false;
+            //In case of adding necessary to fill textBox(-es)
+            //ActivateButton.Enabled = false;
+            //DeactivateButton.Enabled = false;
         }
 
         #endregion
 
-        private void CreateNewOrUpdateButton_Click(object sender, EventArgs e)
+        #region [Activata & Deactivate Project]
+
+        private void ActivateButton_Click(object sender, EventArgs e)
         {
-            if (projectVM is null)
-            {
-                long id = AddNewPFromForm(StatusEnum.Active);
-
-                IdLabel.Text = id.ToString();
-                IdTextBox.Text = id.ToString();
-            }
-            else
-            {
-                UpdateLRFromForm((StatusEnum)(int)(projectVM.StatusId));
-            }
-
-            CreateNewOrUpdateButton.Enabled = false;
-            CreateNewOrUpdateButton.Text = "Update";
-
-            ActivateButton.Enabled = true;
-            DeactivateButton.Enabled = true;
+            _ = AddOrUpdateWithDataFromForm(StatusEnum.Active);
+            Close();
         }
 
-        /// <summary>
-        /// Adds new Project to BD and updates 'projectVM' field
-        /// </summary>
-        /// <param name="stat">State of created Project</param>
-        /// <returns>Id of new Project in DB</returns>
-        long AddNewPFromForm(StatusEnum stat)
+        private void DeactivateButton_Click(object sender, EventArgs e)
+        {
+            _ = AddOrUpdateWithDataFromForm(StatusEnum.Inactive);
+            Close();
+        }
+
+        long AddOrUpdateWithDataFromForm(StatusEnum stat)
         {
             var proj = ParseDataFromForm(stat);
-            projectVM = ProjectVM.FromEntity(proj);
 
-            long id = CrudService.Add_LeaveRequest(proj);
-            return id;
-        }
+            long id = -1;
+            if (projectVM is not null)
+            {
+                proj.ProjectId = projectVM.Id;
+                CrudService.Update_Project(proj);
+            }
+            else
+                id = CrudService.Add_Project(proj);
 
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            AddOrUpdateWithDataFromForm(StatusEnum.Active);
-            Close();
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            AddOrUpdateWithDataFromForm(StatusEnum.Inactive);
-            Close();
-        }
-
-        long UpdateLRFromForm(StatusEnum stat)
-        {
-            long id = long.Parse(IdTextBox.Text);
-            var leaveReq = ParseDataFromForm(stat);
-            leaveReq.LeaveRequestId = id;
-
-            CrudService.Update_LeaveRequest(leaveReq);
             return id;
         }
 
         Project ParseDataFromForm(StatusEnum stat)
         {
-            var leaveReq = new Project //TODO - improve
+            DateTime? endDate = (EndDateTimePicker.Checked)
+                ? EndDateTimePicker.Value
+                : null;
+
+            var proj = new Project
             {
-                EmployeeId = EmployeeComboBox.SelectedIndex + 1,
-                AbsenceReasonId = AbsenceReasonComboBox.SelectedIndex + 1,
+                ProjectTypeId = ProjectTypeComboBox.SelectedIndex + 1,
                 StartDate = StartDateTimePicker.Value,
-                EndDate = EndDateTimePicker.Value,
+                EndDate = endDate,
+                ProjectManagerId = PMComboBox.SelectedIndex + 1,
                 Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) ? null : CommentTextBox.Text,
-                Status = (long)stat
+                StatusId = (long)stat
             };
 
-            return leaveReq;
+            return proj;
         }
 
-        void AddOrUpdateWithDataFromForm(StatusEnum stat)
-        {
-            //TODO - CHANGE
-            var leaveReq = new LeaveRequest
-            {
-                EmployeeId = PMComboBox.SelectedIndex + 1,
-                AbsenceReasonId = ProjectTypeComboBox.SelectedIndex + 1,
-                StartDate = StartDateTimePicker.Value,
-                EndDate = EndDateTimePicker.Value,
-                Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) ? null : CommentTextBox.Text,
-                Status = (long)stat
-            };
-
-            long id = -1;
-            if (long.TryParse(IdTextBox.Text, out id))
-            {
-                leaveReq.LeaveRequestId = id;
-                CrudService.Update_LeaveRequest(leaveReq);
-            }
-            else
-                CrudService.Add_LeaveRequest(leaveReq);
-        }
+        #endregion
 
         private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+            => Close();
 
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -211,5 +164,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 e.Handled = true;
             }
         }
+
     }
 }

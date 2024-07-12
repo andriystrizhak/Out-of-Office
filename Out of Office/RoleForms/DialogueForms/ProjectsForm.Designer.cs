@@ -48,8 +48,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             ProjectTypeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             EndDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -68,7 +66,6 @@
             label1 = new Label();
             StartDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             PMComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            CreateNewOrUpdateButton = new Guna.UI2.WinForms.Guna2Button();
             DeactivateButton = new Guna.UI2.WinForms.Guna2Button();
             ActivateButton = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
@@ -346,35 +343,12 @@
             PMComboBox.Size = new Size(272, 36);
             PMComboBox.TabIndex = 57;
             // 
-            // CreateNewOrUpdateButton
-            // 
-            CreateNewOrUpdateButton.Animated = true;
-            CreateNewOrUpdateButton.BorderRadius = 10;
-            CreateNewOrUpdateButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            CreateNewOrUpdateButton.CustomizableEdges = customizableEdges16;
-            CreateNewOrUpdateButton.DisabledState.BorderColor = Color.DarkGray;
-            CreateNewOrUpdateButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            CreateNewOrUpdateButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
-            CreateNewOrUpdateButton.DisabledState.ForeColor = Color.White;
-            CreateNewOrUpdateButton.FillColor = Color.FromArgb(26, 139, 221);
-            CreateNewOrUpdateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            CreateNewOrUpdateButton.ForeColor = Color.White;
-            CreateNewOrUpdateButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
-            CreateNewOrUpdateButton.Location = new Point(282, 551);
-            CreateNewOrUpdateButton.Name = "CreateNewOrUpdateButton";
-            CreateNewOrUpdateButton.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            CreateNewOrUpdateButton.Size = new Size(147, 46);
-            CreateNewOrUpdateButton.TabIndex = 60;
-            CreateNewOrUpdateButton.Text = "Create new";
-            CreateNewOrUpdateButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            CreateNewOrUpdateButton.Click += CreateNewOrUpdateButton_Click;
-            // 
             // DeactivateButton
             // 
             DeactivateButton.Animated = true;
             DeactivateButton.BorderRadius = 10;
             DeactivateButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            DeactivateButton.CustomizableEdges = customizableEdges18;
+            DeactivateButton.CustomizableEdges = customizableEdges16;
             DeactivateButton.DisabledState.BorderColor = Color.DarkGray;
             DeactivateButton.DisabledState.CustomBorderColor = Color.DarkGray;
             DeactivateButton.DisabledState.FillColor = Color.FromArgb(192, 123, 123);
@@ -387,17 +361,18 @@
             DeactivateButton.Name = "DeactivateButton";
             DeactivateButton.PressedColor = Color.FromArgb(102, 28, 34);
             DeactivateButton.PressedDepth = 25;
-            DeactivateButton.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            DeactivateButton.ShadowDecoration.CustomizableEdges = customizableEdges17;
             DeactivateButton.Size = new Size(147, 46);
             DeactivateButton.TabIndex = 59;
             DeactivateButton.Text = "Deactivate";
+            DeactivateButton.Click += DeactivateButton_Click;
             // 
             // ActivateButton
             // 
             ActivateButton.Animated = true;
             ActivateButton.BorderRadius = 10;
             ActivateButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            ActivateButton.CustomizableEdges = customizableEdges20;
+            ActivateButton.CustomizableEdges = customizableEdges18;
             ActivateButton.DisabledState.BorderColor = Color.DarkGray;
             ActivateButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ActivateButton.DisabledState.FillColor = Color.FromArgb(123, 172, 136);
@@ -410,11 +385,12 @@
             ActivateButton.Name = "ActivateButton";
             ActivateButton.PressedColor = Color.FromArgb(16, 124, 16);
             ActivateButton.PressedDepth = 40;
-            ActivateButton.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            ActivateButton.ShadowDecoration.CustomizableEdges = customizableEdges19;
             ActivateButton.Size = new Size(147, 46);
             ActivateButton.TabIndex = 58;
             ActivateButton.Text = "Activate";
             ActivateButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            ActivateButton.Click += ActivateButton_Click;
             // 
             // ProjectsForm
             // 
@@ -439,7 +415,6 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(PMComboBox);
-            Controls.Add(CreateNewOrUpdateButton);
             Controls.Add(DeactivateButton);
             Controls.Add(ActivateButton);
             FormBorderStyle = FormBorderStyle.None;
@@ -470,7 +445,6 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker StartDateTimePicker;
         private Guna.UI2.WinForms.Guna2ComboBox PMComboBox;
-        private Guna.UI2.WinForms.Guna2Button CreateNewOrUpdateButton;
         private Guna.UI2.WinForms.Guna2Button DeactivateButton;
         private Guna.UI2.WinForms.Guna2Button ActivateButton;
     }

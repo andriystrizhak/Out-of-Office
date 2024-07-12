@@ -83,7 +83,7 @@ namespace OutOfOffice.RoleForms
             ProjectsDataGridView.DataSource = projectsBindingSource;
         }
 
-        private void ProjectsDataGridView_CelltDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void ProjectsDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -93,7 +93,7 @@ namespace OutOfOffice.RoleForms
                 {
                     var projVM = ProjectVM.FromEntity(proj);
                     new ProjectsForm(this, projVM).ShowDialog();
-                    LRLRefreshCircleButton_Click(sender, e);
+                    PLRefreshCircleButton_Click(sender, e);
                 }
                 else
                     MessageBox.Show("KAKA");
@@ -119,7 +119,7 @@ namespace OutOfOffice.RoleForms
             LRLRefreshCircleButton_Click(sender, e);
         }
 
-        private void LeaveRequestsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void LeaveRequestsDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {

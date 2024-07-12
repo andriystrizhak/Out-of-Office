@@ -48,6 +48,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
             InitializeFormWithData();
         }
 
+        private void CloseButton_Click(object sender, EventArgs e)
+            => Close();
+
         #region [Set Lists]
 
         void SetAbsenceReasonList()
@@ -131,9 +134,11 @@ namespace Out_of_Office.RoleForms.DialogueForms
         long AddNewLRFromForm(LeaveStatusEnum stat)
         {
             var leaveReq = ParseDataFromForm(stat);
-            requestVM = LeaveRequestVM.FromEntity(leaveReq);
-
             long id = CrudService.Add_LeaveRequest(leaveReq);
+
+            var fullLeaveReq = CrudService.Get_LeaveRequest(id);
+            requestVM = LeaveRequestVM.FromEntity(fullLeaveReq);
+
             return id;
         }
 
@@ -173,23 +178,29 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 AbsenceReasonId = AbsenceReasonComboBox.SelectedIndex + 1,
                 StartDate = StartDateTimePicker.Value,
                 EndDate = EndDateTimePicker.Value,
-                Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) ? null : CommentTextBox.Text,
-                Status = (long)stat
+                Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) 
+                    ? null : CommentTextBox.Text,
+                Status = (long)stat,
+
+                //Employee = new Employee 
+                //{ 
+                //    FullName = 
+                //        employees[EmployeeComboBox.SelectedIndex].FullName 
+                //},
+                //AbsenceReason = new AbsenceReason
+                //{ 
+                //    AbsenceReasonName = 
+                //        absenceReasons[AbsenceReasonComboBox.SelectedIndex]
+                //            .AbsenceReasonName 
+                //}
             };
 
             return leaveReq;
         }
 
-        //TODO - Add 'DataChanged' event handler here and subscribe on controls
-
         private void Control_DataChanged(object sender, EventArgs e)
         {
             CreateNewOrUpdateButton.Enabled = true;
-        }
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
