@@ -88,7 +88,7 @@
             ProjectTypeComboBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ProjectTypeComboBox.ForeColor = Color.Black;
             ProjectTypeComboBox.ItemHeight = 30;
-            ProjectTypeComboBox.Location = new Point(198, 216);
+            ProjectTypeComboBox.Location = new Point(199, 214);
             ProjectTypeComboBox.Name = "ProjectTypeComboBox";
             ProjectTypeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges13;
             ProjectTypeComboBox.Size = new Size(272, 36);
@@ -105,7 +105,7 @@
             EndDateTimePicker.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             EndDateTimePicker.ForeColor = Color.White;
             EndDateTimePicker.Format = DateTimePickerFormat.Long;
-            EndDateTimePicker.Location = new Point(480, 330);
+            EndDateTimePicker.Location = new Point(481, 328);
             EndDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             EndDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             EndDateTimePicker.Name = "EndDateTimePicker";
@@ -130,7 +130,7 @@
             StatusTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             StatusTextBox.ForeColor = Color.Black;
             StatusTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            StatusTextBox.Location = new Point(449, 159);
+            StatusTextBox.Location = new Point(450, 157);
             StatusTextBox.Margin = new Padding(4, 4, 4, 4);
             StatusTextBox.Name = "StatusTextBox";
             StatusTextBox.PasswordChar = '\0';
@@ -145,7 +145,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(314, 167);
+            label10.Location = new Point(315, 165);
             label10.Name = "label10";
             label10.Size = new Size(125, 22);
             label10.TabIndex = 50;
@@ -165,7 +165,7 @@
             CommentTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             CommentTextBox.ForeColor = Color.Black;
             CommentTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            CommentTextBox.Location = new Point(177, 390);
+            CommentTextBox.Location = new Point(178, 388);
             CommentTextBox.Margin = new Padding(4, 4, 4, 4);
             CommentTextBox.Multiline = true;
             CommentTextBox.Name = "CommentTextBox";
@@ -180,7 +180,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(75, 396);
+            label9.Location = new Point(76, 394);
             label9.Name = "label9";
             label9.Size = new Size(94, 22);
             label9.TabIndex = 48;
@@ -190,7 +190,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(388, 338);
+            label8.Location = new Point(389, 336);
             label8.Name = "label8";
             label8.Size = new Size(85, 22);
             label8.TabIndex = 47;
@@ -200,7 +200,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(75, 338);
+            label7.Location = new Point(76, 336);
             label7.Name = "label7";
             label7.Size = new Size(93, 22);
             label7.TabIndex = 46;
@@ -210,7 +210,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(75, 224);
+            label6.Location = new Point(76, 222);
             label6.Name = "label6";
             label6.Size = new Size(111, 22);
             label6.TabIndex = 45;
@@ -220,7 +220,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(76, 279);
+            label5.Location = new Point(77, 277);
             label5.Name = "label5";
             label5.Size = new Size(148, 22);
             label5.TabIndex = 43;
@@ -241,7 +241,7 @@
             IdTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             IdTextBox.ForeColor = Color.Black;
             IdTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            IdTextBox.Location = new Point(179, 159);
+            IdTextBox.Location = new Point(180, 157);
             IdTextBox.Margin = new Padding(4, 4, 4, 4);
             IdTextBox.Name = "IdTextBox";
             IdTextBox.PasswordChar = '\0';
@@ -256,7 +256,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(75, 167);
+            label3.Location = new Point(76, 165);
             label3.Name = "label3";
             label3.Size = new Size(92, 22);
             label3.TabIndex = 39;
@@ -267,7 +267,7 @@
             IdLabel.AutoSize = true;
             IdLabel.Font = new Font("Montserrat SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point);
             IdLabel.ForeColor = Color.FromArgb(13, 109, 188);
-            IdLabel.Location = new Point(221, 70);
+            IdLabel.Location = new Point(222, 68);
             IdLabel.Name = "IdLabel";
             IdLabel.Size = new Size(55, 37);
             IdLabel.TabIndex = 38;
@@ -286,7 +286,7 @@
             CloseButton.HoverState.FillColor = Color.FromArgb(202, 228, 247);
             CloseButton.Image = Properties.Resources.closeoutline_2;
             CloseButton.ImageSize = new Size(30, 30);
-            CloseButton.Location = new Point(655, 15);
+            CloseButton.Location = new Point(656, 13);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.FromArgb(26, 139, 221);
             CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges9;
@@ -299,7 +299,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Montserrat SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(75, 70);
+            label1.Location = new Point(76, 68);
             label1.Name = "label1";
             label1.Size = new Size(157, 37);
             label1.TabIndex = 36;
@@ -316,7 +316,7 @@
             StartDateTimePicker.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             StartDateTimePicker.ForeColor = Color.White;
             StartDateTimePicker.Format = DateTimePickerFormat.Long;
-            StartDateTimePicker.Location = new Point(177, 330);
+            StartDateTimePicker.Location = new Point(178, 328);
             StartDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             StartDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             StartDateTimePicker.Name = "StartDateTimePicker";
@@ -337,7 +337,7 @@
             PMComboBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             PMComboBox.ForeColor = Color.Black;
             PMComboBox.ItemHeight = 30;
-            PMComboBox.Location = new Point(236, 271);
+            PMComboBox.Location = new Point(237, 269);
             PMComboBox.Name = "PMComboBox";
             PMComboBox.ShadowDecoration.CustomizableEdges = customizableEdges15;
             PMComboBox.Size = new Size(272, 36);
@@ -357,7 +357,7 @@
             DeactivateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DeactivateButton.ForeColor = Color.White;
             DeactivateButton.HoverState.FillColor = Color.FromArgb(179, 49, 60);
-            DeactivateButton.Location = new Point(487, 551);
+            DeactivateButton.Location = new Point(488, 549);
             DeactivateButton.Name = "DeactivateButton";
             DeactivateButton.PressedColor = Color.FromArgb(102, 28, 34);
             DeactivateButton.PressedDepth = 25;
@@ -381,7 +381,7 @@
             ActivateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ActivateButton.ForeColor = Color.White;
             ActivateButton.HoverState.FillColor = Color.FromArgb(19, 149, 38);
-            ActivateButton.Location = new Point(75, 551);
+            ActivateButton.Location = new Point(76, 549);
             ActivateButton.Name = "ActivateButton";
             ActivateButton.PressedColor = Color.FromArgb(16, 124, 16);
             ActivateButton.PressedDepth = 40;
@@ -392,7 +392,7 @@
             ActivateButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             ActivateButton.Click += ActivateButton_Click;
             // 
-            // ProjectsForm
+            // ProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -418,7 +418,7 @@
             Controls.Add(DeactivateButton);
             Controls.Add(ActivateButton);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ProjectsForm";
+            Name = "ProjectForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ProjectsForm";
             ResumeLayout(false);
