@@ -73,7 +73,7 @@
             EmloyeeButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             EmloyeeButton.FillColor = Color.White;
             EmloyeeButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            EmloyeeButton.ForeColor = Color.DodgerBlue;
+            EmloyeeButton.ForeColor = Color.FromArgb(26, 139, 221);
             EmloyeeButton.HoverState.FillColor = Color.FromArgb(177, 214, 244);
             EmloyeeButton.Location = new Point(58, 189);
             EmloyeeButton.Name = "EmloyeeButton";
@@ -100,7 +100,7 @@
             HRButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             HRButton.FillColor = Color.White;
             HRButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            HRButton.ForeColor = Color.DodgerBlue;
+            HRButton.ForeColor = Color.FromArgb(26, 139, 221);
             HRButton.HoverState.FillColor = Color.FromArgb(177, 214, 244);
             HRButton.Location = new Point(259, 189);
             HRButton.Name = "HRButton";
@@ -127,7 +127,7 @@
             PMButton.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
             PMButton.FillColor = Color.White;
             PMButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            PMButton.ForeColor = Color.DodgerBlue;
+            PMButton.ForeColor = Color.FromArgb(26, 139, 221);
             PMButton.HoverState.FillColor = Color.FromArgb(177, 214, 244);
             PMButton.Location = new Point(460, 189);
             PMButton.Name = "PMButton";
