@@ -21,7 +21,7 @@ namespace OutOfOffice
             switch(CurrentRole)
             {
                 case UserRole.Employee:
-                    Application.Run(new EmployeeForm());
+                    Application.Run(new EmployeeRoleForm());
                     break;
                 case UserRole.HR:
                     Application.Run(new HRManagerForm());

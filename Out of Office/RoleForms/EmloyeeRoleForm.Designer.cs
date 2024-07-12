@@ -1,6 +1,6 @@
 ﻿namespace OutOfOffice.RoleForms
 {
-    partial class EmployeeForm
+    partial class EmployeeRoleForm
     {
         /// <summary>
         /// Required designer variable.

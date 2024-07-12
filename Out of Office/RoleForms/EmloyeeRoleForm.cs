@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace OutOfOffice.RoleForms
 {
-    public partial class EmployeeForm : Form
+    public partial class EmployeeRoleForm : Form
     {
         /// <summary>
         /// Розташування <see cref="TopPanel"/> (для переміщення вікна мишкою)
@@ -25,7 +25,7 @@ namespace OutOfOffice.RoleForms
         private SortedBindingList<ProjectVM> projectsBindingSource;
         private SortedBindingList<LeaveRequestVM> leaveRequestsBindingSource;
 
-        public EmployeeForm()
+        public EmployeeRoleForm()
         {
             InitializeComponent();
 
@@ -63,13 +63,7 @@ namespace OutOfOffice.RoleForms
             if (TabControl.SelectedIndex == 0)
                 PLRefreshCircleButton_Click(sender, e);
             else if (TabControl.SelectedIndex == 1)
-            {
-                var leaveRequests = LeaveRequestVM.FromEntities(CrudService.Get_LeaveRequests());
-                leaveRequestsBindingSource = (leaveRequests != null)
-                    ? new SortedBindingList<LeaveRequestVM>(leaveRequests)
-                    : new SortedBindingList<LeaveRequestVM>(new List<LeaveRequestVM>());
-                LeaveRequestsDataGridView.DataSource = leaveRequestsBindingSource;
-            }
+                LRLRefreshCircleButton_Click(sender, e);
         }
 
         #region [Projects List tab]
