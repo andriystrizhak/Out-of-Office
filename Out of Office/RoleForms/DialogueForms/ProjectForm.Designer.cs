@@ -1,6 +1,6 @@
 ﻿namespace Out_of_Office.RoleForms.DialogueForms
 {
-    partial class ProjectsForm
+    partial class ProjectForm
     {
         /// <summary>
         /// Required designer variable.

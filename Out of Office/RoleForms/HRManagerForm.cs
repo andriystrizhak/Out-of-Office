@@ -20,6 +20,7 @@ namespace OutOfOffice.RoleForms
         /// </summary>
         Point lastPoint;
 
+        private SortedBindingList<EmployeeVM> employeesBindingSource;
         private SortedBindingList<ProjectVM> projectsBindingSource;
         private SortedBindingList<LeaveRequestVM> leaveRequestsBindingSource;
 
@@ -68,14 +69,30 @@ namespace OutOfOffice.RoleForms
 
         private void ELRefreshCircleButton_Click(object sender, EventArgs e)
         {
-            //TODO - CHange
-            var projects = ProjectVM.FromEntities(CrudService.Get_Projects());
-            projectsBindingSource = (projects != null)
-                ? new SortedBindingList<ProjectVM>(projects)
-                : new SortedBindingList<ProjectVM>(new List<ProjectVM>());
-            ProjectsDataGridView.DataSource = projectsBindingSource;
+            var employees = EmployeeVM.FromEntities(CrudService.Get_Employees());
+            employeesBindingSource = (employees != null)
+                ? new SortedBindingList<EmployeeVM>(employees)
+                : new SortedBindingList<EmployeeVM>(new List<EmployeeVM>());
+            EmployeesDataGridView.DataSource = employeesBindingSource;
         }
 
+        private void EmployeesDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                long id = (long)EmployeesDataGridView[0, e.RowIndex].Value;
+                var empl = CrudService.Get_Employee(id);
+                if (empl is not null)
+                {
+                    var emplVM = EmployeeVM.FromEntity(empl);
+                    //TODO - Change
+                    //new EmployeeForm(this, emplVM).ShowDialog();
+                    PLRefreshCircleButton_Click(sender, e);
+                }
+                else
+                    MessageBox.Show("KAKA");
+            }
+        }
 
 
         #endregion
@@ -100,7 +117,7 @@ namespace OutOfOffice.RoleForms
                 if (proj is not null)
                 {
                     var projVM = ProjectVM.FromEntity(proj);
-                    new ProjectsForm(this, projVM).ShowDialog();
+                    new ProjectForm(this, projVM).ShowDialog();
                     PLRefreshCircleButton_Click(sender, e);
                 }
                 else
@@ -145,6 +162,12 @@ namespace OutOfOffice.RoleForms
         }
 
         #endregion
+
+        #region [Approval Requests List tab]
+
+        //TODO - add code
+
+        #region
 
         private void DataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

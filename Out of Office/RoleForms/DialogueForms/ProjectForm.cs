@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
-    public partial class ProjectsForm : Form
+    public partial class ProjectForm : Form
     {
         private Form owner;
         private ProjectVM? projectVM = null;
         private List<ProjectType> projectTypes;
         private List<Employee> employees;
 
-        public ProjectsForm(Form owner)
+        public ProjectForm(Form owner)
         {
             this.owner = owner;
 
@@ -29,7 +29,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             InitializeFormWithoutData();
         }
 
-        public ProjectsForm(Form owner, ProjectVM projectVM)
+        public ProjectForm(Form owner, ProjectVM projectVM)
         {
             this.owner = owner;
 

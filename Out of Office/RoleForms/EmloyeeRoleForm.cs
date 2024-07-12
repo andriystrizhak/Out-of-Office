@@ -86,7 +86,7 @@ namespace OutOfOffice.RoleForms
                 if (proj is not null)
                 {
                     var projVM = ProjectVM.FromEntity(proj);
-                    new ProjectsForm(this, projVM).ShowDialog();
+                    new ProjectForm(this, projVM).ShowDialog();
                     PLRefreshCircleButton_Click(sender, e);
                 }
                 else
