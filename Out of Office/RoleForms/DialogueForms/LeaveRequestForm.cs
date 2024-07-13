@@ -181,18 +181,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) 
                     ? null : CommentTextBox.Text,
                 Status = (long)stat,
-
-                //Employee = new Employee 
-                //{ 
-                //    FullName = 
-                //        employees[EmployeeComboBox.SelectedIndex].FullName 
-                //},
-                //AbsenceReason = new AbsenceReason
-                //{ 
-                //    AbsenceReasonName = 
-                //        absenceReasons[AbsenceReasonComboBox.SelectedIndex]
-                //            .AbsenceReasonName 
-                //}
             };
 
             return leaveReq;

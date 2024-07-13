@@ -332,6 +332,7 @@
             AddNewEButton.Size = new Size(162, 46);
             AddNewEButton.TabIndex = 16;
             AddNewEButton.Text = "New Employee";
+            AddNewEButton.Click += AddNewEButton_Click;
             // 
             // tabPage1
             // 

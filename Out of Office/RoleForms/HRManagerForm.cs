@@ -76,6 +76,12 @@ namespace OutOfOffice.RoleForms
             EmployeesDataGridView.DataSource = employeesBindingSource;
         }
 
+        private void AddNewEButton_Click(object sender, EventArgs e)
+        {
+            new EmployeeForm(this).ShowDialog();
+            ELRefreshCircleButton_Click(sender, e);
+        }
+
         private void EmployeesDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -85,15 +91,13 @@ namespace OutOfOffice.RoleForms
                 if (empl is not null)
                 {
                     var emplVM = EmployeeVM.FromEntity(empl);
-                    //TODO - Change
-                    //new EmployeeForm(this, emplVM).ShowDialog();
-                    PLRefreshCircleButton_Click(sender, e);
+                    new EmployeeForm(this, emplVM).ShowDialog();
+                    ELRefreshCircleButton_Click(sender, e);
                 }
                 else
                     MessageBox.Show("KAKA");
             }
         }
-
 
         #endregion
 

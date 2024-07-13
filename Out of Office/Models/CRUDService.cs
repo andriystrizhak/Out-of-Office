@@ -477,6 +477,16 @@ namespace OutOfOffice.Models
             return db.Photos.Find(id);
         }
 
+        public static long Add_Photo(Photo photo)
+        {
+            using var db = dBContextFactory.Create();
+
+            var id = db.Photos.Add(photo);
+            db.SaveChanges();
+
+            return id.Entity.PhotoId;
+        }
+
         #endregion
 
         #endregion

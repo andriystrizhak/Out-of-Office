@@ -14,6 +14,8 @@ namespace Out_of_Office.RoleForms.DialogueForms
 {
     public partial class EmployeeForm : Form
     {
+        private string defaultPhotoPath = "Resources\\unknown.jpg";
+
         private Form owner;
         private EmployeeVM? employeeVM = null;
         private List<Subdivision> subdivisions;
@@ -25,8 +27,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.owner = owner;
 
             InitializeComponent();
-            SetSubdivisionsList();
-            SetHRManagersList();
+            SetLists();
             InitializeFormWithoutData();
         }
 
@@ -42,18 +43,26 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.employeeVM = employeeVM;
 
             InitializeComponent();
-            SetSubdivisionsList();
-            SetHRManagersList();
+            SetLists();
             InitializeFormWithData();
         }
 
+        private void CloseButton_Click(object sender, EventArgs e)
+            => Close();
 
         #region [Set Lists]
+
+        void SetLists()
+        {
+            SetSubdivisionsList();
+            SetPositionsList();
+            SetHRManagersList();
+        }
 
         void SetSubdivisionsList()
         {
             subdivisions = CrudService.Get_Subdivisions();
-            ProjectTypeComboBox.DataSource = subdivisions
+            SubdivisionComboBox.DataSource = subdivisions
                 .Select(pt => pt.SubdivisionName)
                 .ToList();
         }
@@ -61,7 +70,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
         void SetPositionsList()
         {
             positions = CrudService.Get_Positions();
-            PMComboBox.DataSource = positions
+            PositionComboBox.DataSource = positions
                 .Select(e => e.PositionName)
                 .ToList();
         }
@@ -69,7 +78,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
         void SetHRManagersList()
         {
             HRManagers = CrudService.Get_HRManagers();
-            PMComboBox.DataSource = HRManagers
+            PeoplePartnerComboBox.DataSource = HRManagers
                 .Select(e => $"{e.EmployeeId}. {e.FullName}")
                 .ToList();
         }
@@ -83,19 +92,20 @@ namespace Out_of_Office.RoleForms.DialogueForms
             IdLabel.Text = employeeVM.Id.ToString();
 
             IdTextBox.Text = employeeVM.Id.ToString();
-            PMComboBox.SelectedIndex = (int)employeeVM.ProjectManagerId - 1;
-            StatusTextBox.Text = employeeVM.Status.ToString();
-            ProjectTypeComboBox.SelectedIndex = (int)employeeVM.ProjectTypeId - 1;
-            StartDateTimePicker.Value = employeeVM.StartDate;
+            StatusTextBox.Text = employeeVM.Status;
+            FullNameTextBox.Text = employeeVM.FullName;
+            SubdivisionComboBox.SelectedIndex = (int)employeeVM.SubdivisionId - 1;
+            PositionComboBox.SelectedIndex = (int)employeeVM.PositionId - 1;
 
-            if (employeeVM.EndDate is null)
-                EndDateTimePicker.Checked = false;
-            else
-            {
-                EndDateTimePicker.Checked = true;
-                EndDateTimePicker.Value = (DateTime)employeeVM.EndDate;
-            }
-            CommentTextBox.Text = employeeVM.Comment;
+            var currentHR = HRManagers
+                .First(hr => hr.EmployeeId == employeeVM.PeoplePartnerId);
+            if (currentHR is null)
+                throw new Exception($"HR Manager with Id: {employeeVM.PeoplePartnerId} not found");
+
+            PeoplePartnerComboBox.SelectedIndex = HRManagers.IndexOf(currentHR);
+            OOOBalanceNumericUpDown.Value = (decimal)employeeVM.OutOfOfficeBalance;
+
+            PhotoPictureBox.Image = Image.FromFile(employeeVM.PhotoPath ?? defaultPhotoPath);
         }
 
         void InitializeFormWithoutData()
@@ -105,9 +115,8 @@ namespace Out_of_Office.RoleForms.DialogueForms
             IdTextBox.Text = "-";
             StatusTextBox.Text = "New";
 
-            //In case of adding necessary to fill textBox(-es)
-            //ActivateButton.Enabled = false;
-            //DeactivateButton.Enabled = false;
+            ActivateButton.Enabled = false;
+            DeactivateButton.Enabled = false;
         }
 
         #endregion
@@ -128,43 +137,58 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         long AddOrUpdateWithDataFromForm(StatusEnum stat)
         {
-            var proj = ParseDataFromForm(stat);
+            var empl = ParseDataFromForm(stat);
 
             long id = -1;
             if (employeeVM is not null)
             {
-                proj.ProjectId = employeeVM.Id;
-                CrudService.Update_Project(proj);
+                empl.EmployeeId = employeeVM.Id;
+                CrudService.Update_Employee(empl);
             }
             else
-                id = CrudService.Add_Project(proj);
+                id = CrudService.Add_Employee(empl);
 
             return id;
         }
 
-        Project ParseDataFromForm(StatusEnum stat)
+        Employee ParseDataFromForm(StatusEnum stat)
         {
-            DateTime? endDate = (EndDateTimePicker.Checked)
-                ? EndDateTimePicker.Value
+            string? photoPath = (PhotoPictureBox.ImageLocation != defaultPhotoPath) 
+                ? PhotoPictureBox.ImageLocation 
+                : null;
+            long? photoId = (photoPath is not null) 
+                ? CrudService.Add_Photo(new Photo { FilePath = photoPath }) 
                 : null;
 
-            var proj = new Project
+            var empl = new Employee
             {
-                ProjectTypeId = ProjectTypeComboBox.SelectedIndex + 1,
-                StartDate = StartDateTimePicker.Value,
-                EndDate = endDate,
-                ProjectManagerId = PMComboBox.SelectedIndex + 1,
-                Comment = string.IsNullOrWhiteSpace(CommentTextBox.Text) ? null : CommentTextBox.Text,
-                StatusId = (long)stat
+                FullName = FullNameTextBox.Text,
+                SubdivisionId = SubdivisionComboBox.SelectedIndex + 1,
+                PositionId = PositionComboBox.SelectedIndex + 1,
+                StatusId = (long)stat,
+                PeoplePartnerId = HRManagers[PeoplePartnerComboBox.SelectedIndex].EmployeeId,
+                OutOfOfficeBalance = (double)OOOBalanceNumericUpDown.Value,
+                PhotoId = photoId,
             };
 
-            return proj;
+            return empl;
         }
 
         #endregion
 
-        private void CloseButton_Click(object sender, EventArgs e)
-            => Close();
+        private void Control_DataChanged(object sender, EventArgs e)
+        {
+            if (FullNameTextBox.Text == "")
+            {
+                ActivateButton.Enabled = false;
+                DeactivateButton.Enabled = false;
+            }
+            else
+            {
+                ActivateButton.Enabled = true;
+                DeactivateButton.Enabled = true;
+            }
+        }
 
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -175,6 +199,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
             }
         }
 
+        private void PhotoPictureBox_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
