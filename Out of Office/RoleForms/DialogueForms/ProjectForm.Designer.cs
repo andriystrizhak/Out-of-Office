@@ -99,6 +99,7 @@
             ProjectTypeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges15;
             ProjectTypeComboBox.Size = new Size(272, 36);
             ProjectTypeComboBox.TabIndex = 54;
+            ProjectTypeComboBox.SelectedIndexChanged += Control_DataChanged;
             // 
             // EndDateTimePicker
             // 
@@ -121,6 +122,7 @@
             EndDateTimePicker.Size = new Size(154, 36);
             EndDateTimePicker.TabIndex = 52;
             EndDateTimePicker.Value = new DateTime(2024, 7, 9, 22, 46, 25, 65);
+            EndDateTimePicker.ValueChanged += Control_DataChanged;
             // 
             // StatusTextBox
             // 
@@ -182,6 +184,7 @@
             CommentTextBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
             CommentTextBox.Size = new Size(457, 118);
             CommentTextBox.TabIndex = 49;
+            CommentTextBox.TextChanged += Control_DataChanged;
             // 
             // label9
             // 
@@ -332,6 +335,7 @@
             StartDateTimePicker.Size = new Size(154, 36);
             StartDateTimePicker.TabIndex = 53;
             StartDateTimePicker.Value = new DateTime(2024, 7, 9, 22, 46, 25, 65);
+            StartDateTimePicker.ValueChanged += Control_DataChanged;
             // 
             // PMComboBox
             // 
@@ -353,6 +357,7 @@
             PMComboBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
             PMComboBox.Size = new Size(272, 36);
             PMComboBox.TabIndex = 57;
+            PMComboBox.SelectedIndexChanged += Control_DataChanged;
             // 
             // DeactivateButton
             // 
@@ -413,7 +418,6 @@
             CreateNewOrUpdateButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CreateNewOrUpdateButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
             CreateNewOrUpdateButton.DisabledState.ForeColor = Color.White;
-            CreateNewOrUpdateButton.Enabled = false;
             CreateNewOrUpdateButton.FillColor = Color.FromArgb(26, 139, 221);
             CreateNewOrUpdateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CreateNewOrUpdateButton.ForeColor = Color.White;

@@ -96,6 +96,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 EndDateTimePicker.Value = (DateTime)projectVM.EndDate;
             }
             CommentTextBox.Text = projectVM.Comment;
+
+            CreateNewOrUpdateButton.Text = "Update";
+            CreateNewOrUpdateButton.Enabled = false;
         }
 
         void InitializeFormWithoutData()
@@ -105,9 +108,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
             IdTextBox.Text = "-";
             StatusTextBox.Text = "New";
 
-            //In case of adding necessary to fill textBox(-es)
-            //ActivateButton.Enabled = false;
-            //DeactivateButton.Enabled = false;
+            CreateNewOrUpdateButton.Text = "Create new";
+            ActivateButton.Enabled = false;
+            DeactivateButton.Enabled = false;
         }
 
         #endregion
@@ -145,7 +148,48 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         #endregion
 
-        #region [Activata & Deactivate Project]
+        #region [Create new Project]
+
+        private void CreateNewOrUpdateButton_Click(object sender, EventArgs e)
+        {
+            if (projectVM is null)
+            {
+                long id = AddNewProjectFromForm(StatusEnum.Active);
+
+                IdLabel.Text = id.ToString();
+                IdTextBox.Text = id.ToString();
+            }
+            else
+            {
+                AddOrUpdateWithDataFromForm((StatusEnum)(int)(projectVM.StatusId));
+            }
+
+            CreateNewOrUpdateButton.Enabled = false;
+            CreateNewOrUpdateButton.Text = "Update";
+
+            ActivateButton.Enabled = true;
+            DeactivateButton.Enabled = true;
+        }
+
+        /// <summary>
+        /// Adds new Project to BD and updates 'requestVM' field
+        /// </summary>
+        /// <param name="stat">State of created Project</param>
+        /// <returns>Id of new Project in DB</returns>
+        long AddNewProjectFromForm(StatusEnum stat)
+        {
+            var proj = ParseDataFromForm(stat);
+            long id = CrudService.Add_Project(proj);
+
+            var fullProj = CrudService.Get_Project(id);
+            projectVM = ProjectVM.FromEntity(fullProj);
+
+            return id;
+        }
+
+        #endregion
+
+        #region [Activate & Deactivate Project]
 
         private void ActivateButton_Click(object sender, EventArgs e)
         {
@@ -196,6 +240,11 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         #endregion
 
+        private void Control_DataChanged(object sender, EventArgs e)
+        {
+            CreateNewOrUpdateButton.Enabled = true;
+        }
+
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -203,11 +252,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 // Скасувати введення символу
                 e.Handled = true;
             }
-        }
-
-        private void CreateNewOrUpdateButton_Click(object sender, EventArgs e)
-        {
-            //TODO - add functionality
         }
     }
 }
