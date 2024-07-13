@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -55,8 +55,6 @@
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             TopPanel = new Guna.UI2.WinForms.Guna2Panel();
             label3 = new Label();
@@ -81,7 +79,6 @@
             ARLRefreshCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             ApprovalRequestsDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             label5 = new Label();
-            AddNewARButton = new Guna.UI2.WinForms.Guna2Button();
             TopPanel.SuspendLayout();
             TabControl.SuspendLayout();
             tabPage3.SuspendLayout();
@@ -106,12 +103,12 @@
             TopPanel.Controls.Add(label3);
             TopPanel.Controls.Add(MinimizeButton);
             TopPanel.Controls.Add(CloseButton);
-            TopPanel.CustomizableEdges = customizableEdges15;
+            TopPanel.CustomizableEdges = customizableEdges13;
             TopPanel.Dock = DockStyle.Top;
             TopPanel.Location = new Point(0, 0);
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
-            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges14;
             TopPanel.Size = new Size(1093, 33);
             TopPanel.TabIndex = 13;
             TopPanel.MouseDown += This_MouseDown;
@@ -132,7 +129,7 @@
             // 
             MinimizeButton.Animated = true;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
-            MinimizeButton.CustomizableEdges = customizableEdges11;
+            MinimizeButton.CustomizableEdges = customizableEdges9;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -144,7 +141,7 @@
             MinimizeButton.HoverState.FillColor = Color.FromArgb(12, 65, 109);
             MinimizeButton.Location = new Point(989, 0);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             MinimizeButton.Size = new Size(52, 33);
             MinimizeButton.TabIndex = 8;
             MinimizeButton.Text = "—";
@@ -154,7 +151,7 @@
             // 
             CloseButton.Animated = true;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
-            CloseButton.CustomizableEdges = customizableEdges13;
+            CloseButton.CustomizableEdges = customizableEdges11;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -167,7 +164,7 @@
             CloseButton.Location = new Point(1041, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
             CloseButton.Size = new Size(52, 33);
             CloseButton.TabIndex = 7;
             CloseButton.Text = "x";
@@ -578,7 +575,6 @@
             tabPage4.Controls.Add(ARLRefreshCircleButton);
             tabPage4.Controls.Add(ApprovalRequestsDataGridView);
             tabPage4.Controls.Add(label5);
-            tabPage4.Controls.Add(AddNewARButton);
             tabPage4.Location = new Point(4, 44);
             tabPage4.Name = "tabPage4";
             tabPage4.Size = new Size(1085, 634);
@@ -605,6 +601,7 @@
             ARLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             ARLRefreshCircleButton.Size = new Size(45, 45);
             ARLRefreshCircleButton.TabIndex = 19;
+            ARLRefreshCircleButton.Click += ARLRefreshCircleButton_Click;
             // 
             // ApprovalRequestsDataGridView
             // 
@@ -663,6 +660,7 @@
             ApprovalRequestsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ApprovalRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ApprovalRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            ApprovalRequestsDataGridView.CellMouseDoubleClick += ApprovalRequestsDataGridView_CellMouseDoubleClick;
             ApprovalRequestsDataGridView.ColumnHeaderMouseClick += DataGridView_ColumnHeaderMouseClick;
             // 
             // label5
@@ -674,26 +672,6 @@
             label5.Size = new Size(336, 37);
             label5.TabIndex = 17;
             label5.Text = "Approval Requests List";
-            // 
-            // AddNewARButton
-            // 
-            AddNewARButton.BorderRadius = 10;
-            AddNewARButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            AddNewARButton.CustomizableEdges = customizableEdges9;
-            AddNewARButton.DisabledState.BorderColor = Color.DarkGray;
-            AddNewARButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            AddNewARButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            AddNewARButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            AddNewARButton.FillColor = Color.FromArgb(26, 139, 221);
-            AddNewARButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            AddNewARButton.ForeColor = Color.White;
-            AddNewARButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
-            AddNewARButton.Location = new Point(42, 522);
-            AddNewARButton.Name = "AddNewARButton";
-            AddNewARButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            AddNewARButton.Size = new Size(147, 46);
-            AddNewARButton.TabIndex = 16;
-            AddNewARButton.Text = "New Request";
             // 
             // HRManagerForm
             // 
@@ -750,6 +728,5 @@
         private Guna.UI2.WinForms.Guna2CircleButton ARLRefreshCircleButton;
         private Guna.UI2.WinForms.Guna2DataGridView ApprovalRequestsDataGridView;
         private Label label5;
-        private Guna.UI2.WinForms.Guna2Button AddNewARButton;
     }
 }

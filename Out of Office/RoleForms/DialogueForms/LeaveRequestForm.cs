@@ -148,13 +148,21 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            _ = UpdateLRFromForm(LeaveStatusEnum.Submitted);
+            var appReqId = UpdateLRFromForm(LeaveStatusEnum.Submitted);
+            var leaveReq = CrudService.Get_LeaveRequest(appReqId);
+            CrudService.Add_ApprovalRequest(new ApprovalRequest
+            {
+                ApproverId = leaveReq.EmployeeId,
+                LeaveRequestId = appReqId,
+                StatusId = (long)LeaveStatusEnum.New,
+            });
             Close();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            _ = UpdateLRFromForm(LeaveStatusEnum.Cancelled);
+            var appReqId = UpdateLRFromForm(LeaveStatusEnum.Cancelled);
+            _ = CrudService.Remove_ApprovalRequest(appReqId);
             Close();
         }
 

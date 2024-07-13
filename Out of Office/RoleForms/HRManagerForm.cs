@@ -23,6 +23,7 @@ namespace OutOfOffice.RoleForms
         private SortedBindingList<EmployeeVM> employeesBindingSource;
         private SortedBindingList<ProjectVM> projectsBindingSource;
         private SortedBindingList<LeaveRequestVM> leaveRequestsBindingSource;
+        private SortedBindingList<ApprovalRequestVM> approvalRequestsBindingSource;
 
         public HRManagerForm()
         {
@@ -63,6 +64,8 @@ namespace OutOfOffice.RoleForms
                 PLRefreshCircleButton_Click(sender, e);
             else if (TabControl.SelectedIndex == 2)
                 LRLRefreshCircleButton_Click(sender, e);
+            else if (TabControl.SelectedIndex == 3)
+                ARLRefreshCircleButton_Click(sender, e);
         }
 
         #region [Employees List tab]
@@ -169,7 +172,31 @@ namespace OutOfOffice.RoleForms
 
         #region [Approval Requests List tab]
 
-        //TODO - add code
+        private void ARLRefreshCircleButton_Click(object sender, EventArgs e)
+        {
+            var approvalRequests = ApprovalRequestVM.FromEntities(CrudService.Get_ApprovalRequests());
+            approvalRequestsBindingSource = (approvalRequests != null)
+                ? new SortedBindingList<ApprovalRequestVM>(approvalRequests)
+                : new SortedBindingList<ApprovalRequestVM>(new List<ApprovalRequestVM>());
+            ApprovalRequestsDataGridView.DataSource = approvalRequestsBindingSource;
+        }
+
+        private void ApprovalRequestsDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                long id = (long)ApprovalRequestsDataGridView[0, e.RowIndex].Value;
+                var appReq = CrudService.Get_ApprovalRequest(id);
+                if (appReq is not null)
+                {
+                    var appReqVM = ApprovalRequestVM.FromEntity(appReq);
+                    new ApprovalRequestForm(this, appReqVM).ShowDialog();
+                    ARLRefreshCircleButton_Click(sender, e);
+                }
+                else
+                    MessageBox.Show("This Approval Request wasn't founded(");
+            }
+        }
 
         #endregion
 

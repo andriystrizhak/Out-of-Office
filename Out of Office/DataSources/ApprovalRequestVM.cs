@@ -30,5 +30,10 @@ namespace Out_of_Office.DataSources
                 Comment = entity.Comment
             };
         }
+
+        public static List<ApprovalRequestVM> FromEntities(List<ApprovalRequest> entities)
+        {
+            return entities.Select(FromEntity).ToList();
+        }
     }
 }

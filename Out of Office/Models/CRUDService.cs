@@ -210,6 +210,16 @@ namespace OutOfOffice.Models
                 .FirstOrDefault(e => e.ApprovalRequestId == id);
         }
 
+        public static long Add_ApprovalRequest(ApprovalRequest appReq)
+        {
+            using var db = dBContextFactory.Create();
+
+            var id = db.ApprovalRequests.Add(appReq);
+            db.SaveChanges();
+
+            return id.Entity.ApprovalRequestId;
+        }
+
         public static void Update_ApprovalRequest(ApprovalRequest appReq)
         {
             using var db = dBContextFactory.Create();
@@ -226,6 +236,20 @@ namespace OutOfOffice.Models
 
             db.ApprovalRequests.Update(appReq);
             db.SaveChanges();
+        }
+
+        public static bool Remove_ApprovalRequest(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var appReq = db.ApprovalRequests.Find(id);
+            if (appReq is null)
+                return false;
+
+            db.ApprovalRequests.Remove(appReq);
+            db.SaveChanges();
+
+            return true;
         }
 
         #endregion
