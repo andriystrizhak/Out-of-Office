@@ -1,5 +1,6 @@
 ﻿using Out_of_Office.DataSources;
 using OutOfOffice.Models;
+using OutOfOffice.RoleForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
@@ -24,8 +26,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.owner = owner;
 
             InitializeComponent();
-            SetProjectTypesList();
-            SetEmployeesList();
+            SetAll();
             InitializeFormWithoutData();
         }
 
@@ -41,13 +42,19 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.projectVM = projectVM;
 
             InitializeComponent();
-            SetProjectTypesList();
-            SetEmployeesList();
+            SetAll();
             InitializeFormWithData();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
             => Close();
+
+        private void SetAll()
+        {
+            SetRoleConstraints();
+            SetProjectTypesList();
+            SetEmployeesList();
+        }
 
         #region [Set Lists]
 
@@ -101,6 +108,39 @@ namespace Out_of_Office.RoleForms.DialogueForms
             //In case of adding necessary to fill textBox(-es)
             //ActivateButton.Enabled = false;
             //DeactivateButton.Enabled = false;
+        }
+
+        #endregion
+
+        #region [Set Role Constraints]
+
+        private void SetRoleConstraints()
+        {
+            if (owner is not ProjectManagerForm)
+            {
+                foreach (var control in Controls)
+                {
+                    if (control != CloseButton)
+                    {
+                        //TODO - fix
+                        //control.Enabled = false;
+                    }
+                }
+                ReadOnly_Constraint();
+            }
+        }
+
+        private void ReadOnly_Constraint()
+        {
+            ProjectTypeComboBox.Enabled = false;
+            PMComboBox.Enabled = false;
+            StartDateTimePicker.Enabled = false;
+            EndDateTimePicker.Enabled = false;
+            CommentTextBox.Enabled = false;
+
+            ActivateButton.Enabled = false;
+            CreateNewOrUpdateButton.Enabled = false;
+            DeactivateButton.Enabled = false;
         }
 
         #endregion
@@ -163,6 +203,11 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 // Скасувати введення символу
                 e.Handled = true;
             }
+        }
+
+        private void CreateNewOrUpdateButton_Click(object sender, EventArgs e)
+        {
+            //TODO - add functionality
         }
     }
 }

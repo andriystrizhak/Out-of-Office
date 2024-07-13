@@ -139,8 +139,8 @@
             IdTextBox.CustomizableEdges = customizableEdges15;
             IdTextBox.DefaultText = "";
             IdTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
-            IdTextBox.DisabledState.FillColor = Color.FromArgb(226, 239, 252);
-            IdTextBox.DisabledState.ForeColor = Color.FromArgb(64, 64, 64);
+            IdTextBox.DisabledState.FillColor = Color.White;
+            IdTextBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
             IdTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             IdTextBox.Enabled = false;
             IdTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -206,8 +206,8 @@
             CommentTextBox.CustomizableEdges = customizableEdges13;
             CommentTextBox.DefaultText = "";
             CommentTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
-            CommentTextBox.DisabledState.FillColor = Color.FromArgb(226, 239, 252);
-            CommentTextBox.DisabledState.ForeColor = Color.FromArgb(64, 64, 64);
+            CommentTextBox.DisabledState.FillColor = Color.White;
+            CommentTextBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
             CommentTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             CommentTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             CommentTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
@@ -242,8 +242,8 @@
             StatusTextBox.CustomizableEdges = customizableEdges11;
             StatusTextBox.DefaultText = "";
             StatusTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
-            StatusTextBox.DisabledState.FillColor = Color.FromArgb(226, 239, 252);
-            StatusTextBox.DisabledState.ForeColor = Color.FromArgb(64, 64, 64);
+            StatusTextBox.DisabledState.FillColor = Color.White;
+            StatusTextBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
             StatusTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             StatusTextBox.Enabled = false;
             StatusTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -317,8 +317,8 @@
             AbsenceReasonComboBox.BorderRadius = 10;
             AbsenceReasonComboBox.CustomizableEdges = customizableEdges7;
             AbsenceReasonComboBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
-            AbsenceReasonComboBox.DisabledState.FillColor = Color.FromArgb(226, 239, 252);
-            AbsenceReasonComboBox.DisabledState.ForeColor = Color.Black;
+            AbsenceReasonComboBox.DisabledState.FillColor = Color.White;
+            AbsenceReasonComboBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
             AbsenceReasonComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             AbsenceReasonComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             AbsenceReasonComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -411,8 +411,8 @@
             EmployeeComboBox.BorderRadius = 10;
             EmployeeComboBox.CustomizableEdges = customizableEdges20;
             EmployeeComboBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
-            EmployeeComboBox.DisabledState.FillColor = Color.FromArgb(226, 239, 252);
-            EmployeeComboBox.DisabledState.ForeColor = Color.Black;
+            EmployeeComboBox.DisabledState.FillColor = Color.White;
+            EmployeeComboBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
             EmployeeComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             EmployeeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             EmployeeComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
