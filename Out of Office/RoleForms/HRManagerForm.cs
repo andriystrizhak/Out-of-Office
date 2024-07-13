@@ -167,7 +167,7 @@ namespace OutOfOffice.RoleForms
 
         //TODO - add code
 
-        #region
+        #endregion
 
         private void DataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
