@@ -145,12 +145,6 @@ namespace OutOfOffice.RoleForms
             LeaveRequestsDataGridView.DataSource = leaveRequestsBindingSource;
         }
 
-        private void AddNewLRButton_Click(object sender, EventArgs e)
-        {
-            new LeaveRequestForm(this).ShowDialog();
-            LRLRefreshCircleButton_Click(sender, e);
-        }
-
         private void LeaveRequestsDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)

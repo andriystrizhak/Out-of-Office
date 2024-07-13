@@ -1,5 +1,6 @@
 ﻿using Out_of_Office.DataSources;
 using OutOfOffice.Models;
+using OutOfOffice.RoleForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
@@ -21,13 +23,13 @@ namespace Out_of_Office.RoleForms.DialogueForms
         private List<AbsenceReason> absenceReasons;
         private List<Employee> employees;
 
+
         public LeaveRequestForm(Form owner)
         {
             this.owner = owner;
 
             InitializeComponent();
-            SetAbsenceReasonList();
-            SetEmployeesList();
+            SetAll();
             InitializeFormWithoutData();
         }
 
@@ -43,13 +45,19 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.requestVM = requestVM;
 
             InitializeComponent();
-            SetAbsenceReasonList();
-            SetEmployeesList();
+            SetAll();
             InitializeFormWithData();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
             => Close();
+
+        private void SetAll()
+        {
+            SetRoleConstraints();
+            SetAbsenceReasonList();
+            SetEmployeesList();
+        }
 
         #region [Set Lists]
 
@@ -98,6 +106,39 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             CreateNewOrUpdateButton.Text = "Create new";
             SubmitButton.Enabled = false;
+            CancelButton.Enabled = false;
+        }
+
+        #endregion
+
+        #region [Set Role Constraints]
+
+        private void SetRoleConstraints()
+        {
+            if (owner is not EmployeeRoleForm)
+            {
+                foreach (var control in Controls)
+                {
+                    if (control != CloseButton)
+                    {
+                        //TODO - fix
+                        //control.Enabled = false;
+                    }
+                }
+                ReadOnly_Constraint();
+            }
+        }
+
+        private void ReadOnly_Constraint()
+        {
+            EmployeeComboBox.Enabled = false;
+            AbsenceReasonComboBox.Enabled = false;
+            StartDateTimePicker.Enabled = false;
+            EndDateTimePicker.Enabled = false;
+            CommentTextBox.Enabled = false;
+
+            SubmitButton.Enabled = false;
+            CreateNewOrUpdateButton.Enabled = false;
             CancelButton.Enabled = false;
         }
 
