@@ -210,32 +210,22 @@ namespace OutOfOffice.Models
                 .FirstOrDefault(e => e.ApprovalRequestId == id);
         }
 
-        public static bool Approve_ApprovalRequest(long id)
+        public static void Update_ApprovalRequest(ApprovalRequest appReq)
         {
             using var db = dBContextFactory.Create();
 
-            var req = db.ApprovalRequests.Find(id);
-            if (req is not null)
-            {
-                req.StatusId = 2;
-                db.SaveChanges();
-                return true;
-            }
-            return false;
+            db.ApprovalRequests.Update(appReq);
+            db.SaveChanges();
         }
 
-        public static bool Reject_ApprovalRequest(long id)
+        public static void Reject_ApprovalRequest(ApprovalRequest appReq)
         {
             using var db = dBContextFactory.Create();
 
-            var req = db.ApprovalRequests.Find(id);
-            if (req is not null)
-            {
-                req.StatusId = 3;
-                db.SaveChanges();
-                return true;
-            }
-            return false;
+            appReq.StatusId = (long)LeaveStatusEnum.Rejected;
+
+            db.ApprovalRequests.Update(appReq);
+            db.SaveChanges();
         }
 
         #endregion

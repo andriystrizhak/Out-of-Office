@@ -161,7 +161,7 @@ namespace OutOfOffice.RoleForms
                     LRLRefreshCircleButton_Click(sender, e);
                 }
                 else
-                    MessageBox.Show("KAKA");
+                    MessageBox.Show("This Leave Request wasn't founded(");
             }
         }
 
