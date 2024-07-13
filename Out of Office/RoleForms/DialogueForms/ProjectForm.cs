@@ -46,6 +46,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
             InitializeFormWithData();
         }
 
+        private void CloseButton_Click(object sender, EventArgs e)
+            => Close();
+
         #region [Set Lists]
 
         void SetProjectTypesList()
@@ -152,9 +155,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
         }
 
         #endregion
-
-        private void CloseButton_Click(object sender, EventArgs e)
-            => Close();
 
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
         {
