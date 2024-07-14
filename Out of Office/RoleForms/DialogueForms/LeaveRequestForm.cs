@@ -116,8 +116,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
         private void SetRoleConstraints()
         {
             if (owner is not EmployeeRoleForm
-                || requestVM.StatusId == (long)LeaveStatusEnum.Approved
-                || requestVM.StatusId == (long)LeaveStatusEnum.Rejected)
+                || (requestVM is not null
+                && (requestVM.StatusId == (long)LeaveStatusEnum.Approved
+                || requestVM.StatusId == (long)LeaveStatusEnum.Rejected)))
             {
                 foreach (Control control in Controls)
                     if (control != CloseButton)
