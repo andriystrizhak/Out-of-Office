@@ -152,6 +152,19 @@ namespace OutOfOffice.Models
                 .FirstOrDefault(e => e.ProjectId == id);
         }
 
+        public static List<Project> Get_EmployeeProjects(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var projects = db.EmployeeProjects
+                .Include(e => e.Project)
+                .Where(e => e.EmployeeId == id)
+                .Select(e => e.Project)
+                .ToList();
+
+            return projects;
+        }
+
         public static long Add_Project(Project proj)
         {
             using var db = dBContextFactory.Create();
