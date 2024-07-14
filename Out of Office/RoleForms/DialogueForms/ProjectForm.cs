@@ -253,5 +253,11 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 e.Handled = true;
             }
         }
+
+        //TODO - TEMP
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            new EmployeeProjectsForm().ShowDialog();
+        }
     }
 }

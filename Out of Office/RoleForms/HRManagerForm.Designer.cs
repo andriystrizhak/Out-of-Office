@@ -657,6 +657,7 @@
             Controls.Add(TopPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HRManagerForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HRManagerForm";
             Load += HRManagerForm_Load;
             TopPanel.ResumeLayout(false);
