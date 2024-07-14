@@ -73,7 +73,8 @@
             DeactivateButton = new Guna.UI2.WinForms.Guna2Button();
             ActivateButton = new Guna.UI2.WinForms.Guna2Button();
             CreateNewOrUpdateButton = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            SelectEmplButton = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -116,7 +117,7 @@
             EndDateTimePicker.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             EndDateTimePicker.ForeColor = Color.White;
             EndDateTimePicker.Format = DateTimePickerFormat.Long;
-            EndDateTimePicker.Location = new Point(481, 328);
+            EndDateTimePicker.Location = new Point(481, 380);
             EndDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             EndDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             EndDateTimePicker.Name = "EndDateTimePicker";
@@ -177,7 +178,7 @@
             CommentTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             CommentTextBox.ForeColor = Color.Black;
             CommentTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            CommentTextBox.Location = new Point(178, 388);
+            CommentTextBox.Location = new Point(178, 440);
             CommentTextBox.Margin = new Padding(4, 4, 4, 4);
             CommentTextBox.Multiline = true;
             CommentTextBox.Name = "CommentTextBox";
@@ -193,7 +194,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(76, 394);
+            label9.Location = new Point(76, 446);
             label9.Name = "label9";
             label9.Size = new Size(94, 22);
             label9.TabIndex = 48;
@@ -203,7 +204,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(389, 336);
+            label8.Location = new Point(389, 388);
             label8.Name = "label8";
             label8.Size = new Size(85, 22);
             label8.TabIndex = 47;
@@ -213,7 +214,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(76, 336);
+            label7.Location = new Point(76, 388);
             label7.Name = "label7";
             label7.Size = new Size(93, 22);
             label7.TabIndex = 46;
@@ -330,7 +331,7 @@
             StartDateTimePicker.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             StartDateTimePicker.ForeColor = Color.White;
             StartDateTimePicker.Format = DateTimePickerFormat.Long;
-            StartDateTimePicker.Location = new Point(178, 328);
+            StartDateTimePicker.Location = new Point(178, 380);
             StartDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             StartDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             StartDateTimePicker.Name = "StartDateTimePicker";
@@ -376,7 +377,7 @@
             DeactivateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DeactivateButton.ForeColor = Color.White;
             DeactivateButton.HoverState.FillColor = Color.FromArgb(179, 49, 60);
-            DeactivateButton.Location = new Point(488, 549);
+            DeactivateButton.Location = new Point(488, 601);
             DeactivateButton.Name = "DeactivateButton";
             DeactivateButton.PressedColor = Color.FromArgb(102, 28, 34);
             DeactivateButton.PressedDepth = 25;
@@ -400,7 +401,7 @@
             ActivateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ActivateButton.ForeColor = Color.White;
             ActivateButton.HoverState.FillColor = Color.FromArgb(19, 149, 38);
-            ActivateButton.Location = new Point(76, 549);
+            ActivateButton.Location = new Point(76, 601);
             ActivateButton.Name = "ActivateButton";
             ActivateButton.PressedColor = Color.FromArgb(16, 124, 16);
             ActivateButton.PressedDepth = 40;
@@ -425,7 +426,7 @@
             CreateNewOrUpdateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CreateNewOrUpdateButton.ForeColor = Color.White;
             CreateNewOrUpdateButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
-            CreateNewOrUpdateButton.Location = new Point(283, 549);
+            CreateNewOrUpdateButton.Location = new Point(283, 601);
             CreateNewOrUpdateButton.Name = "CreateNewOrUpdateButton";
             CreateNewOrUpdateButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             CreateNewOrUpdateButton.Size = new Size(147, 46);
@@ -434,38 +435,49 @@
             CreateNewOrUpdateButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             CreateNewOrUpdateButton.Click += CreateNewOrUpdateButton_Click;
             // 
-            // guna2Button1
+            // SelectEmplButton
             // 
-            guna2Button1.Animated = true;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(123, 172, 136);
-            guna2Button1.DisabledState.ForeColor = Color.White;
-            guna2Button1.FillColor = Color.FromArgb(24, 178, 63);
-            guna2Button1.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.HoverState.FillColor = Color.FromArgb(19, 149, 38);
-            guna2Button1.Location = new Point(522, 212);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.FromArgb(16, 124, 16);
-            guna2Button1.PressedDepth = 40;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(113, 38);
-            guna2Button1.TabIndex = 63;
-            guna2Button1.Text = "Projs";
-            guna2Button1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            guna2Button1.Click += EmployeesButton_Click;
+            SelectEmplButton.Animated = true;
+            SelectEmplButton.BorderRadius = 10;
+            SelectEmplButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
+            SelectEmplButton.CustomizableEdges = customizableEdges1;
+            SelectEmplButton.DisabledState.BorderColor = Color.DarkGray;
+            SelectEmplButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            SelectEmplButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
+            SelectEmplButton.DisabledState.ForeColor = Color.White;
+            SelectEmplButton.FillColor = Color.FromArgb(26, 139, 221);
+            SelectEmplButton.Font = new Font("Montserrat SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            SelectEmplButton.ForeColor = Color.White;
+            SelectEmplButton.HoverState.FillColor = Color.FromArgb(19, 149, 38);
+            SelectEmplButton.Location = new Point(271, 326);
+            SelectEmplButton.Name = "SelectEmplButton";
+            SelectEmplButton.PressedColor = Color.Empty;
+            SelectEmplButton.PressedDepth = 40;
+            SelectEmplButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            SelectEmplButton.Size = new Size(189, 36);
+            SelectEmplButton.TabIndex = 63;
+            SelectEmplButton.Text = "Select Employees";
+            SelectEmplButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            SelectEmplButton.Click += EmployeesButton_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(77, 332);
+            label2.Name = "label2";
+            label2.Size = new Size(181, 22);
+            label2.TabIndex = 64;
+            label2.Text = "Assigned Employees";
             // 
             // ProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(226, 239, 252);
-            ClientSize = new Size(713, 658);
-            Controls.Add(guna2Button1);
+            ClientSize = new Size(713, 701);
+            Controls.Add(label2);
+            Controls.Add(SelectEmplButton);
             Controls.Add(CreateNewOrUpdateButton);
             Controls.Add(EndDateTimePicker);
             Controls.Add(StatusTextBox);
@@ -517,6 +529,7 @@
         private Guna.UI2.WinForms.Guna2Button DeactivateButton;
         private Guna.UI2.WinForms.Guna2Button ActivateButton;
         private Guna.UI2.WinForms.Guna2Button CreateNewOrUpdateButton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button SelectEmplButton;
+        private Label label2;
     }
 }

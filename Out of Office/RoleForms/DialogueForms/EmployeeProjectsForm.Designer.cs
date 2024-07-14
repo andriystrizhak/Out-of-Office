@@ -162,7 +162,6 @@
             ProjectEmployeesDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ProjectEmployeesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ProjectEmployeesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            ProjectEmployeesDataGridView.CellValueChanged += ProjectEmployeesDataGridView_CellValueChanged;
             ProjectEmployeesDataGridView.CurrentCellDirtyStateChanged += ProjectEmployeesDataGridView_CurrentCellDirtyStateChanged;
             ProjectEmployeesDataGridView.DataBindingComplete += ProjectsDataGridView_DataBindingComplete;
             // 

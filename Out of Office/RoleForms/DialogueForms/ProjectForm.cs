@@ -121,15 +121,11 @@ namespace Out_of_Office.RoleForms.DialogueForms
         {
             if (owner is not ProjectManagerForm)
             {
-                foreach (var control in Controls)
-                {
+                foreach (Control control in Controls)
                     if (control != CloseButton)
-                    {
-                        //TODO - fix
-                        //control.Enabled = false;
-                    }
-                }
-                ReadOnly_Constraint();
+                        control.Enabled = false;
+                //TODO - Remove
+                //ReadOnly_Constraint();
             }
         }
 
@@ -141,6 +137,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             EndDateTimePicker.Enabled = false;
             CommentTextBox.Enabled = false;
 
+            SelectEmplButton.Enabled = false;
             ActivateButton.Enabled = false;
             CreateNewOrUpdateButton.Enabled = false;
             DeactivateButton.Enabled = false;
@@ -254,7 +251,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
             }
         }
 
-        //TODO - TEMP
         private void EmployeesButton_Click(object sender, EventArgs e)
         {
             new ProjectEmployeesForm(projectVM.Id).ShowDialog();

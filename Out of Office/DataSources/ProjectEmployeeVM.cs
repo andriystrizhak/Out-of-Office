@@ -70,7 +70,6 @@ namespace Out_of_Office.DataSources
         public static List<EmployeeProject> ToEntities(List<ProjectEmployeeVM> vms, long projId)
         {
             return vms
-                //.Where(vm => vm.Assigned)
                 .Select(vm => ToEntity(vm, projId))
                 .ToList();
         }

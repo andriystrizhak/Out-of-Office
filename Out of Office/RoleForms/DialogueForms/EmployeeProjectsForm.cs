@@ -65,32 +65,29 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 ProjectEmployeesDataGridView.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
 
+        /*
         private void ProjectEmployeesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == 0) // CheckBox column index
             {
                 bool isChecked = (bool)ProjectEmployeesDataGridView[e.ColumnIndex, e.RowIndex].Value;
                 string projectName = ProjectEmployeesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-                //MessageBox.Show($"{projectName} is {(isChecked ? "assigned" : "unassigned")}");
             }
         }
+        */
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             var emplProjsVM = (List<ProjectEmployeeVM>)ProjectEmployeesDataGridView.DataSource;
-            //var emplProjs = ProjectEmployeeVM.ToEntities(emplProjsVM, currentProjId);
-            //CrudService.Update_EmployeeProjects(emplProjs, currentProjId);
 
             var diffToAdd = ProjectEmployeeVM.Get_DifferenceToAdd(
                         initialPEList, emplProjsVM);
-
             CrudService.Add_EmployeeProjects(
                 ProjectEmployeeVM.ToEntities(
                     diffToAdd, currentProjId));
 
             var diffToRemove = ProjectEmployeeVM.Get_DifferenceToRemove(
                 initialPEList, emplProjsVM);
-
             CrudService.Remove_EmployeeProjects(
                 ProjectEmployeeVM.ToEntities(
                     diffToRemove, currentProjId));
@@ -99,8 +96,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+            => Close();
     }
 }
