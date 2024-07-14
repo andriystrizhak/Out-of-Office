@@ -369,7 +369,7 @@ namespace OutOfOffice.Models
 
         #region [ Employee Project ]
 
-        public static List<EmployeeProject> Get_EmployeesProjects()
+        public static List<EmployeeProject> Get_ProjectsEmployees()
         {
             using var db = dBContextFactory.Create();
 
@@ -380,38 +380,46 @@ namespace OutOfOffice.Models
             return projects;
         }
 
-        public static List<EmployeeProject> Get_EmployeeProjects(long id)
+        public static List<EmployeeProject> Get_ProjectEmployees(long projId)
         {
             using var db = dBContextFactory.Create();
 
             var projects = db.EmployeeProjects
-                .Include(e => e.Project)
-                .Where(e => e.EmployeeId == id)
+                .Include(e => e.Employee)
+                .Where(e => e.ProjectId == projId)
                 //.Select(e => e.Project)
                 .ToList();
 
             return projects;
         }
 
-        public static List<EmployeeProject> Get_NotEmployeeProjects(long id)
+        public static List<EmployeeProject> Get_NotProjectEmployees(long projId)
         {
             using var db = dBContextFactory.Create();
 
             var projects = db.EmployeeProjects
-                .Include(e => e.Project)
-                .Where(e => e.EmployeeId != id)
+                .Include(e => e.Employee)
+                .Where(e => e.ProjectId != projId)
                 //.Select(e => e.Project)
                 .ToList();
 
             return projects;
         }
 
-        public static void Update_EmployeeProjects(List<EmployeeProject> empProjsVM, long id)
+        public static bool Is_EmployeeAssignedToProject(long empId, long projId)
         {
             using var db = dBContextFactory.Create();
 
-            var existingEmployeeProjects = Get_EmployeeProjects(id);
-            var existingNotEmployeeProjects = Get_NotEmployeeProjects(id);
+            return db.EmployeeProjects
+                .Any(e => e.EmployeeId == empId && e.ProjectId == projId);
+        }
+
+        public static void Update_ProjectEmployees(List<EmployeeProject> empProjsVM, long projId)
+        {
+            using var db = dBContextFactory.Create();
+
+            var existingEmployeeProjects = Get_ProjectEmployees(projId);
+            var existingNotEmployeeProjects = Get_NotProjectEmployees(projId);
 
             var projectsToAdd = empProjsVM
                 .Where(pa => !existingEmployeeProjects
@@ -427,6 +435,28 @@ namespace OutOfOffice.Models
                 .ToList();
             db.EmployeeProjects.RemoveRange(projectsToDelete);
 
+            db.SaveChanges();
+        }
+
+        public static void Add_EmployeeProjects(List<EmployeeProject> empProjs)
+        {
+            if (empProjs.Count == 0)
+                return;
+
+            using var db = dBContextFactory.Create();
+
+            db.EmployeeProjects.AddRange(empProjs);
+            db.SaveChanges();
+        }
+
+        public static void Remove_EmployeeProjects(List<EmployeeProject> empProjs)
+        {
+            if (empProjs.Count == 0)
+                return;
+
+            using var db = dBContextFactory.Create();
+
+            db.EmployeeProjects.RemoveRange(empProjs);
             db.SaveChanges();
         }
 

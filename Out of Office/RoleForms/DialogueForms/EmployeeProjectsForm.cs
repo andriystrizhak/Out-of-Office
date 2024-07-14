@@ -1,4 +1,6 @@
 ﻿using Guna.UI2.WinForms;
+using Out_of_Office.DataSources;
+using OutOfOffice.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,43 +13,92 @@ using System.Windows.Forms;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
-    public partial class EmployeeProjectsForm : Form
+    public partial class ProjectEmployeesForm : Form
     {
-        public EmployeeProjectsForm()
+        private SortedBindingList<ProjectEmployeeVM> emplProjBindingSource;
+        private List<ProjectEmployeeVM> initialPEList;
+        private long currentProjId;
+
+        public ProjectEmployeesForm(long id)
         {
+            currentProjId = id;
+
             InitializeComponent();
             InitializeGridData();
         }
 
         private void InitializeGridData()
         {
+            /*
+            var projEmpsVM = ProjectEmployeeVM.FromEntities(CrudService.Get_Employees(), currentProjId);
+            emplProjBindingSource = (projEmpsVM != null)
+                ? new SortedBindingList<ProjectEmployeeVM>(projEmpsVM)
+                : new SortedBindingList<ProjectEmployeeVM>(new List<ProjectEmployeeVM>());
+            ProjectEmployeesDataGridView.DataSource = emplProjBindingSource;
+            */
 
-
-
-            ProjectsDataGridView.Rows.Add(false, 1, "Project 1");
-            ProjectsDataGridView.Rows.Add(true, 2, "Project 2");
-            ProjectsDataGridView.Rows.Add(false, 3, "Project 3");
+            //Creating copy of initial data
+            initialPEList = ProjectEmployeeVM.FromEntities(CrudService.Get_Employees(), currentProjId);
+            var projEmpsVM = ProjectEmployeeVM.FromEntities(CrudService.Get_Employees(), currentProjId);
+            ProjectEmployeesDataGridView.DataSource = projEmpsVM;
         }
 
-        private void Guna2DataGridView_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        private void ProjectsDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            if (ProjectsDataGridView.IsCurrentCellDirty)
+            if (ProjectEmployeesDataGridView.Columns.Contains("Assigned"))
             {
-                ProjectsDataGridView.CommitEdit(DataGridViewDataErrorContexts.Commit);
+                ProjectEmployeesDataGridView.Columns["Assigned"].ValueType = typeof(bool);
+                ProjectEmployeesDataGridView.Columns["Assigned"].Visible = true;
+                ProjectEmployeesDataGridView.Columns["Assigned"].ReadOnly = false;
+            }
+
+            if (ProjectEmployeesDataGridView.Columns.Contains("EmployeeName"))
+            {
+                ProjectEmployeesDataGridView.Columns["EmployeeName"].HeaderText = "Employee Name";
+                ProjectEmployeesDataGridView.Columns["EmployeeName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 
-        private void Guna2DataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void ProjectEmployeesDataGridView_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (ProjectEmployeesDataGridView.IsCurrentCellDirty)
+                ProjectEmployeesDataGridView.CommitEdit(DataGridViewDataErrorContexts.Commit);
+        }
+
+        private void ProjectEmployeesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == 0) // CheckBox column index
             {
-                bool isChecked = (bool)ProjectsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                string projectName = ProjectsDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-                MessageBox.Show($"{projectName} is {(isChecked ? "assigned" : "unassigned")}");
+                bool isChecked = (bool)ProjectEmployeesDataGridView[e.ColumnIndex, e.RowIndex].Value;
+                string projectName = ProjectEmployeesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                //MessageBox.Show($"{projectName} is {(isChecked ? "assigned" : "unassigned")}");
             }
         }
 
-        private void DeactivateButton_Click(object sender, EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            var emplProjsVM = (List<ProjectEmployeeVM>)ProjectEmployeesDataGridView.DataSource;
+            //var emplProjs = ProjectEmployeeVM.ToEntities(emplProjsVM, currentProjId);
+            //CrudService.Update_EmployeeProjects(emplProjs, currentProjId);
+
+            var diffToAdd = ProjectEmployeeVM.Get_DifferenceToAdd(
+                        initialPEList, emplProjsVM);
+
+            CrudService.Add_EmployeeProjects(
+                ProjectEmployeeVM.ToEntities(
+                    diffToAdd, currentProjId));
+
+            var diffToRemove = ProjectEmployeeVM.Get_DifferenceToRemove(
+                initialPEList, emplProjsVM);
+
+            CrudService.Remove_EmployeeProjects(
+                ProjectEmployeeVM.ToEntities(
+                    diffToRemove, currentProjId));
+            
+            Close();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }

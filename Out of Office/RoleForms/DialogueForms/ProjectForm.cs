@@ -255,9 +255,9 @@ namespace Out_of_Office.RoleForms.DialogueForms
         }
 
         //TODO - TEMP
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void EmployeesButton_Click(object sender, EventArgs e)
         {
-            new EmployeeProjectsForm().ShowDialog();
+            new ProjectEmployeesForm(projectVM.Id).ShowDialog();
         }
     }
 }
