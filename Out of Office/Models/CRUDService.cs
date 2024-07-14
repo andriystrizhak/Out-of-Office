@@ -406,26 +406,29 @@ namespace OutOfOffice.Models
             return projects;
         }
 
-        //TODO - fix
-        /*
-        public static void Update_EmployeeProjects(List<EmployeeProjectVM> empProjsVM, long id)
+        public static void Update_EmployeeProjects(List<EmployeeProject> empProjsVM, long id)
         {
             using var db = dBContextFactory.Create();
 
             var existingEmployeeProjects = Get_EmployeeProjects(id);
+            var existingNotEmployeeProjects = Get_NotEmployeeProjects(id);
 
             var projectsToAdd = empProjsVM
-            .Where(pa => pa.Assigned && !existingEmployeeProjects.Any(ep => ep.ProjectId == pa.ProjectId))
-            .Select(pa => new EmployeeProject
-            {
-                EmployeeId = employeeId,
-                ProjectId = pa.ProjectId
-            })
-            .ToList();
+                .Where(pa => !existingEmployeeProjects
+                    .Exists(eep => eep.EmployeeId == pa.EmployeeId 
+                        && eep.ProjectId == pa.ProjectId))
+                .ToList();
+            db.EmployeeProjects.AddRange(projectsToAdd);
 
-            //db.EmployeeProjects.Update(empProjs);
+            var projectsToDelete = existingNotEmployeeProjects
+                .Where(enep => !empProjsVM
+                    .Exists(ep => ep.EmployeeId == enep.EmployeeId 
+                        && ep.ProjectId == enep.ProjectId))
+                .ToList();
+            db.EmployeeProjects.RemoveRange(projectsToDelete);
+
             db.SaveChanges();
-        }*/
+        }
 
         #endregion
 
