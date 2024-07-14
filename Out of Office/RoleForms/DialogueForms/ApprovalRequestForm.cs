@@ -1,5 +1,6 @@
 ﻿using Out_of_Office.DataSources;
 using OutOfOffice.Models;
+using OutOfOffice.RoleForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
@@ -30,12 +32,18 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.appRequestVM = appRequestVM;
 
             InitializeComponent();
-            SetEmployeeList();
+            SetAll();
             InitializeFormWithData();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
             => Close();
+
+        private void SetAll()
+        {
+            SetRoleConstraints();
+            SetEmployeeList();
+        }
 
         #region [Set List]
 
@@ -63,11 +71,34 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         #endregion
 
-        #region [Activata & Deactivate Project]
+        #region [Set Role Constraints]
+
+        private void SetRoleConstraints()
+        {
+            if (owner is not HRManagerForm 
+                && owner is not ProjectManagerForm)
+            {
+                foreach (Control control in Controls)
+                    if (control != CloseButton)
+                        control.Enabled = false;
+            }
+        }
+
+        #endregion
+
+        #region [Approve & Reject Project]
 
         private void ApproveButton_Click(object sender, EventArgs e)
         {
             _ = UpdateWithDataFromForm(LeaveStatusEnum.Approved);
+
+            var leaveReq = CrudService.Get_LeaveRequest(appRequestVM.LeaveRequestId);
+            var empl = CrudService.Get_Employee(leaveReq.EmployeeId);
+            var daysToSubtract = (leaveReq.EndDate - leaveReq.StartDate).TotalDays;
+            empl.OutOfOfficeBalance -= daysToSubtract;
+
+            CrudService.Update_LeaveRequest(leaveReq);
+
             Close();
         }
 

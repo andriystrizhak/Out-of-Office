@@ -14,6 +14,8 @@ namespace Out_of_Office.DataSources
         public long Id { get; set; }
         public string EmployeeName { get; set; } = null!;
 
+        #region [Methods]
+
         public static ProjectEmployeeVM FromEntity(Employee entity, long projId)
         {
             return new ProjectEmployeeVM
@@ -73,5 +75,7 @@ namespace Out_of_Office.DataSources
                 .Select(vm => ToEntity(vm, projId))
                 .ToList();
         }
+
+        #endregion
     }
 }

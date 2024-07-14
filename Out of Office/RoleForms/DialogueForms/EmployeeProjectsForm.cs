@@ -27,6 +27,8 @@ namespace Out_of_Office.RoleForms.DialogueForms
             InitializeGridData();
         }
 
+        #region [Iniialize Grid Data]
+
         private void InitializeGridData()
         {
             /*
@@ -64,6 +66,8 @@ namespace Out_of_Office.RoleForms.DialogueForms
             if (ProjectEmployeesDataGridView.IsCurrentCellDirty)
                 ProjectEmployeesDataGridView.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
+
+        #endregion
 
         /*
         private void ProjectEmployeesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

@@ -1,5 +1,6 @@
 ﻿using Out_of_Office.DataSources;
 using OutOfOffice.Models;
+using OutOfOffice.RoleForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Out_of_Office.RoleForms.DialogueForms
 {
@@ -27,7 +29,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.owner = owner;
 
             InitializeComponent();
-            SetLists();
+            SetAll();
             InitializeFormWithoutData();
         }
 
@@ -43,12 +45,18 @@ namespace Out_of_Office.RoleForms.DialogueForms
             this.employeeVM = employeeVM;
 
             InitializeComponent();
-            SetLists();
+            SetAll();
             InitializeFormWithData();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
             => Close();
+
+        private void SetAll()
+        {
+            SetRoleConstraints();
+            SetLists();
+        }
 
         #region [Set Lists]
 
@@ -117,6 +125,20 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             ActivateButton.Enabled = false;
             DeactivateButton.Enabled = false;
+        }
+
+        #endregion
+
+        #region [Set Role Constraints]
+
+        private void SetRoleConstraints()
+        {
+            if (owner is not HRManagerForm)
+            {
+                foreach (Control control in Controls)
+                    if (control != CloseButton)
+                        control.Enabled = false;
+            }
         }
 
         #endregion

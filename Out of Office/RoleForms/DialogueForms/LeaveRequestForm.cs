@@ -115,31 +115,14 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         private void SetRoleConstraints()
         {
-            if (owner is not EmployeeRoleForm)
+            if (owner is not EmployeeRoleForm
+                || requestVM.StatusId == (long)LeaveStatusEnum.Approved
+                || requestVM.StatusId == (long)LeaveStatusEnum.Rejected)
             {
-                foreach (var control in Controls)
-                {
+                foreach (Control control in Controls)
                     if (control != CloseButton)
-                    {
-                        //TODO - fix
-                        //control.Enabled = false;
-                    }
-                }
-                ReadOnly_Constraint();
+                        control.Enabled = false;
             }
-        }
-
-        private void ReadOnly_Constraint()
-        {
-            EmployeeComboBox.Enabled = false;
-            AbsenceReasonComboBox.Enabled = false;
-            StartDateTimePicker.Enabled = false;
-            EndDateTimePicker.Enabled = false;
-            CommentTextBox.Enabled = false;
-
-            SubmitButton.Enabled = false;
-            CreateNewOrUpdateButton.Enabled = false;
-            CancelButton.Enabled = false;
         }
 
         #endregion
