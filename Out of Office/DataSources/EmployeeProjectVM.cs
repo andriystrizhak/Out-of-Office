@@ -23,12 +23,23 @@ namespace Out_of_Office.DataSources
             };
         }
 
+        public static List<EmployeeProjectVM> FromEntities(List<EmployeeProject> entities, long id)
+        {
+            return entities.Select(e => FromEntity(e, id)).ToList();
+        }
+
         public static EmployeeProject ToEntity(EmployeeProjectVM vm, long id)
         {
             return new EmployeeProject
             {
+                EmployeeId = id,
                 ProjectId = vm.Id
             };
+        }
+
+        public static List<EmployeeProject> ToEntities(List<EmployeeProjectVM> vms, long id)
+        {
+            return vms.Where(vm => vm.IsAssigned).Select(vm => ToEntity(vm, id)).ToList();
         }
     }
 }
