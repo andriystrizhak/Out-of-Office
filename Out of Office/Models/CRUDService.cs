@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Out_of_Office.DataSources;
 using Out_of_Office.Models;
 using Out_of_Office.Models.Factories;
 using System;
@@ -150,19 +151,6 @@ namespace OutOfOffice.Models
                 .Include(e => e.ProjectManager)
                 .Include(e => e.Status)
                 .FirstOrDefault(e => e.ProjectId == id);
-        }
-
-        public static List<Project> Get_EmployeeProjects(long id)
-        {
-            using var db = dBContextFactory.Create();
-
-            var projects = db.EmployeeProjects
-                .Include(e => e.Project)
-                .Where(e => e.EmployeeId == id)
-                .Select(e => e.Project)
-                .ToList();
-
-            return projects;
         }
 
         public static long Add_Project(Project proj)
@@ -376,6 +364,67 @@ namespace OutOfOffice.Models
             }
             return false;
         }
+
+        #endregion
+
+        #region [ Employee Project ]
+
+        public static List<EmployeeProject> Get_EmployeesProjects()
+        {
+            using var db = dBContextFactory.Create();
+
+            var projects = db.EmployeeProjects
+                .Include(e => e.Project)
+                .ToList();
+
+            return projects;
+        }
+
+        public static List<EmployeeProject> Get_EmployeeProjects(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var projects = db.EmployeeProjects
+                .Include(e => e.Project)
+                .Where(e => e.EmployeeId == id)
+                //.Select(e => e.Project)
+                .ToList();
+
+            return projects;
+        }
+
+        public static List<EmployeeProject> Get_NotEmployeeProjects(long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var projects = db.EmployeeProjects
+                .Include(e => e.Project)
+                .Where(e => e.EmployeeId != id)
+                //.Select(e => e.Project)
+                .ToList();
+
+            return projects;
+        }
+
+        /*
+        public static void Update_EmployeeProjects(List<EmployeeProjectVM> empProjsVM, long id)
+        {
+            using var db = dBContextFactory.Create();
+
+            var existingEmployeeProjects = Get_EmployeeProjects(id);
+
+            var projectsToAdd = empProjsVM
+            .Where(pa => pa.Assigned && !existingEmployeeProjects.Any(ep => ep.ProjectId == pa.ProjectId))
+            .Select(pa => new EmployeeProject
+            {
+                EmployeeId = employeeId,
+                ProjectId = pa.ProjectId
+            })
+            .ToList();
+
+            //db.EmployeeProjects.Update(empProjs);
+            db.SaveChanges();
+        }*/
 
         #endregion
 
