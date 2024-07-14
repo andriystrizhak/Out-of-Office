@@ -406,6 +406,7 @@ namespace OutOfOffice.Models
             return projects;
         }
 
+        //TODO - fix
         /*
         public static void Update_EmployeeProjects(List<EmployeeProjectVM> empProjsVM, long id)
         {

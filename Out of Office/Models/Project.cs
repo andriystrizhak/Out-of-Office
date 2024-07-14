@@ -16,6 +16,7 @@ namespace OutOfOffice.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long ProjectId { get; set; }
+        public string ProjectName { get; set; } = null!;
         public long ProjectTypeId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }

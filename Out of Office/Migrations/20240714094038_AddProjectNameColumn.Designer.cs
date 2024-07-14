@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OutOfOffice.Models;
 
@@ -10,9 +11,10 @@ using OutOfOffice.Models;
 namespace Out_of_Office.Migrations
 {
     [DbContext(typeof(ListsDbContext))]
-    partial class ListsDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240714094038_AddProjectNameColumn")]
+    partial class AddProjectNameColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.31");

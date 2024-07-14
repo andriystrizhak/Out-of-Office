@@ -19,7 +19,7 @@ namespace Out_of_Office.DataSources
             {
                 IsAssigned = entity.EmployeeId == id,
                 Id = entity.ProjectId,
-                ProjectName = entity.Project.
+                ProjectName = entity.Project.ProjectName
             };
         }
 
