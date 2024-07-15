@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,12 +40,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -75,6 +77,8 @@
             CreateNewOrUpdateButton = new Guna.UI2.WinForms.Guna2Button();
             SelectEmplButton = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
+            ProjectNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -87,7 +91,7 @@
             // 
             ProjectTypeComboBox.BackColor = Color.Transparent;
             ProjectTypeComboBox.BorderRadius = 10;
-            ProjectTypeComboBox.CustomizableEdges = customizableEdges16;
+            ProjectTypeComboBox.CustomizableEdges = customizableEdges18;
             ProjectTypeComboBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
             ProjectTypeComboBox.DisabledState.FillColor = Color.White;
             ProjectTypeComboBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
@@ -98,9 +102,9 @@
             ProjectTypeComboBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ProjectTypeComboBox.ForeColor = Color.Black;
             ProjectTypeComboBox.ItemHeight = 30;
-            ProjectTypeComboBox.Location = new Point(199, 214);
+            ProjectTypeComboBox.Location = new Point(199, 265);
             ProjectTypeComboBox.Name = "ProjectTypeComboBox";
-            ProjectTypeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            ProjectTypeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges19;
             ProjectTypeComboBox.Size = new Size(272, 36);
             ProjectTypeComboBox.TabIndex = 54;
             ProjectTypeComboBox.SelectedIndexChanged += Control_DataChanged;
@@ -112,16 +116,16 @@
             EndDateTimePicker.Checked = true;
             EndDateTimePicker.CheckedState.FillColor = Color.FromArgb(26, 139, 221);
             EndDateTimePicker.CheckedState.ForeColor = Color.White;
-            EndDateTimePicker.CustomizableEdges = customizableEdges5;
+            EndDateTimePicker.CustomizableEdges = customizableEdges7;
             EndDateTimePicker.FillColor = Color.FromArgb(126, 181, 222);
             EndDateTimePicker.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             EndDateTimePicker.ForeColor = Color.White;
             EndDateTimePicker.Format = DateTimePickerFormat.Long;
-            EndDateTimePicker.Location = new Point(481, 380);
+            EndDateTimePicker.Location = new Point(481, 431);
             EndDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             EndDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             EndDateTimePicker.Name = "EndDateTimePicker";
-            EndDateTimePicker.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            EndDateTimePicker.ShadowDecoration.CustomizableEdges = customizableEdges8;
             EndDateTimePicker.ShowCheckBox = true;
             EndDateTimePicker.Size = new Size(154, 36);
             EndDateTimePicker.TabIndex = 52;
@@ -132,7 +136,7 @@
             // 
             StatusTextBox.AutoSize = true;
             StatusTextBox.BorderRadius = 10;
-            StatusTextBox.CustomizableEdges = customizableEdges7;
+            StatusTextBox.CustomizableEdges = customizableEdges9;
             StatusTextBox.DefaultText = "";
             StatusTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
             StatusTextBox.DisabledState.FillColor = Color.White;
@@ -150,7 +154,7 @@
             StatusTextBox.PlaceholderText = "id";
             StatusTextBox.ReadOnly = true;
             StatusTextBox.SelectedText = "";
-            StatusTextBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            StatusTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
             StatusTextBox.Size = new Size(185, 34);
             StatusTextBox.TabIndex = 51;
             // 
@@ -168,7 +172,7 @@
             // 
             CommentTextBox.AutoSize = true;
             CommentTextBox.BorderRadius = 10;
-            CommentTextBox.CustomizableEdges = customizableEdges9;
+            CommentTextBox.CustomizableEdges = customizableEdges11;
             CommentTextBox.DefaultText = "";
             CommentTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
             CommentTextBox.DisabledState.FillColor = Color.White;
@@ -178,14 +182,14 @@
             CommentTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             CommentTextBox.ForeColor = Color.Black;
             CommentTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            CommentTextBox.Location = new Point(178, 440);
+            CommentTextBox.Location = new Point(178, 491);
             CommentTextBox.Margin = new Padding(4, 4, 4, 4);
             CommentTextBox.Multiline = true;
             CommentTextBox.Name = "CommentTextBox";
             CommentTextBox.PasswordChar = '\0';
             CommentTextBox.PlaceholderText = "(optional)";
             CommentTextBox.SelectedText = "";
-            CommentTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            CommentTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
             CommentTextBox.Size = new Size(457, 118);
             CommentTextBox.TabIndex = 49;
             CommentTextBox.TextChanged += Control_DataChanged;
@@ -194,7 +198,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(76, 446);
+            label9.Location = new Point(76, 497);
             label9.Name = "label9";
             label9.Size = new Size(94, 22);
             label9.TabIndex = 48;
@@ -204,7 +208,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(389, 388);
+            label8.Location = new Point(389, 439);
             label8.Name = "label8";
             label8.Size = new Size(85, 22);
             label8.TabIndex = 47;
@@ -214,7 +218,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(76, 388);
+            label7.Location = new Point(76, 439);
             label7.Name = "label7";
             label7.Size = new Size(93, 22);
             label7.TabIndex = 46;
@@ -224,7 +228,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(76, 222);
+            label6.Location = new Point(76, 273);
             label6.Name = "label6";
             label6.Size = new Size(111, 22);
             label6.TabIndex = 45;
@@ -234,7 +238,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(77, 277);
+            label5.Location = new Point(77, 328);
             label5.Name = "label5";
             label5.Size = new Size(148, 22);
             label5.TabIndex = 43;
@@ -244,7 +248,7 @@
             // 
             IdTextBox.AutoSize = true;
             IdTextBox.BorderRadius = 10;
-            IdTextBox.CustomizableEdges = customizableEdges11;
+            IdTextBox.CustomizableEdges = customizableEdges13;
             IdTextBox.DefaultText = "";
             IdTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
             IdTextBox.DisabledState.FillColor = Color.White;
@@ -262,7 +266,7 @@
             IdTextBox.PlaceholderText = "id";
             IdTextBox.ReadOnly = true;
             IdTextBox.SelectedText = "";
-            IdTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            IdTextBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
             IdTextBox.Size = new Size(87, 34);
             IdTextBox.TabIndex = 40;
             // 
@@ -303,7 +307,7 @@
             CloseButton.Location = new Point(656, 13);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.FromArgb(26, 139, 221);
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges15;
             CloseButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             CloseButton.Size = new Size(45, 45);
             CloseButton.TabIndex = 37;
@@ -326,16 +330,16 @@
             StartDateTimePicker.Checked = true;
             StartDateTimePicker.CheckedState.FillColor = Color.FromArgb(26, 139, 221);
             StartDateTimePicker.CheckedState.ForeColor = Color.White;
-            StartDateTimePicker.CustomizableEdges = customizableEdges14;
+            StartDateTimePicker.CustomizableEdges = customizableEdges16;
             StartDateTimePicker.FillColor = Color.FromArgb(126, 181, 222);
             StartDateTimePicker.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold, GraphicsUnit.Point);
             StartDateTimePicker.ForeColor = Color.White;
             StartDateTimePicker.Format = DateTimePickerFormat.Long;
-            StartDateTimePicker.Location = new Point(178, 380);
+            StartDateTimePicker.Location = new Point(178, 431);
             StartDateTimePicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             StartDateTimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             StartDateTimePicker.Name = "StartDateTimePicker";
-            StartDateTimePicker.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            StartDateTimePicker.ShadowDecoration.CustomizableEdges = customizableEdges17;
             StartDateTimePicker.Size = new Size(154, 36);
             StartDateTimePicker.TabIndex = 53;
             StartDateTimePicker.Value = new DateTime(2024, 7, 9, 22, 46, 25, 65);
@@ -345,7 +349,7 @@
             // 
             PMComboBox.BackColor = Color.Transparent;
             PMComboBox.BorderRadius = 10;
-            PMComboBox.CustomizableEdges = customizableEdges18;
+            PMComboBox.CustomizableEdges = customizableEdges20;
             PMComboBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
             PMComboBox.DisabledState.FillColor = Color.White;
             PMComboBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
@@ -356,9 +360,9 @@
             PMComboBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             PMComboBox.ForeColor = Color.Black;
             PMComboBox.ItemHeight = 30;
-            PMComboBox.Location = new Point(237, 269);
+            PMComboBox.Location = new Point(237, 320);
             PMComboBox.Name = "PMComboBox";
-            PMComboBox.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            PMComboBox.ShadowDecoration.CustomizableEdges = customizableEdges21;
             PMComboBox.Size = new Size(272, 36);
             PMComboBox.TabIndex = 57;
             PMComboBox.SelectedIndexChanged += Control_DataChanged;
@@ -368,7 +372,7 @@
             DeactivateButton.Animated = true;
             DeactivateButton.BorderRadius = 10;
             DeactivateButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            DeactivateButton.CustomizableEdges = customizableEdges20;
+            DeactivateButton.CustomizableEdges = customizableEdges22;
             DeactivateButton.DisabledState.BorderColor = Color.DarkGray;
             DeactivateButton.DisabledState.CustomBorderColor = Color.DarkGray;
             DeactivateButton.DisabledState.FillColor = Color.FromArgb(192, 123, 123);
@@ -377,11 +381,11 @@
             DeactivateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DeactivateButton.ForeColor = Color.White;
             DeactivateButton.HoverState.FillColor = Color.FromArgb(179, 49, 60);
-            DeactivateButton.Location = new Point(488, 601);
+            DeactivateButton.Location = new Point(488, 652);
             DeactivateButton.Name = "DeactivateButton";
             DeactivateButton.PressedColor = Color.FromArgb(102, 28, 34);
             DeactivateButton.PressedDepth = 25;
-            DeactivateButton.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            DeactivateButton.ShadowDecoration.CustomizableEdges = customizableEdges23;
             DeactivateButton.Size = new Size(147, 46);
             DeactivateButton.TabIndex = 59;
             DeactivateButton.Text = "Deactivate";
@@ -392,7 +396,7 @@
             ActivateButton.Animated = true;
             ActivateButton.BorderRadius = 10;
             ActivateButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            ActivateButton.CustomizableEdges = customizableEdges22;
+            ActivateButton.CustomizableEdges = customizableEdges24;
             ActivateButton.DisabledState.BorderColor = Color.DarkGray;
             ActivateButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ActivateButton.DisabledState.FillColor = Color.FromArgb(123, 172, 136);
@@ -401,11 +405,11 @@
             ActivateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ActivateButton.ForeColor = Color.White;
             ActivateButton.HoverState.FillColor = Color.FromArgb(19, 149, 38);
-            ActivateButton.Location = new Point(76, 601);
+            ActivateButton.Location = new Point(76, 652);
             ActivateButton.Name = "ActivateButton";
             ActivateButton.PressedColor = Color.FromArgb(16, 124, 16);
             ActivateButton.PressedDepth = 40;
-            ActivateButton.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            ActivateButton.ShadowDecoration.CustomizableEdges = customizableEdges25;
             ActivateButton.Size = new Size(147, 46);
             ActivateButton.TabIndex = 58;
             ActivateButton.Text = "Activate";
@@ -417,7 +421,7 @@
             CreateNewOrUpdateButton.Animated = true;
             CreateNewOrUpdateButton.BorderRadius = 10;
             CreateNewOrUpdateButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            CreateNewOrUpdateButton.CustomizableEdges = customizableEdges3;
+            CreateNewOrUpdateButton.CustomizableEdges = customizableEdges5;
             CreateNewOrUpdateButton.DisabledState.BorderColor = Color.DarkGray;
             CreateNewOrUpdateButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CreateNewOrUpdateButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
@@ -426,9 +430,9 @@
             CreateNewOrUpdateButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             CreateNewOrUpdateButton.ForeColor = Color.White;
             CreateNewOrUpdateButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
-            CreateNewOrUpdateButton.Location = new Point(283, 601);
+            CreateNewOrUpdateButton.Location = new Point(283, 652);
             CreateNewOrUpdateButton.Name = "CreateNewOrUpdateButton";
-            CreateNewOrUpdateButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            CreateNewOrUpdateButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             CreateNewOrUpdateButton.Size = new Size(147, 46);
             CreateNewOrUpdateButton.TabIndex = 60;
             CreateNewOrUpdateButton.Text = "Create new";
@@ -440,7 +444,7 @@
             SelectEmplButton.Animated = true;
             SelectEmplButton.BorderRadius = 10;
             SelectEmplButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            SelectEmplButton.CustomizableEdges = customizableEdges1;
+            SelectEmplButton.CustomizableEdges = customizableEdges3;
             SelectEmplButton.DisabledState.BorderColor = Color.DarkGray;
             SelectEmplButton.DisabledState.CustomBorderColor = Color.DarkGray;
             SelectEmplButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
@@ -449,11 +453,11 @@
             SelectEmplButton.Font = new Font("Montserrat SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             SelectEmplButton.ForeColor = Color.White;
             SelectEmplButton.HoverState.FillColor = Color.FromArgb(19, 149, 38);
-            SelectEmplButton.Location = new Point(271, 326);
+            SelectEmplButton.Location = new Point(271, 375);
             SelectEmplButton.Name = "SelectEmplButton";
             SelectEmplButton.PressedColor = Color.Empty;
             SelectEmplButton.PressedDepth = 40;
-            SelectEmplButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            SelectEmplButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             SelectEmplButton.Size = new Size(189, 36);
             SelectEmplButton.TabIndex = 63;
             SelectEmplButton.Text = "Select Employees";
@@ -464,18 +468,56 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(77, 332);
+            label2.Location = new Point(77, 383);
             label2.Name = "label2";
             label2.Size = new Size(181, 22);
             label2.TabIndex = 64;
             label2.Text = "Assigned Employees";
+            // 
+            // ProjectNameTextBox
+            // 
+            ProjectNameTextBox.AutoSize = true;
+            ProjectNameTextBox.BorderRadius = 10;
+            ProjectNameTextBox.CustomizableEdges = customizableEdges1;
+            ProjectNameTextBox.DefaultText = "";
+            ProjectNameTextBox.DisabledState.BorderColor = Color.FromArgb(226, 239, 252);
+            ProjectNameTextBox.DisabledState.FillColor = Color.White;
+            ProjectNameTextBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
+            ProjectNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ProjectNameTextBox.Enabled = false;
+            ProjectNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ProjectNameTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            ProjectNameTextBox.ForeColor = Color.Black;
+            ProjectNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ProjectNameTextBox.Location = new Point(209, 210);
+            ProjectNameTextBox.Margin = new Padding(4, 4, 4, 4);
+            ProjectNameTextBox.Name = "ProjectNameTextBox";
+            ProjectNameTextBox.PasswordChar = '\0';
+            ProjectNameTextBox.PlaceholderText = "name";
+            ProjectNameTextBox.SelectedText = "";
+            ProjectNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            ProjectNameTextBox.Size = new Size(262, 34);
+            ProjectNameTextBox.TabIndex = 66;
+            ProjectNameTextBox.TextChanged += Control_DataChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(75, 218);
+            label4.Name = "label4";
+            label4.Size = new Size(122, 22);
+            label4.TabIndex = 65;
+            label4.Text = "Project name";
             // 
             // ProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(226, 239, 252);
-            ClientSize = new Size(713, 701);
+            ClientSize = new Size(713, 757);
+            Controls.Add(ProjectNameTextBox);
+            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(SelectEmplButton);
             Controls.Add(CreateNewOrUpdateButton);
@@ -531,5 +573,7 @@
         private Guna.UI2.WinForms.Guna2Button CreateNewOrUpdateButton;
         private Guna.UI2.WinForms.Guna2Button SelectEmplButton;
         private Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox ProjectNameTextBox;
+        private Label label4;
     }
 }

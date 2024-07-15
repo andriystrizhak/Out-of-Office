@@ -83,6 +83,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             IdLabel.Text = projectVM.Id.ToString();
 
             IdTextBox.Text = projectVM.Id.ToString();
+            ProjectNameTextBox.Text = projectVM.Name;
             PMComboBox.SelectedIndex = (int)projectVM.ProjectManagerId - 1;
             StatusTextBox.Text = projectVM.Status.ToString();
             ProjectTypeComboBox.SelectedIndex = (int)projectVM.ProjectTypeId - 1;
@@ -124,23 +125,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
                 foreach (Control control in Controls)
                     if (control != CloseButton)
                         control.Enabled = false;
-                //TODO - Remove
-                //ReadOnly_Constraint();
             }
-        }
-
-        private void ReadOnly_Constraint()
-        {
-            ProjectTypeComboBox.Enabled = false;
-            PMComboBox.Enabled = false;
-            StartDateTimePicker.Enabled = false;
-            EndDateTimePicker.Enabled = false;
-            CommentTextBox.Enabled = false;
-
-            SelectEmplButton.Enabled = false;
-            ActivateButton.Enabled = false;
-            CreateNewOrUpdateButton.Enabled = false;
-            DeactivateButton.Enabled = false;
         }
 
         #endregion
@@ -224,6 +209,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             var proj = new Project
             {
+                ProjectName = ProjectNameTextBox.Text,
                 ProjectTypeId = ProjectTypeComboBox.SelectedIndex + 1,
                 StartDate = StartDateTimePicker.Value,
                 EndDate = endDate,
@@ -239,7 +225,10 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         private void Control_DataChanged(object sender, EventArgs e)
         {
-            CreateNewOrUpdateButton.Enabled = true;
+            if (string.IsNullOrEmpty(ProjectNameTextBox.Text))
+                CreateNewOrUpdateButton.Enabled = false;
+            else
+                CreateNewOrUpdateButton.Enabled = true;
         }
 
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
