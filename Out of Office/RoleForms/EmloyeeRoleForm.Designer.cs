@@ -66,6 +66,8 @@
             label3 = new Label();
             ChangeRoleBPanel = new Guna.UI2.WinForms.Guna2Panel();
             ChangeRoleButton = new Guna.UI2.WinForms.Guna2Button();
+            FadeInTimer = new System.Windows.Forms.Timer(components);
+            FadeOutTimer = new System.Windows.Forms.Timer(components);
             TabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProjectsDataGridView).BeginInit();
@@ -458,6 +460,16 @@
             ChangeRoleButton.TabIndex = 21;
             ChangeRoleButton.Click += ChangeRoleButton_Click;
             // 
+            // FadeInTimer
+            // 
+            FadeInTimer.Interval = 10;
+            FadeInTimer.Tick += FadeInTimer_Tick;
+            // 
+            // FadeOutTimer
+            // 
+            FadeOutTimer.Interval = 20;
+            FadeOutTimer.Tick += FadeOutTimer_AndClose_Tick;
+            // 
             // EmployeeRoleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -469,9 +481,12 @@
             Controls.Add(TabControl);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EmployeeRoleForm";
+            Opacity = 0D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DeveloperForm";
+            FormClosing += MainForm_FormClosing;
             Load += EmployeeForm_Load;
+            Shown += MainForm_Shown;
             TabControl.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -504,5 +519,7 @@
         private Label label3;
         private Guna.UI2.WinForms.Guna2Panel ChangeRoleBPanel;
         private Guna.UI2.WinForms.Guna2Button ChangeRoleButton;
+        private System.Windows.Forms.Timer FadeInTimer;
+        private System.Windows.Forms.Timer FadeOutTimer;
     }
 }

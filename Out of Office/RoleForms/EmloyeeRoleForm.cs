@@ -38,6 +38,58 @@ namespace OutOfOffice.RoleForms
             TabControl_SelectedIndexChanged(sender, e);
         }
 
+        #region [ this form ]
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            //Thread.Sleep(500);
+            //SplashScreenManager.CloseForm();
+
+            FadeInTimer.Start();
+        }
+
+        double FadeInOutDelta { get; } = 0.05;
+
+        private void FadeInTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity < 1)
+                this.Opacity += FadeInOutDelta;
+            else
+            {
+                FadeInTimer.Stop();
+            }
+        }
+
+        private void FadeOutTimer_AndClose_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0)
+                this.Opacity -= 2 * FadeInOutDelta;
+            else
+                this.Close();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            //var handler = ShowProgressPanel(this);
+
+            DialogResult closeForm = (Program.CurrentRole != UserRole.Exit)
+                ? DialogResult.Yes
+                : MessageBox.Show(
+                "Do you really want to leave?", "Bye?",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (closeForm == DialogResult.Yes)
+            {
+                this.FormClosing -= MainForm_FormClosing;
+                FadeOutTimer.Start();
+            }
+            //handler.Close();
+            e.Cancel = true;
+        }
+
+        #endregion
+
         #region [ TopPanel ]
 
         private void CloseButton_Click(object sender, EventArgs e)

@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle29 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle30 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle31 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle32 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle33 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle34 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle35 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle36 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             TopPanel = new Guna.UI2.WinForms.Guna2Panel();
             label3 = new Label();
@@ -82,6 +82,8 @@
             label5 = new Label();
             ChangeRoleBPanel = new Guna.UI2.WinForms.Guna2Panel();
             ChangeRoleButton = new Guna.UI2.WinForms.Guna2Button();
+            FadeOutTimer = new System.Windows.Forms.Timer(components);
+            FadeInTimer = new System.Windows.Forms.Timer(components);
             TopPanel.SuspendLayout();
             TabControl.SuspendLayout();
             tabPage3.SuspendLayout();
@@ -107,12 +109,12 @@
             TopPanel.Controls.Add(label3);
             TopPanel.Controls.Add(MinimizeButton);
             TopPanel.Controls.Add(CloseButton);
-            TopPanel.CustomizableEdges = customizableEdges15;
+            TopPanel.CustomizableEdges = customizableEdges41;
             TopPanel.Dock = DockStyle.Top;
             TopPanel.Location = new Point(0, 0);
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
-            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges42;
             TopPanel.Size = new Size(1093, 33);
             TopPanel.TabIndex = 13;
             TopPanel.MouseDown += This_MouseDown;
@@ -133,7 +135,7 @@
             // 
             MinimizeButton.Animated = true;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
-            MinimizeButton.CustomizableEdges = customizableEdges11;
+            MinimizeButton.CustomizableEdges = customizableEdges37;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,7 +147,7 @@
             MinimizeButton.HoverState.FillColor = Color.FromArgb(12, 65, 109);
             MinimizeButton.Location = new Point(989, 0);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges38;
             MinimizeButton.Size = new Size(52, 33);
             MinimizeButton.TabIndex = 8;
             MinimizeButton.Text = "—";
@@ -155,7 +157,7 @@
             // 
             CloseButton.Animated = true;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
-            CloseButton.CustomizableEdges = customizableEdges13;
+            CloseButton.CustomizableEdges = customizableEdges39;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -168,7 +170,7 @@
             CloseButton.Location = new Point(1041, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges40;
             CloseButton.Size = new Size(52, 33);
             CloseButton.TabIndex = 7;
             CloseButton.Text = "x";
@@ -237,7 +239,7 @@
             ELRefreshCircleButton.Location = new Point(997, 508);
             ELRefreshCircleButton.Name = "ELRefreshCircleButton";
             ELRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            ELRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            ELRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges43;
             ELRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             ELRefreshCircleButton.Size = new Size(45, 45);
             ELRefreshCircleButton.TabIndex = 19;
@@ -245,32 +247,32 @@
             // 
             // EmployeesDataGridView
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            EmployeesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = Color.White;
+            EmployeesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             EmployeesDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             EmployeesDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             EmployeesDataGridView.BorderStyle = BorderStyle.FixedSingle;
             EmployeesDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(14, 75, 126);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.NullValue = "-";
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(13, 109, 188);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            EmployeesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = Color.FromArgb(14, 75, 126);
+            dataGridViewCellStyle26.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle26.ForeColor = Color.White;
+            dataGridViewCellStyle26.NullValue = "-";
+            dataGridViewCellStyle26.SelectionBackColor = Color.FromArgb(13, 109, 188);
+            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.True;
+            EmployeesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             EmployeesDataGridView.ColumnHeadersHeight = 25;
             EmployeesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(241, 248, 254);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.NullValue = "-";
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(190, 223, 249);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            EmployeesDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = Color.FromArgb(241, 248, 254);
+            dataGridViewCellStyle27.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle27.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle27.NullValue = "-";
+            dataGridViewCellStyle27.SelectionBackColor = Color.FromArgb(190, 223, 249);
+            dataGridViewCellStyle27.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.False;
+            EmployeesDataGridView.DefaultCellStyle = dataGridViewCellStyle27;
             EmployeesDataGridView.GridColor = Color.FromArgb(190, 223, 249);
             EmployeesDataGridView.Location = new Point(42, 75);
             EmployeesDataGridView.Name = "EmployeesDataGridView";
@@ -330,7 +332,7 @@
             // 
             AddNewPButton.BorderRadius = 10;
             AddNewPButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            AddNewPButton.CustomizableEdges = customizableEdges6;
+            AddNewPButton.CustomizableEdges = customizableEdges44;
             AddNewPButton.DisabledState.BorderColor = Color.DarkGray;
             AddNewPButton.DisabledState.CustomBorderColor = Color.DarkGray;
             AddNewPButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -341,7 +343,7 @@
             AddNewPButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
             AddNewPButton.Location = new Point(42, 522);
             AddNewPButton.Name = "AddNewPButton";
-            AddNewPButton.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            AddNewPButton.ShadowDecoration.CustomizableEdges = customizableEdges45;
             AddNewPButton.Size = new Size(162, 46);
             AddNewPButton.TabIndex = 17;
             AddNewPButton.Text = "New Project";
@@ -363,7 +365,7 @@
             PLRefreshCircleButton.Location = new Point(997, 508);
             PLRefreshCircleButton.Name = "PLRefreshCircleButton";
             PLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges46;
             PLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             PLRefreshCircleButton.Size = new Size(45, 45);
             PLRefreshCircleButton.TabIndex = 12;
@@ -373,33 +375,33 @@
             // 
             ProjectsDataGridView.AllowUserToAddRows = false;
             ProjectsDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            ProjectsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.BackColor = Color.White;
+            ProjectsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
             ProjectsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ProjectsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             ProjectsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             ProjectsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             ProjectsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(14, 75, 126);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.NullValue = "-";
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(13, 109, 188);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            ProjectsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = Color.FromArgb(14, 75, 126);
+            dataGridViewCellStyle29.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle29.ForeColor = Color.White;
+            dataGridViewCellStyle29.NullValue = "-";
+            dataGridViewCellStyle29.SelectionBackColor = Color.FromArgb(13, 109, 188);
+            dataGridViewCellStyle29.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = DataGridViewTriState.True;
+            ProjectsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             ProjectsDataGridView.ColumnHeadersHeight = 25;
             ProjectsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(241, 248, 254);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.NullValue = "-";
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(190, 223, 249);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            ProjectsDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = Color.FromArgb(241, 248, 254);
+            dataGridViewCellStyle30.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle30.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle30.NullValue = "-";
+            dataGridViewCellStyle30.SelectionBackColor = Color.FromArgb(190, 223, 249);
+            dataGridViewCellStyle30.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle30.WrapMode = DataGridViewTriState.False;
+            ProjectsDataGridView.DefaultCellStyle = dataGridViewCellStyle30;
             ProjectsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
             ProjectsDataGridView.Location = new Point(42, 75);
             ProjectsDataGridView.Margin = new Padding(20, 50, 20, 100);
@@ -473,7 +475,7 @@
             LRLRefreshCircleButton.Location = new Point(997, 508);
             LRLRefreshCircleButton.Name = "LRLRefreshCircleButton";
             LRLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges47;
             LRLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             LRLRefreshCircleButton.Size = new Size(45, 45);
             LRLRefreshCircleButton.TabIndex = 15;
@@ -481,32 +483,32 @@
             // 
             // LeaveRequestsDataGridView
             // 
-            dataGridViewCellStyle7.BackColor = Color.White;
-            LeaveRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle31.BackColor = Color.White;
+            LeaveRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             LeaveRequestsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             LeaveRequestsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             LeaveRequestsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             LeaveRequestsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(14, 75, 126);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.NullValue = "-";
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(13, 109, 188);
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            LeaveRequestsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle32.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = Color.FromArgb(14, 75, 126);
+            dataGridViewCellStyle32.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle32.ForeColor = Color.White;
+            dataGridViewCellStyle32.NullValue = "-";
+            dataGridViewCellStyle32.SelectionBackColor = Color.FromArgb(13, 109, 188);
+            dataGridViewCellStyle32.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = DataGridViewTriState.True;
+            LeaveRequestsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             LeaveRequestsDataGridView.ColumnHeadersHeight = 25;
             LeaveRequestsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(241, 248, 254);
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.NullValue = "-";
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(190, 223, 249);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            LeaveRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle33.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = Color.FromArgb(241, 248, 254);
+            dataGridViewCellStyle33.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle33.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle33.NullValue = "-";
+            dataGridViewCellStyle33.SelectionBackColor = Color.FromArgb(190, 223, 249);
+            dataGridViewCellStyle33.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle33.WrapMode = DataGridViewTriState.False;
+            LeaveRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle33;
             LeaveRequestsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
             LeaveRequestsDataGridView.Location = new Point(42, 75);
             LeaveRequestsDataGridView.Name = "LeaveRequestsDataGridView";
@@ -576,7 +578,7 @@
             ARLRefreshCircleButton.Location = new Point(997, 508);
             ARLRefreshCircleButton.Name = "ARLRefreshCircleButton";
             ARLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            ARLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            ARLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges48;
             ARLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             ARLRefreshCircleButton.Size = new Size(45, 45);
             ARLRefreshCircleButton.TabIndex = 19;
@@ -584,32 +586,32 @@
             // 
             // ApprovalRequestsDataGridView
             // 
-            dataGridViewCellStyle10.BackColor = Color.White;
-            ApprovalRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle34.BackColor = Color.White;
+            ApprovalRequestsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
             ApprovalRequestsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             ApprovalRequestsDataGridView.BackgroundColor = Color.FromArgb(241, 248, 254);
             ApprovalRequestsDataGridView.BorderStyle = BorderStyle.FixedSingle;
             ApprovalRequestsDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(14, 75, 126);
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.NullValue = "-";
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(13, 109, 188);
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            ApprovalRequestsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle35.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = Color.FromArgb(14, 75, 126);
+            dataGridViewCellStyle35.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle35.ForeColor = Color.White;
+            dataGridViewCellStyle35.NullValue = "-";
+            dataGridViewCellStyle35.SelectionBackColor = Color.FromArgb(13, 109, 188);
+            dataGridViewCellStyle35.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = DataGridViewTriState.True;
+            ApprovalRequestsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             ApprovalRequestsDataGridView.ColumnHeadersHeight = 25;
             ApprovalRequestsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.FromArgb(241, 248, 254);
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle12.NullValue = "-";
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(190, 223, 249);
-            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            ApprovalRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle36.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = Color.FromArgb(241, 248, 254);
+            dataGridViewCellStyle36.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle36.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle36.NullValue = "-";
+            dataGridViewCellStyle36.SelectionBackColor = Color.FromArgb(190, 223, 249);
+            dataGridViewCellStyle36.SelectionForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle36.WrapMode = DataGridViewTriState.False;
+            ApprovalRequestsDataGridView.DefaultCellStyle = dataGridViewCellStyle36;
             ApprovalRequestsDataGridView.GridColor = Color.FromArgb(190, 223, 249);
             ApprovalRequestsDataGridView.Location = new Point(42, 75);
             ApprovalRequestsDataGridView.Name = "ApprovalRequestsDataGridView";
@@ -655,10 +657,10 @@
             // 
             ChangeRoleBPanel.BackColor = Color.FromArgb(226, 239, 252);
             ChangeRoleBPanel.Controls.Add(ChangeRoleButton);
-            ChangeRoleBPanel.CustomizableEdges = customizableEdges3;
+            ChangeRoleBPanel.CustomizableEdges = customizableEdges35;
             ChangeRoleBPanel.Location = new Point(868, 88);
             ChangeRoleBPanel.Name = "ChangeRoleBPanel";
-            ChangeRoleBPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ChangeRoleBPanel.ShadowDecoration.CustomizableEdges = customizableEdges36;
             ChangeRoleBPanel.Size = new Size(183, 56);
             ChangeRoleBPanel.TabIndex = 20;
             // 
@@ -667,7 +669,7 @@
             ChangeRoleButton.BorderRadius = 10;
             ChangeRoleButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
             ChangeRoleButton.Cursor = Cursors.Hand;
-            ChangeRoleButton.CustomizableEdges = customizableEdges1;
+            ChangeRoleButton.CustomizableEdges = customizableEdges33;
             ChangeRoleButton.DisabledState.BorderColor = Color.DarkGray;
             ChangeRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ChangeRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -680,10 +682,20 @@
             ChangeRoleButton.ImageSize = new Size(35, 35);
             ChangeRoleButton.Location = new Point(128, 5);
             ChangeRoleButton.Name = "ChangeRoleButton";
-            ChangeRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            ChangeRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges34;
             ChangeRoleButton.Size = new Size(48, 48);
             ChangeRoleButton.TabIndex = 21;
             ChangeRoleButton.Click += ChangeRoleButton_Click;
+            // 
+            // FadeOutTimer
+            // 
+            FadeOutTimer.Interval = 20;
+            FadeOutTimer.Tick += FadeOutTimer_AndClose_Tick;
+            // 
+            // FadeInTimer
+            // 
+            FadeInTimer.Interval = 10;
+            FadeInTimer.Tick += FadeInTimer_Tick;
             // 
             // ProjectManagerForm
             // 
@@ -695,9 +707,12 @@
             Controls.Add(TopPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ProjectManagerForm";
+            Opacity = 0D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ProjectManagerForm";
+            FormClosing += MainForm_FormClosing;
             Load += HRManagerForm_Load;
+            Shown += MainForm_Shown;
             TopPanel.ResumeLayout(false);
             TopPanel.PerformLayout();
             TabControl.ResumeLayout(false);
@@ -744,5 +759,7 @@
         private Guna.UI2.WinForms.Guna2Button AddNewPButton;
         private Guna.UI2.WinForms.Guna2Panel ChangeRoleBPanel;
         private Guna.UI2.WinForms.Guna2Button ChangeRoleButton;
+        private System.Windows.Forms.Timer FadeOutTimer;
+        private System.Windows.Forms.Timer FadeInTimer;
     }
 }
