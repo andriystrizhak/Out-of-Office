@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Out_of_Office;
 using Out_of_Office.DataSources;
 using Out_of_Office.Models;
 using Out_of_Office.Models.Factories;
@@ -60,7 +61,23 @@ namespace OutOfOffice.Models
                 .Include(e => e.Status)
                 .Include(e => e.PeoplePartner)
                 .Include(e => e.Photo)
-                .Where(e => e.Position.PositionName == "HR Manager")
+                .Where(e => e.PositionId == (long)UserRole.HR)
+                .ToList();
+
+            return employee;
+        }
+
+        public static List<Employee> Get_ProjectManager()
+        {
+            using var db = dBContextFactory.Create();
+
+            var employee = db.Employees
+                .Include(e => e.Subdivision)
+                .Include(e => e.Position)
+                .Include(e => e.Status)
+                .Include(e => e.PeoplePartner)
+                .Include(e => e.Photo)
+                .Where(e => e.PositionId == (long)UserRole.PM)
                 .ToList();
 
             return employee;
