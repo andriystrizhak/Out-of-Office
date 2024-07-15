@@ -100,6 +100,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             CreateNewOrUpdateButton.Text = "Update";
             CreateNewOrUpdateButton.Enabled = false;
+            SelectEmplButton.Enabled = true;
         }
 
         void InitializeFormWithoutData()

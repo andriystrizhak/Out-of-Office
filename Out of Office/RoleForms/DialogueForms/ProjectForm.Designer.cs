@@ -79,6 +79,7 @@
             label2 = new Label();
             ProjectNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
+            SelectEmplsToolTip = new ToolTip(components);
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -449,6 +450,7 @@
             SelectEmplButton.DisabledState.CustomBorderColor = Color.DarkGray;
             SelectEmplButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
             SelectEmplButton.DisabledState.ForeColor = Color.White;
+            SelectEmplButton.Enabled = false;
             SelectEmplButton.FillColor = Color.FromArgb(26, 139, 221);
             SelectEmplButton.Font = new Font("Montserrat SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             SelectEmplButton.ForeColor = Color.White;
@@ -463,6 +465,7 @@
             SelectEmplButton.Text = "Select Employees";
             SelectEmplButton.TextOffset = new Point(0, -1);
             SelectEmplButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            SelectEmplsToolTip.SetToolTip(SelectEmplButton, "Create Project to select employees");
             SelectEmplButton.Click += EmployeesButton_Click;
             // 
             // label2
@@ -485,7 +488,6 @@
             ProjectNameTextBox.DisabledState.FillColor = Color.White;
             ProjectNameTextBox.DisabledState.ForeColor = Color.FromArgb(72, 72, 72);
             ProjectNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            ProjectNameTextBox.Enabled = false;
             ProjectNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             ProjectNameTextBox.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ProjectNameTextBox.ForeColor = Color.Black;
@@ -576,5 +578,6 @@
         private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox ProjectNameTextBox;
         private Label label4;
+        private ToolTip SelectEmplsToolTip;
     }
 }
