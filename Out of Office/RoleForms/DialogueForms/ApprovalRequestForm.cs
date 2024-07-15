@@ -57,7 +57,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         #endregion
 
-        (LeaveRequest, Employee?) Get_RelatedLRAndE()
+        (LeaveRequest leaveReq, Employee? empl) Get_RelatedLRAndE()
         {
             var leaveReq = CrudService.Get_LeaveRequest(appRequestVM.LeaveRequestId);
             var empl = CrudService.Get_Employee(leaveReq.EmployeeId);
@@ -78,10 +78,10 @@ namespace Out_of_Office.RoleForms.DialogueForms
             ApproverComboBox.SelectedIndex = (int)appRequestVM.ApproverId - 1;
             CommentTextBox.Text = appRequestVM.Comment;
 
-            var lReqAndEmpl = Get_RelatedLRAndE();
+            var relatedData = Get_RelatedLRAndE();
 
-            if ((lReqAndEmpl.Item1.EndDate - lReqAndEmpl.Item1.StartDate).TotalDays 
-                > lReqAndEmpl.Item2.OutOfOfficeBalance)
+            if ((relatedData.leaveReq.EndDate - relatedData.leaveReq.StartDate).TotalDays 
+                > relatedData.empl.OutOfOfficeBalance)
                 ApproveButton.Enabled = false;
         }
 
