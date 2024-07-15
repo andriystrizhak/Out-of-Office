@@ -452,7 +452,7 @@
             SelectEmplButton.FillColor = Color.FromArgb(26, 139, 221);
             SelectEmplButton.Font = new Font("Montserrat SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             SelectEmplButton.ForeColor = Color.White;
-            SelectEmplButton.HoverState.FillColor = Color.FromArgb(19, 149, 38);
+            SelectEmplButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
             SelectEmplButton.Location = new Point(271, 375);
             SelectEmplButton.Name = "SelectEmplButton";
             SelectEmplButton.PressedColor = Color.Empty;
@@ -461,6 +461,7 @@
             SelectEmplButton.Size = new Size(189, 36);
             SelectEmplButton.TabIndex = 63;
             SelectEmplButton.Text = "Select Employees";
+            SelectEmplButton.TextOffset = new Point(0, -1);
             SelectEmplButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             SelectEmplButton.Click += EmployeesButton_Click;
             // 

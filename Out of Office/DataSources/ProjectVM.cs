@@ -17,9 +17,9 @@ namespace Out_of_Office.DataSources
         public DateTime? EndDate { get; set; }
         public long ProjectManagerId { get; set; }
         public string ProjectManagerName { get; set; } = null!;
-        public string? Comment { get; set; }
         public long StatusId { get; set; }
         public string Status { get; set; } = null!;
+        public string? Comment { get; set; }
 
         public static ProjectVM FromEntity(Project entity)
         {

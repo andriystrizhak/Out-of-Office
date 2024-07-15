@@ -215,6 +215,5 @@ namespace OutOfOffice.RoleForms
 
             projectsBindingSource.ApplySort(columnName, direction);
         }
-
     }
 }

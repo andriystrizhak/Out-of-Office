@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -42,16 +42,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
@@ -65,7 +63,6 @@
             ELRefreshCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             EmployeesDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             label4 = new Label();
-            AddNewEButton = new Guna.UI2.WinForms.Guna2Button();
             tabPage1 = new TabPage();
             AddNewPButton = new Guna.UI2.WinForms.Guna2Button();
             PLRefreshCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -103,14 +100,16 @@
             TopPanel.Controls.Add(label3);
             TopPanel.Controls.Add(MinimizeButton);
             TopPanel.Controls.Add(CloseButton);
-            TopPanel.CustomizableEdges = customizableEdges13;
+            TopPanel.CustomizableEdges = customizableEdges11;
             TopPanel.Dock = DockStyle.Top;
             TopPanel.Location = new Point(0, 0);
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
-            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges12;
             TopPanel.Size = new Size(1093, 33);
             TopPanel.TabIndex = 13;
+            TopPanel.MouseDown += This_MouseDown;
+            TopPanel.MouseMove += This_MouseMove;
             // 
             // label3
             // 
@@ -127,7 +126,7 @@
             // 
             MinimizeButton.Animated = true;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
-            MinimizeButton.CustomizableEdges = customizableEdges9;
+            MinimizeButton.CustomizableEdges = customizableEdges7;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -139,16 +138,17 @@
             MinimizeButton.HoverState.FillColor = Color.FromArgb(12, 65, 109);
             MinimizeButton.Location = new Point(989, 0);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             MinimizeButton.Size = new Size(52, 33);
             MinimizeButton.TabIndex = 8;
             MinimizeButton.Text = "—";
+            MinimizeButton.Click += MinimizeButton_Click;
             // 
             // CloseButton
             // 
             CloseButton.Animated = true;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
-            CloseButton.CustomizableEdges = customizableEdges11;
+            CloseButton.CustomizableEdges = customizableEdges9;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -161,10 +161,11 @@
             CloseButton.Location = new Point(1041, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             CloseButton.Size = new Size(52, 33);
             CloseButton.TabIndex = 7;
             CloseButton.Text = "x";
+            CloseButton.Click += CloseButton_Click;
             // 
             // TabControl
             // 
@@ -198,6 +199,7 @@
             TabControl.TabIndex = 15;
             TabControl.TabMenuBackColor = Color.FromArgb(26, 139, 221);
             TabControl.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
+            TabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
             // 
             // tabPage3
             // 
@@ -205,7 +207,6 @@
             tabPage3.Controls.Add(ELRefreshCircleButton);
             tabPage3.Controls.Add(EmployeesDataGridView);
             tabPage3.Controls.Add(label4);
-            tabPage3.Controls.Add(AddNewEButton);
             tabPage3.Location = new Point(4, 44);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -233,6 +234,7 @@
             ELRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             ELRefreshCircleButton.Size = new Size(45, 45);
             ELRefreshCircleButton.TabIndex = 19;
+            ELRefreshCircleButton.Click += ELRefreshCircleButton_Click;
             // 
             // EmployeesDataGridView
             // 
@@ -291,6 +293,7 @@
             EmployeesDataGridView.ThemeStyle.RowsStyle.Height = 25;
             EmployeesDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             EmployeesDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            EmployeesDataGridView.CellMouseDoubleClick += EmployeesDataGridView_CellMouseDoubleClick;
             // 
             // label4
             // 
@@ -301,26 +304,6 @@
             label4.Size = new Size(227, 37);
             label4.TabIndex = 17;
             label4.Text = "Employees List";
-            // 
-            // AddNewEButton
-            // 
-            AddNewEButton.BorderRadius = 10;
-            AddNewEButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            AddNewEButton.CustomizableEdges = customizableEdges2;
-            AddNewEButton.DisabledState.BorderColor = Color.DarkGray;
-            AddNewEButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            AddNewEButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            AddNewEButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            AddNewEButton.FillColor = Color.FromArgb(26, 139, 221);
-            AddNewEButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            AddNewEButton.ForeColor = Color.White;
-            AddNewEButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
-            AddNewEButton.Location = new Point(42, 522);
-            AddNewEButton.Name = "AddNewEButton";
-            AddNewEButton.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            AddNewEButton.Size = new Size(162, 46);
-            AddNewEButton.TabIndex = 16;
-            AddNewEButton.Text = "New Employee";
             // 
             // tabPage1
             // 
@@ -340,7 +323,7 @@
             // 
             AddNewPButton.BorderRadius = 10;
             AddNewPButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            AddNewPButton.CustomizableEdges = customizableEdges4;
+            AddNewPButton.CustomizableEdges = customizableEdges2;
             AddNewPButton.DisabledState.BorderColor = Color.DarkGray;
             AddNewPButton.DisabledState.CustomBorderColor = Color.DarkGray;
             AddNewPButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -351,10 +334,11 @@
             AddNewPButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
             AddNewPButton.Location = new Point(42, 522);
             AddNewPButton.Name = "AddNewPButton";
-            AddNewPButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            AddNewPButton.ShadowDecoration.CustomizableEdges = customizableEdges3;
             AddNewPButton.Size = new Size(162, 46);
             AddNewPButton.TabIndex = 17;
             AddNewPButton.Text = "New Project";
+            AddNewPButton.Click += AddNewPButton_Click;
             // 
             // PLRefreshCircleButton
             // 
@@ -372,10 +356,11 @@
             PLRefreshCircleButton.Location = new Point(997, 508);
             PLRefreshCircleButton.Name = "PLRefreshCircleButton";
             PLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             PLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             PLRefreshCircleButton.Size = new Size(45, 45);
             PLRefreshCircleButton.TabIndex = 12;
+            PLRefreshCircleButton.Click += PLRefreshCircleButton_Click;
             // 
             // ProjectsDataGridView
             // 
@@ -440,6 +425,7 @@
             ProjectsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ProjectsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            ProjectsDataGridView.CellMouseDoubleClick += ProjectsDataGridView_CellMouseDoubleClick;
             // 
             // label1
             // 
@@ -480,10 +466,11 @@
             LRLRefreshCircleButton.Location = new Point(997, 508);
             LRLRefreshCircleButton.Name = "LRLRefreshCircleButton";
             LRLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
             LRLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             LRLRefreshCircleButton.Size = new Size(45, 45);
             LRLRefreshCircleButton.TabIndex = 15;
+            LRLRefreshCircleButton.Click += LRLRefreshCircleButton_Click;
             // 
             // LeaveRequestsDataGridView
             // 
@@ -542,6 +529,7 @@
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             LeaveRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            LeaveRequestsDataGridView.CellMouseDoubleClick += LeaveRequestsDataGridView_CellMouseDoubleClick;
             // 
             // label2
             // 
@@ -581,10 +569,11 @@
             ARLRefreshCircleButton.Location = new Point(997, 508);
             ARLRefreshCircleButton.Name = "ARLRefreshCircleButton";
             ARLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            ARLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            ARLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             ARLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             ARLRefreshCircleButton.Size = new Size(45, 45);
             ARLRefreshCircleButton.TabIndex = 19;
+            ARLRefreshCircleButton.Click += ARLRefreshCircleButton_Click;
             // 
             // ApprovalRequestsDataGridView
             // 
@@ -643,6 +632,7 @@
             ApprovalRequestsDataGridView.ThemeStyle.RowsStyle.Height = 25;
             ApprovalRequestsDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             ApprovalRequestsDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            ApprovalRequestsDataGridView.CellMouseDoubleClick += ApprovalRequestsDataGridView_CellMouseDoubleClick;
             // 
             // label5
             // 
@@ -665,6 +655,7 @@
             Name = "ProjectManagerForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ProjectManagerForm";
+            Load += HRManagerForm_Load;
             TopPanel.ResumeLayout(false);
             TopPanel.PerformLayout();
             TabControl.ResumeLayout(false);
@@ -695,7 +686,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton ELRefreshCircleButton;
         private Guna.UI2.WinForms.Guna2DataGridView EmployeesDataGridView;
         private Label label4;
-        private Guna.UI2.WinForms.Guna2Button AddNewEButton;
         private TabPage tabPage1;
         private Guna.UI2.WinForms.Guna2CircleButton PLRefreshCircleButton;
         private Guna.UI2.WinForms.Guna2DataGridView ProjectsDataGridView;

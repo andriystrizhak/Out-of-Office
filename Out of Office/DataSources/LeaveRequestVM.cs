@@ -16,9 +16,9 @@ namespace Out_of_Office.DataSources
         public string AbsenceReason { get; set; } = null!;
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string? Comment { get; set; }
         public long StatusId { get; set; }
         public string Status { get; set; } = null!;
+        public string? Comment { get; set; }
 
         public static LeaveRequestVM FromEntity(LeaveRequest entity)
         {
