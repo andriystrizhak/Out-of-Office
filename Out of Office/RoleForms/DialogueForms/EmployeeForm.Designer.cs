@@ -396,6 +396,7 @@
             OOOBalanceNumericUpDown.BorderRadius = 10;
             OOOBalanceNumericUpDown.CustomizableEdges = customizableEdges1;
             OOOBalanceNumericUpDown.DecimalPlaces = 2;
+            OOOBalanceNumericUpDown.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             OOOBalanceNumericUpDown.Font = new Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             OOOBalanceNumericUpDown.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             OOOBalanceNumericUpDown.Location = new Point(283, 448);

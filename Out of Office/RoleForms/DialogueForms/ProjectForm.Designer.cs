@@ -450,7 +450,6 @@
             SelectEmplButton.DisabledState.CustomBorderColor = Color.DarkGray;
             SelectEmplButton.DisabledState.FillColor = Color.FromArgb(120, 158, 187);
             SelectEmplButton.DisabledState.ForeColor = Color.White;
-            SelectEmplButton.Enabled = false;
             SelectEmplButton.FillColor = Color.FromArgb(26, 139, 221);
             SelectEmplButton.Font = new Font("Montserrat SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             SelectEmplButton.ForeColor = Color.White;

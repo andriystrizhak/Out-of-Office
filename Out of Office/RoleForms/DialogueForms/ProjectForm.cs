@@ -68,7 +68,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         void SetEmployeesList()
         {
-            employees = CrudService.Get_Employees();
+            employees = CrudService.Get_ProjectManager();
             PMComboBox.DataSource = employees
                 .Select(e => $"{e.EmployeeId}. {e.FullName}")
                 .ToList();
@@ -100,7 +100,6 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             CreateNewOrUpdateButton.Text = "Update";
             CreateNewOrUpdateButton.Enabled = false;
-            SelectEmplButton.Enabled = true;
         }
 
         void InitializeFormWithoutData()
@@ -113,6 +112,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             CreateNewOrUpdateButton.Text = "Create new";
             ActivateButton.Enabled = false;
             DeactivateButton.Enabled = false;
+            SelectEmplButton.Enabled = false;
         }
 
         #endregion
@@ -152,6 +152,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
             ActivateButton.Enabled = true;
             DeactivateButton.Enabled = true;
+            SelectEmplButton.Enabled = true;
         }
 
         /// <summary>

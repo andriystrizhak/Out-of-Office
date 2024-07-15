@@ -10,7 +10,7 @@ namespace Out_of_Office
     {
         NotSet,
         Employee,
-        HR,
-        PM
+        HR = 3,
+        PM = 4
     }
 }
