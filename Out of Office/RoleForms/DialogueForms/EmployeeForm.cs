@@ -31,6 +31,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             InitializeComponent();
             SetAll();
             InitializeFormWithoutData();
+            FullNameTextBox.TextChanged += Control_DataChanged;
         }
 
         public EmployeeForm(Form owner, EmployeeVM employeeVM)

@@ -342,7 +342,6 @@
             FullNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges20;
             FullNameTextBox.Size = new Size(302, 34);
             FullNameTextBox.TabIndex = 86;
-            FullNameTextBox.TextChanged += Control_DataChanged;
             // 
             // StatusTextBox
             // 

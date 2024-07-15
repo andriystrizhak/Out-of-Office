@@ -57,6 +57,16 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         #endregion
 
+        (LeaveRequest, Employee?) Get_RelatedLRAndE()
+        {
+            var leaveReq = CrudService.Get_LeaveRequest(appRequestVM.LeaveRequestId);
+            var empl = CrudService.Get_Employee(leaveReq.EmployeeId);
+            if (empl is null)
+                throw new ArgumentNullException(nameof(empl), "There's no Employee with this Id");
+
+            return (leaveReq, empl);
+        }
+
         #region [Initialize Form]
 
         void InitializeFormWithData()
@@ -67,6 +77,12 @@ namespace Out_of_Office.RoleForms.DialogueForms
             StatusTextBox.Text = appRequestVM.Status;
             ApproverComboBox.SelectedIndex = (int)appRequestVM.ApproverId - 1;
             CommentTextBox.Text = appRequestVM.Comment;
+
+            var lReqAndEmpl = Get_RelatedLRAndE();
+
+            if ((lReqAndEmpl.Item1.EndDate - lReqAndEmpl.Item1.StartDate).TotalDays 
+                > lReqAndEmpl.Item2.OutOfOfficeBalance)
+                ApproveButton.Enabled = false;
         }
 
         #endregion
@@ -75,8 +91,11 @@ namespace Out_of_Office.RoleForms.DialogueForms
 
         private void SetRoleConstraints()
         {
-            if (owner is not HRManagerForm 
+            if ((owner is not HRManagerForm 
                 && owner is not ProjectManagerForm)
+                || (appRequestVM is not null
+                && (appRequestVM.StatusId == (long)LeaveStatusEnum.Approved
+                || appRequestVM.StatusId == (long)LeaveStatusEnum.Rejected)))
             {
                 foreach (Control control in Controls)
                     if (control != CloseButton)
@@ -97,7 +116,7 @@ namespace Out_of_Office.RoleForms.DialogueForms
             var daysToSubtract = (leaveReq.EndDate - leaveReq.StartDate).TotalDays;
             empl.OutOfOfficeBalance -= daysToSubtract;
 
-            CrudService.Update_LeaveRequest(leaveReq);
+            CrudService.Update_Employee(empl);
 
             Close();
         }
