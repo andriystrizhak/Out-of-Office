@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Out_of_Office;
 using Out_of_Office.DataSources;
 using Out_of_Office.RoleForms.DialogueForms;
 using OutOfOffice.Models;
@@ -40,7 +41,10 @@ namespace OutOfOffice.RoleForms
         #region [ TopPanel ]
 
         private void CloseButton_Click(object sender, EventArgs e)
-            => Close();
+        {
+            Program.CurrentRole = UserRole.Exit;
+            Close();
+        }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
             => WindowState = FormWindowState.Minimized;
@@ -152,6 +156,12 @@ namespace OutOfOffice.RoleForms
             }
 
             projectsBindingSource.ApplySort(columnName, direction);
+        }
+
+        private void ChangeRoleButton_Click(object sender, EventArgs e)
+        {
+            Program.CurrentRole = UserRole.ToSet;
+            Close();
         }
     }
 }

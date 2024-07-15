@@ -73,6 +73,16 @@ namespace Out_of_Office.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_изменить_пользователя_90__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-изменить-пользователя-90 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_обновление_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-обновление-48", resourceCulture);

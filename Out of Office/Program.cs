@@ -5,7 +5,7 @@ namespace OutOfOffice
 {
     public static class Program
     {
-        public static UserRole CurrentRole { get; set; } = UserRole.NotSet;
+        public static UserRole CurrentRole { get; set; } = UserRole.ToSet;
 
         /// <summary>
         ///  The main entry point for the application.
@@ -16,19 +16,19 @@ namespace OutOfOffice
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new RoleSelectionForm());
-            
-            switch(CurrentRole)
+
+            while (true)
             {
-                case UserRole.Employee:
+                if (CurrentRole == UserRole.Exit)
+                    break;
+                else if (CurrentRole == UserRole.ToSet)
+                    Application.Run(new RoleSelectionForm());
+                else if (CurrentRole == UserRole.Employee)
                     Application.Run(new EmployeeRoleForm());
-                    break;
-                case UserRole.HR:
+                else if (CurrentRole == UserRole.HR)
                     Application.Run(new HRManagerForm());
-                    break;
-                case UserRole.PM:
+                else if (CurrentRole == UserRole.PM)
                     Application.Run(new ProjectManagerForm());
-                    break;
             }
         }
     }

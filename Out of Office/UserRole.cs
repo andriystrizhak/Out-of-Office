@@ -8,7 +8,8 @@ namespace Out_of_Office
 {
     public enum UserRole
     {
-        NotSet,
+        Exit,
+        ToSet,
         Employee,
         HR = 3,
         PM = 4

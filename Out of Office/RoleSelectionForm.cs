@@ -18,7 +18,10 @@ namespace OutOfOffice
         #region [ TopPanel ]
 
         private void CloseButton_Click(object sender, EventArgs e)
-            => Close();
+        {
+            Program.CurrentRole = UserRole.Exit;
+            Close();
+        }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
             => WindowState = FormWindowState.Minimized;

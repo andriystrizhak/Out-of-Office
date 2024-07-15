@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             MinimizeButton = new Guna.UI2.WinForms.Guna2Button();
             CloseButton = new Guna.UI2.WinForms.Guna2Button();
@@ -60,12 +64,15 @@
             AddNewLRButton = new Guna.UI2.WinForms.Guna2Button();
             TopPanel = new Guna.UI2.WinForms.Guna2Panel();
             label3 = new Label();
+            ChangeRoleBPanel = new Guna.UI2.WinForms.Guna2Panel();
+            ChangeRoleButton = new Guna.UI2.WinForms.Guna2Button();
             TabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProjectsDataGridView).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LeaveRequestsDataGridView).BeginInit();
             TopPanel.SuspendLayout();
+            ChangeRoleBPanel.SuspendLayout();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -78,7 +85,7 @@
             // 
             MinimizeButton.Animated = true;
             MinimizeButton.CheckedState.FillColor = Color.RoyalBlue;
-            MinimizeButton.CustomizableEdges = customizableEdges1;
+            MinimizeButton.CustomizableEdges = customizableEdges5;
             MinimizeButton.DisabledState.BorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             MinimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -90,7 +97,7 @@
             MinimizeButton.HoverState.FillColor = Color.FromArgb(12, 65, 109);
             MinimizeButton.Location = new Point(989, 0);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            MinimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             MinimizeButton.Size = new Size(52, 33);
             MinimizeButton.TabIndex = 8;
             MinimizeButton.Text = "—";
@@ -100,7 +107,7 @@
             // 
             CloseButton.Animated = true;
             CloseButton.CheckedState.FillColor = Color.OrangeRed;
-            CloseButton.CustomizableEdges = customizableEdges3;
+            CloseButton.CustomizableEdges = customizableEdges7;
             CloseButton.DisabledState.BorderColor = Color.DarkGray;
             CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
             CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -113,7 +120,7 @@
             CloseButton.Location = new Point(1041, 0);
             CloseButton.Name = "CloseButton";
             CloseButton.PressedColor = Color.Firebrick;
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             CloseButton.Size = new Size(52, 33);
             CloseButton.TabIndex = 7;
             CloseButton.Text = "x";
@@ -190,7 +197,7 @@
             PLRefreshCircleButton.Location = new Point(997, 508);
             PLRefreshCircleButton.Name = "PLRefreshCircleButton";
             PLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            PLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges11;
             PLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             PLRefreshCircleButton.Size = new Size(45, 45);
             PLRefreshCircleButton.TabIndex = 12;
@@ -292,7 +299,7 @@
             LRLRefreshCircleButton.Location = new Point(997, 508);
             LRLRefreshCircleButton.Name = "LRLRefreshCircleButton";
             LRLRefreshCircleButton.PressedColor = Color.FromArgb(26, 139, 221);
-            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            LRLRefreshCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
             LRLRefreshCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             LRLRefreshCircleButton.Size = new Size(45, 45);
             LRLRefreshCircleButton.TabIndex = 15;
@@ -372,7 +379,7 @@
             // 
             AddNewLRButton.BorderRadius = 10;
             AddNewLRButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
-            AddNewLRButton.CustomizableEdges = customizableEdges9;
+            AddNewLRButton.CustomizableEdges = customizableEdges13;
             AddNewLRButton.DisabledState.BorderColor = Color.DarkGray;
             AddNewLRButton.DisabledState.CustomBorderColor = Color.DarkGray;
             AddNewLRButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -383,7 +390,7 @@
             AddNewLRButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
             AddNewLRButton.Location = new Point(42, 522);
             AddNewLRButton.Name = "AddNewLRButton";
-            AddNewLRButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            AddNewLRButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
             AddNewLRButton.Size = new Size(147, 46);
             AddNewLRButton.TabIndex = 12;
             AddNewLRButton.Text = "New Request";
@@ -395,12 +402,12 @@
             TopPanel.Controls.Add(label3);
             TopPanel.Controls.Add(MinimizeButton);
             TopPanel.Controls.Add(CloseButton);
-            TopPanel.CustomizableEdges = customizableEdges5;
+            TopPanel.CustomizableEdges = customizableEdges9;
             TopPanel.Dock = DockStyle.Top;
             TopPanel.Location = new Point(0, 0);
             TopPanel.Margin = new Padding(3, 3, 3, 0);
             TopPanel.Name = "TopPanel";
-            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            TopPanel.ShadowDecoration.CustomizableEdges = customizableEdges10;
             TopPanel.Size = new Size(1093, 33);
             TopPanel.TabIndex = 12;
             TopPanel.MouseDown += This_MouseDown;
@@ -417,16 +424,51 @@
             label3.TabIndex = 9;
             label3.Text = "Employee Form";
             // 
-            // EmployeeForm
+            // ChangeRoleBPanel
+            // 
+            ChangeRoleBPanel.BackColor = Color.FromArgb(226, 239, 252);
+            ChangeRoleBPanel.Controls.Add(ChangeRoleButton);
+            ChangeRoleBPanel.CustomizableEdges = customizableEdges3;
+            ChangeRoleBPanel.Location = new Point(868, 88);
+            ChangeRoleBPanel.Name = "ChangeRoleBPanel";
+            ChangeRoleBPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ChangeRoleBPanel.Size = new Size(183, 56);
+            ChangeRoleBPanel.TabIndex = 22;
+            // 
+            // ChangeRoleButton
+            // 
+            ChangeRoleButton.BorderRadius = 10;
+            ChangeRoleButton.CheckedState.FillColor = Color.FromArgb(13, 109, 188);
+            ChangeRoleButton.Cursor = Cursors.Hand;
+            ChangeRoleButton.CustomizableEdges = customizableEdges1;
+            ChangeRoleButton.DisabledState.BorderColor = Color.DarkGray;
+            ChangeRoleButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ChangeRoleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ChangeRoleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ChangeRoleButton.FillColor = Color.FromArgb(26, 139, 221);
+            ChangeRoleButton.Font = new Font("Montserrat SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ChangeRoleButton.ForeColor = Color.White;
+            ChangeRoleButton.HoverState.FillColor = Color.FromArgb(21, 114, 190);
+            ChangeRoleButton.Image = Out_of_Office.Properties.Resources.icons8_изменить_пользователя_90__2_;
+            ChangeRoleButton.ImageSize = new Size(35, 35);
+            ChangeRoleButton.Location = new Point(128, 5);
+            ChangeRoleButton.Name = "ChangeRoleButton";
+            ChangeRoleButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            ChangeRoleButton.Size = new Size(48, 48);
+            ChangeRoleButton.TabIndex = 21;
+            ChangeRoleButton.Click += ChangeRoleButton_Click;
+            // 
+            // EmployeeRoleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 105, 171);
             ClientSize = new Size(1093, 715);
+            Controls.Add(ChangeRoleBPanel);
             Controls.Add(TopPanel);
             Controls.Add(TabControl);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "EmployeeForm";
+            Name = "EmployeeRoleForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DeveloperForm";
             Load += EmployeeForm_Load;
@@ -439,6 +481,7 @@
             ((System.ComponentModel.ISupportInitialize)LeaveRequestsDataGridView).EndInit();
             TopPanel.ResumeLayout(false);
             TopPanel.PerformLayout();
+            ChangeRoleBPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -459,5 +502,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton PLRefreshCircleButton;
         private Guna.UI2.WinForms.Guna2CircleButton LRLRefreshCircleButton;
         private Label label3;
+        private Guna.UI2.WinForms.Guna2Panel ChangeRoleBPanel;
+        private Guna.UI2.WinForms.Guna2Button ChangeRoleButton;
     }
 }

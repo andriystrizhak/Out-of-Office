@@ -222,6 +222,13 @@ namespace Out_of_Office.RoleForms.DialogueForms
         private void Control_DataChanged(object sender, EventArgs e)
         {
             CreateNewOrUpdateButton.Enabled = true;
+
+            if (EndDateTimePicker.Value < StartDateTimePicker.Value)
+            {
+                CreateNewOrUpdateButton.Enabled = false;
+                SubmitButton.Enabled = false;
+                CancelButton.Enabled = false;
+            }    
         }
 
         private void IdTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
