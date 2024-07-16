@@ -8,7 +8,7 @@ This is how the DB scheme looks like which is used in the application:
 
 ## SQL queries that were used to create the DB:
 
-- ** AbsenceReasons**
+- **AbsenceReasons**
 ```sql
 CREATE TABLE "AbsenceReasons" (
 	"AbsenceReasonID"	INTEGER NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE "AbsenceReasons" (
 );
 ```
 
-- ** ApprovalRequests**
+- **ApprovalRequests**
 ```sql
 CREATE TABLE "ApprovalRequests" (
 	"ApprovalRequestID"	INTEGER NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE "ApprovalRequests" (
 );
 ```
 
-- ** EmployeeProjects**
+- **EmployeeProjects**
 ```sql
 CREATE TABLE "EmployeeProjects" (
 	"EmployeeId"	INTEGER NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE "EmployeeProjects" (
 );
 ```
 
-- ** Employees**
+- **Employees**
 ```sql
 CREATE TABLE "Employees" (
 	"EmployeeID"	INTEGER NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE "Employees" (
 );
 ```
 
-- ** LeaveRequests**
+- **LeaveRequests**
 ```sql
 CREATE TABLE "LeaveRequests" (
 	"LeaveRequestID"	INTEGER NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE "LeaveRequests" (
 );
 ```
 
-- ** LeaveStatuses**
+- **LeaveStatuses**
 ```sql
 CREATE TABLE "LeaveStatuses" (
 	"LeaveStatusID"	INTEGER NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE "LeaveStatuses" (
 );
 ```
 
-- ** Photos**
+- **Photos**
 ```sql
 CREATE TABLE "Photos" (
 	"PhotoID"	INTEGER NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE "Photos" (
 );
 ```
 
-- ** Positions**
+- **Positions**
 ```sql
 CREATE TABLE "Positions" (
 	"PositionID"	INTEGER NOT NULL,
@@ -107,7 +107,7 @@ CREATE TABLE "Positions" (
 );
 ```
 
-- ** ProjectTypes**
+- **ProjectTypes**
 ```sql
 CREATE TABLE "ProjectTypes" (
 	"ProjectTypeID"	INTEGER NOT NULL,
@@ -116,7 +116,7 @@ CREATE TABLE "ProjectTypes" (
 );
 ```
 
-- ** Projects**
+- **Projects**
 ```sql
 CREATE TABLE "Projects" (
 	"ProjectID"	INTEGER NOT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE "Projects" (
 );
 ```
 
-- ** Statuses**
+- **Statuses**
 ```sql
 CREATE TABLE "Statuses" (
 	"StatusID"	INTEGER NOT NULL,
@@ -143,7 +143,7 @@ CREATE TABLE "Statuses" (
 );
 ```
 
-- ** Subdivisions**
+- **Subdivisions**
 ```sql
 CREATE TABLE "Subdivisions" (
 	"SubdivisionID"	INTEGER NOT NULL,
