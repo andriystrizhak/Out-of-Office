@@ -1,6 +1,38 @@
 # 🏢 Out of Office
 Out of Office - is a solution for companies that simplifies the process of how an employee makes a request for time off.
 
+## 🖼️ About Application
+When you launch the application, you can first see a role selection window:
+
+![image](https://github.com/user-attachments/assets/3cbeeabc-6e58-41b1-b519-91b3d74b065f)
+
+After selecting and confirming one of the options, the form of the corresponding role will open, there are currently three of them:
+
+### Employee Form
+This form contains two tabs with lists:
+- Projects
+- Leave Requests
+
+![image](https://github.com/user-attachments/assets/c68f5ddf-7d6b-4e53-a5b0-d308c65ca779)
+
+### HR Manager Form
+Contains four tabs with lists:
+- Employees
+- Projects
+- Leave Requests
+- Approval Requests
+
+![image](https://github.com/user-attachments/assets/e4ada530-61f9-4834-b07b-36e78136b37f)
+
+### Project Manager Form
+Also contains four tabs with lists:
+- Employees
+- Projects
+- Leave Requests
+- Approval Requests
+
+![image](https://github.com/user-attachments/assets/63b9def8-5c2b-43f0-8857-a681f9c32e83)
+
 ## 🪴 DB(database) Schema
 This is how the DB scheme looks like which is used in the application:
 
