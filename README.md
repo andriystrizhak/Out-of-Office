@@ -1,21 +1,21 @@
 # 🏢 Out of Office
-Out of Office - is a solution for companies that simplifies the process of how an employee makes a request for time off.
+**Out of Office** - is a solution for companies that simplifies the process of how an employee makes a request for time off.
 
-## 🖼️ About Application
+## 🖼️ Application Structure
 When you launch the application, you can first see a role selection window:
 
 ![image](https://github.com/user-attachments/assets/3cbeeabc-6e58-41b1-b519-91b3d74b065f)
 
-After selecting and confirming one of the options, the form of the corresponding role will open, there are currently three of them:
+After selecting and confirming one of the options, the form of the corresponding role will open, there are currently **three of them**:
 
-### Employee Form
+### 🧑‍💼 Employee Form
 This form contains two tabs with lists:
 - Projects
 - Leave Requests
 
 ![image](https://github.com/user-attachments/assets/c68f5ddf-7d6b-4e53-a5b0-d308c65ca779)
 
-### HR Manager Form
+### 🫂 HR Manager Form
 Contains four tabs with lists:
 - Employees
 - Projects
@@ -24,7 +24,7 @@ Contains four tabs with lists:
 
 ![image](https://github.com/user-attachments/assets/e4ada530-61f9-4834-b07b-36e78136b37f)
 
-### Project Manager Form
+### 🤵‍♂️ Project Manager Form
 Also contains four tabs with lists:
 - Employees
 - Projects
@@ -32,6 +32,33 @@ Also contains four tabs with lists:
 - Approval Requests
 
 ![image](https://github.com/user-attachments/assets/63b9def8-5c2b-43f0-8857-a681f9c32e83)
+
+## 💪 App Features
+#### Sort by column content
+Click on column header to do it:
+
+![bandicam 2024-07-26 22-21-21-755](https://github.com/user-attachments/assets/37b17cb2-8c33-4b62-aab5-bc7da97f9d50)
+
+#### See details about
+Double click on row with record to see (or even change) details of record in special form:
+
+![image](https://github.com/user-attachments/assets/b1ba598f-8147-4b3a-aada-651695d87a98)
+
+#### Add new record
+Different roles have the ability to create and add new entries to specific lists. 
+Click "New [list item name]" button to open new form where you can add data:
+
+![image](https://github.com/user-attachments/assets/89e59c67-0e17-44e6-9ec3-4e14be0ddd80)
+
+#### Refresh list
+Click on bottom right "Refresh" button to do it:
+
+![bandicam 2024-07-26 22-47-32-945](https://github.com/user-attachments/assets/79d5c899-05b8-47e6-9a76-54005fe9e298)
+
+#### Change role
+Click the top right button in the tab to change your role (different roles have different access levels):
+
+![bandicam 2024-07-26 22-34-35-388](https://github.com/user-attachments/assets/f2d98d60-a3dc-404d-bbc0-4f21ce7cf03e)
 
 ## 🪴 DB(database) Schema
 This is how the DB scheme looks like which is used in the application:
