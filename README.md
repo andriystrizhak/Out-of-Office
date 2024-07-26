@@ -213,3 +213,6 @@ CREATE TABLE "Subdivisions" (
 
 + Automatically generated tables **__EFMigrationsHistory** & **sqlite_sequence**
 
+## P.S.
+Yes, there's a lot of hardcode and violations of DRY principles, and I know that. The application was developed in a hurry😩
+So, I will be very grateful for any feedback!
